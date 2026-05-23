@@ -394,7 +394,7 @@
                 <p class="text-gray-500 text-sm font-bold tracking-[0.2em] uppercase">Select your destination.</p>
             </div>
 
-            <div id="tour-dates-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8 text-center">
+            <div id="tour-dates-grid" class="flex flex-wrap justify-center gap-x-12 gap-y-8 text-center">
                 <!-- Tour dates will be injected here via JavaScript -->
             </div>
         </div>
@@ -780,7 +780,7 @@
         tourDates.forEach(tour => {
             // Populate Grid
             const card = document.createElement('div');
-            card.className = "group border-b border-gray-100 pb-3 hover:border-[#9333ea] transition-colors cursor-default";
+            card.className = "group border-b border-gray-100 pb-3 hover:border-[#9333ea] transition-colors cursor-default text-center w-full sm:w-[260px] md:w-[280px]";
             card.innerHTML = `
                 <p class="text-xs font-bold tracking-[0.15em] uppercase text-gray-400 group-hover:text-[#9333ea] transition-colors mb-2">${tour.date}</p>
                 <h4 class="text-xl font-bold tracking-tight mb-1">${tour.city}</h4>

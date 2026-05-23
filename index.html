@@ -42,6 +42,14 @@
         .animate-drive {
             animation: drive 15s ease-in-out infinite;
         }
+        @keyframes sway {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+        .animate-sway {
+            animation: sway 4s ease-in-out infinite;
+            transform-origin: top center;
+        }
         .text-stroke {
             -webkit-text-stroke: 2px black;
             color: transparent;
@@ -104,9 +112,17 @@
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-[#e11d48]/10 to-[#9333ea]/5 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div class="absolute inset-0 z-0 flex items-end justify-center pointer-events-none">
-            <img src="usher.webp" alt="Usher and Chris Brown" class="w-[90%] md:w-[70%] lg:w-[60%] h-auto object-cover object-bottom mix-blend-multiply opacity-95" onerror="this.src='https://via.placeholder.com/1200x800?text=Usher+and+Chris+Brown'">
+            <img src="hero3.png" alt="Usher and Chris Brown" class="w-[90%] md:w-[70%] lg:w-[60%] h-auto object-cover object-bottom mix-blend-multiply opacity-95" onerror="this.src='https://via.placeholder.com/1200x800?text=Usher+and+Chris+Brown'">
         </div>
-        
+
+        <!-- Floating VIP Badge - Hero Right Side -->
+        <div class="hidden md:block absolute top-28 right-6 lg:right-12 xl:right-20 z-20 w-[180px] lg:w-[240px] xl:w-[280px] pointer-events-none">
+            <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-tr from-[#e11d48]/40 to-[#9333ea]/40 blur-[60px] rounded-full mix-blend-screen"></div>
+                <img src="badge.png" alt="VIP All Access Badge" class="relative z-10 w-full object-contain drop-shadow-[0_25px_40px_rgba(0,0,0,0.45)] animate-sway origin-top pointer-events-auto transition-transform duration-700 hover:rotate-3" onerror="this.src='https://via.placeholder.com/280x460?text=VIP+Badge'">
+            </div>
+        </div>
+
         <div class="relative z-10 text-center px-6 max-w-6xl mx-auto mt-12 md:mt-0 flex-grow flex flex-col justify-start md:justify-center mb-16">
             <p class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-6 text-[#e11d48]">
                 The Music Dept Presents

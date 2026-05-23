@@ -147,6 +147,46 @@
         </div>
     </header>
 
+    <!-- THE BILLBOARD & COUNTDOWN -->
+    <section class="bg-black text-white py-24 md:py-32 overflow-hidden border-b border-gray-900 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#e11d48]/5 to-transparent pointer-events-none"></div>
+        <div class="w-full px-6 flex flex-col items-center justify-center text-center relative z-10">
+            <h2 class="text-[18vw] md:text-[14vw] font-display uppercase leading-[0.85] tracking-normal">
+                TWO ICONS.<br/>
+                <span class="text-stroke-purple">ONE NIGHT.</span>
+            </h2>
+
+            <!-- Fan Access Image -->
+            <div class="mt-16 relative max-w-3xl w-full px-6">
+                <div class="absolute inset-0 bg-gradient-to-tr from-[#e11d48]/20 to-[#9333ea]/20 blur-[80px] rounded-full"></div>
+                <img src="fanaccess.png" alt="VIP Fan Access" class="relative z-10 w-full object-contain drop-shadow-[0_30px_60px_rgba(225,29,72,0.25)]" onerror="this.src='https://via.placeholder.com/900x500/0a0a0a/e11d48?text=FAN+ACCESS'">
+            </div>
+
+            <!-- Next Show Countdown -->
+            <div class="mt-20 border border-gray-800 bg-[#0a0a0a] p-8 md:p-12 w-full max-w-4xl shadow-[0_0_50px_rgba(225,29,72,0.05)]">
+                <p class="text-[#e11d48] font-bold tracking-[0.3em] uppercase text-xs mb-8">Next Stop: Washington, DC</p>
+                <div class="grid grid-cols-4 gap-4 md:gap-8 text-center divide-x divide-gray-800">
+                    <div class="flex flex-col">
+                        <span id="cd-days" class="text-5xl md:text-7xl font-display">00</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Days</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span id="cd-hours" class="text-5xl md:text-7xl font-display">00</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Hours</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span id="cd-minutes" class="text-5xl md:text-7xl font-display">00</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Minutes</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span id="cd-seconds" class="text-5xl md:text-7xl font-display text-[#e11d48]">00</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- THE PACKAGE DETAILS -->
     <section id="experience" class="py-32 bg-[#050505] text-white relative z-20">
         <div class="max-w-7xl mx-auto px-6 md:px-12">
@@ -219,106 +259,43 @@
         </div>
     </section>
 
-    <!-- THE BILLBOARD & COUNTDOWN -->
-    <section class="bg-black text-white py-24 md:py-32 overflow-hidden border-b border-gray-900 relative">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#e11d48]/5 to-transparent pointer-events-none"></div>
-        <div class="w-full px-6 flex flex-col items-center justify-center text-center relative z-10">
-            <h2 class="text-[18vw] md:text-[14vw] font-display uppercase leading-[0.85] tracking-normal">
-                TWO ICONS.<br/>
-                <span class="text-stroke-purple">ONE NIGHT.</span>
-            </h2>
-
-            <!-- Fan Access Image -->
-            <div class="mt-16 relative max-w-3xl w-full px-6">
-                <div class="absolute inset-0 bg-gradient-to-tr from-[#e11d48]/20 to-[#9333ea]/20 blur-[80px] rounded-full"></div>
-                <img src="fanaccess.png" alt="VIP Fan Access" class="relative z-10 w-full object-contain drop-shadow-[0_30px_60px_rgba(225,29,72,0.25)]" onerror="this.src='https://via.placeholder.com/900x500/0a0a0a/e11d48?text=FAN+ACCESS'">
-            </div>
-            
-            <!-- Next Show Countdown -->
-            <div class="mt-20 border border-gray-800 bg-[#0a0a0a] p-8 md:p-12 w-full max-w-4xl shadow-[0_0_50px_rgba(225,29,72,0.05)]">
-                <p class="text-[#e11d48] font-bold tracking-[0.3em] uppercase text-xs mb-8">Next Stop: Washington, DC</p>
-                <div class="grid grid-cols-4 gap-4 md:gap-8 text-center divide-x divide-gray-800">
-                    <div class="flex flex-col">
-                        <span id="cd-days" class="text-5xl md:text-7xl font-display">00</span>
-                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Days</span>
-                    </div>
-                    <div class="flex flex-col">
-                        <span id="cd-hours" class="text-5xl md:text-7xl font-display">00</span>
-                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Hours</span>
-                    </div>
-                    <div class="flex flex-col">
-                        <span id="cd-minutes" class="text-5xl md:text-7xl font-display">00</span>
-                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Minutes</span>
-                    </div>
-                    <div class="flex flex-col">
-                        <span id="cd-seconds" class="text-5xl md:text-7xl font-display text-[#e11d48]">00</span>
-                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Seconds</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- THE COACH PARALLAX ANIMATION -->
-    <section class="py-40 bg-black relative overflow-hidden border-t border-b border-gray-900">
+    <section class="py-40 bg-white relative overflow-hidden border-t border-b border-gray-200">
         <div class="absolute inset-0 bg-gradient-to-r from-[#e11d48]/5 via-transparent to-[#9333ea]/5 pointer-events-none"></div>
         <div class="text-center relative z-20 mb-12">
             <p class="text-[#e11d48] font-bold tracking-[0.3em] uppercase text-xs mb-4">The Transport · Fan Experience</p>
-            <h2 class="text-5xl md:text-7xl font-display text-white tracking-wide uppercase">Premium Star Coach</h2>
-            <p class="text-gray-400 mt-4 max-w-2xl mx-auto text-sm md:text-base font-light leading-relaxed">The official Vibe Escape tour bus — a fully outfitted luxury coach engineered for the ultimate R&B fan experience. Plush reclining seats, ambient lighting, premium sound system, full bar, and onboard restroom. Strictly limited to 12 VIP guests per coach.</p>
+            <h2 class="text-5xl md:text-7xl font-display text-black tracking-wide uppercase">Premium Star Coach</h2>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto text-sm md:text-base font-light leading-relaxed">The official Vibe Escape tour bus — a fully outfitted luxury coach engineered for the ultimate R&B fan experience. Plush reclining seats, ambient lighting, premium sound system, full bar, and onboard restroom. Strictly limited to 12 VIP guests per coach.</p>
         </div>
 
         <!-- Real Tour Bus Image -->
         <div class="relative z-20 max-w-5xl mx-auto px-6 mb-16">
             <div class="relative group">
-                <div class="absolute -inset-2 bg-gradient-to-r from-[#e11d48]/30 via-[#9333ea]/20 to-[#e11d48]/30 blur-[60px] rounded-full"></div>
-                <img src="hero3.png" alt="Vibe Escape Premium Star Coach" class="relative z-10 w-full object-contain drop-shadow-[0_30px_60px_rgba(225,29,72,0.25)] transition-transform duration-700 group-hover:scale-[1.02]" onerror="this.src='https://via.placeholder.com/1200x500/0a0a0a/e11d48?text=VIBE+ESCAPE+TOUR+BUS'">
+                <div class="absolute -inset-2 bg-gradient-to-r from-[#e11d48]/20 via-[#9333ea]/15 to-[#e11d48]/20 blur-[60px] rounded-full"></div>
+                <img src="hero3.png" alt="Vibe Escape Premium Star Coach" class="relative z-10 w-full object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.15)] transition-transform duration-700 group-hover:scale-[1.02]" onerror="this.src='https://via.placeholder.com/1200x500/ffffff/e11d48?text=VIBE+ESCAPE+TOUR+BUS'">
             </div>
         </div>
 
         <!-- Coach Features Grid -->
         <div class="relative z-20 max-w-5xl mx-auto px-6 mb-20 grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="border border-gray-800 bg-[#0a0a0a] p-6 text-center hover:border-[#e11d48]/50 transition-colors">
+            <div class="border border-gray-200 bg-white p-6 text-center hover:border-[#e11d48]/50 hover:shadow-[0_10px_30px_rgba(225,29,72,0.08)] transition-all">
                 <p class="text-[#e11d48] font-display text-3xl md:text-4xl mb-2">12</p>
-                <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-400">VIP Guests Max</p>
+                <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-700">VIP Guests Max</p>
             </div>
-            <div class="border border-gray-800 bg-[#0a0a0a] p-6 text-center hover:border-[#e11d48]/50 transition-colors">
+            <div class="border border-gray-200 bg-white p-6 text-center hover:border-[#e11d48]/50 hover:shadow-[0_10px_30px_rgba(225,29,72,0.08)] transition-all">
                 <p class="text-[#e11d48] font-display text-3xl md:text-4xl mb-2">24/7</p>
-                <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-400">Concierge Service</p>
+                <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-700">Concierge Service</p>
             </div>
-            <div class="border border-gray-800 bg-[#0a0a0a] p-6 text-center hover:border-[#e11d48]/50 transition-colors">
+            <div class="border border-gray-200 bg-white p-6 text-center hover:border-[#e11d48]/50 hover:shadow-[0_10px_30px_rgba(225,29,72,0.08)] transition-all">
                 <p class="text-[#e11d48] font-display text-3xl md:text-4xl mb-2">Full</p>
-                <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-400">Open Bar</p>
+                <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-700">Open Bar</p>
             </div>
-            <div class="border border-gray-800 bg-[#0a0a0a] p-6 text-center hover:border-[#e11d48]/50 transition-colors">
+            <div class="border border-gray-200 bg-white p-6 text-center hover:border-[#e11d48]/50 hover:shadow-[0_10px_30px_rgba(225,29,72,0.08)] transition-all">
                 <p class="text-[#e11d48] font-display text-3xl md:text-4xl mb-2">VIP</p>
-                <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-400">Venue Parking</p>
+                <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-700">Venue Parking</p>
             </div>
         </div>
 
-        <!-- Animated Bus Track -->
-        <div class="relative w-full h-[200px] md:h-[300px] flex items-center">
-            <div class="w-full h-px bg-gray-800 absolute top-1/2 -translate-y-1/2"></div>
-            
-            <div class="animate-drive absolute w-full flex justify-start items-center">
-                <!-- Stylized Luxury Coach Representation -->
-                <div class="relative w-[300px] md:w-[500px] h-[100px] md:h-[160px] bg-gradient-to-r from-gray-900 via-black to-gray-900 border border-gray-800 rounded-lg shadow-[0_20px_50px_rgba(225,29,72,0.15)] flex items-center justify-center">
-                    <!-- Windows -->
-                    <div class="absolute top-4 left-4 right-12 h-1/2 bg-black flex gap-2 overflow-hidden">
-                        <div class="w-1/4 h-full bg-gradient-to-b from-gray-800 to-black opacity-50"></div>
-                        <div class="w-1/4 h-full bg-gradient-to-b from-gray-800 to-black opacity-50"></div>
-                        <div class="w-1/4 h-full bg-gradient-to-b from-gray-800 to-black opacity-50"></div>
-                        <div class="w-1/4 h-full bg-gradient-to-b from-[#e11d48]/20 to-black opacity-50"></div>
-                    </div>
-                    <!-- Headlights Glow -->
-                    <div class="absolute right-0 top-1/2 w-32 h-32 bg-white/10 blur-2xl rounded-full translate-x-1/2"></div>
-                    <!-- Taillights Glow -->
-                    <div class="absolute left-0 top-1/2 w-20 h-20 bg-[#e11d48]/30 blur-xl rounded-full -translate-x-1/2"></div>
-                    
-                    <span class="relative z-10 text-white/10 font-black tracking-[0.4em] uppercase text-xl md:text-3xl">VIBE ESCAPE</span>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- FAN EXPERIENCE SECTION -->
@@ -431,7 +408,7 @@
             <div id="form-grid" class="grid lg:grid-cols-5 gap-10 lg:gap-12 items-start">
 
             <!-- Form Container -->
-            <div id="form-container" class="lg:col-span-3 border border-gray-800 p-8 md:p-16 bg-black/80 backdrop-blur-sm relative overflow-hidden shadow-[0_30px_80px_rgba(225,29,72,0.15)]">
+            <div id="form-container" class="order-1 lg:order-2 lg:col-span-3 border border-gray-800 p-8 md:p-16 bg-black/80 backdrop-blur-sm relative overflow-hidden shadow-[0_30px_80px_rgba(225,29,72,0.15)]">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-[#e11d48]/20 blur-[100px]"></div>
                 
                 <div class="mb-12 relative z-10">
@@ -536,7 +513,7 @@
             </div>
 
             <!-- FAQ Column -->
-            <aside class="lg:col-span-2 lg:sticky lg:top-24 space-y-4">
+            <aside class="order-2 lg:order-1 lg:col-span-2 lg:sticky lg:top-24 space-y-4">
                 <div class="mb-6">
                     <p class="text-[#e11d48] font-bold tracking-[0.3em] uppercase text-xs mb-3">Before You Apply</p>
                     <h3 class="text-3xl md:text-4xl font-display tracking-wide uppercase">Frequently Asked</h3>

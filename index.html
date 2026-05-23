@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Raymond & Brown Tour | Vibe Escape</title>
+    
+    <!-- ADDED: Modern, younger Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- ADDED: Tailwind Configuration to use the new fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                        display: ['"Bebas Neue"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        @keyframes drive {
+            0% { transform: translateX(-120%); }
+            100% { transform: translateX(120%); }
+        }
+        .animate-scroll {
+            animation: scroll 20s linear infinite;
+        }
+        .animate-drive {
+            animation: drive 15s ease-in-out infinite;
+        }
+        .text-stroke {
+            -webkit-text-stroke: 2px black;
+            color: transparent;
+        }
+        .text-stroke-purple {
+            -webkit-text-stroke: 1px #e11d48;
+            color: transparent;
+        }
+        @media (min-width: 768px) {
+            .text-stroke {
+                -webkit-text-stroke: 3px black;
+            }
+            .text-stroke-purple {
+                -webkit-text-stroke: 2px #e11d48;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white text-black font-sans selection:bg-[#e11d48] selection:text-white overflow-x-hidden">
+
+    <!-- SOCIAL PROOF ALERT -->
+    <div id="social-proof-alert" class="fixed bottom-6 right-6 z-50 transition-all duration-700 transform translate-y-10 opacity-0 pointer-events-none">
+        <div class="bg-black/90 backdrop-blur-lg border border-[#e11d48]/40 p-4 rounded-sm shadow-[0_10px_40px_rgba(225,29,72,0.2)] flex items-start gap-4 max-w-sm">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#e11d48] to-[#9333ea] flex items-center justify-center shrink-0 mt-1">
+                <i data-lucide="bell" class="w-4 h-4 text-white"></i>
+            </div>
+            <div>
+                <p class="text-white text-sm font-medium">
+                    <span id="sp-name" class="font-bold"></span> <span id="sp-action"></span>
+                </p>
+                <p class="text-gray-400 text-xs mt-1 flex items-center gap-1">
+                    <i data-lucide="map-pin" class="w-3 h-3 text-[#e11d48]"></i> <span id="sp-location"></span> • Just now
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav id="main-nav" class="fixed w-full z-50 transition-all duration-500 border-b bg-transparent py-6 border-transparent">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl md:text-2xl font-black tracking-[0.2em] uppercase">
+                    VIBE <span class="font-light text-[#e11d48]">ESCAPE</span>
+                </span>
+            </div>
+            <div class="hidden md:flex space-x-12 text-xs font-bold tracking-[0.15em] uppercase text-gray-500">
+                <a href="#experience" class="hover:text-[#e11d48] transition-colors">Experience</a>
+                <a href="#dates" class="hover:text-[#e11d48] transition-colors">Tour Dates</a>
+            </div>
+            <button onclick="document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' })"
+                class="border border-black bg-black text-white px-6 py-2.5 text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#e11d48] hover:border-[#e11d48] transition-colors">
+                Apply
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-[110vh] flex flex-col justify-center bg-[#f8f8f8] pt-20 pb-24 overflow-hidden">
+        <!-- Subtle Purple Glow behind hero -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-[#e11d48]/10 to-[#9333ea]/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="absolute inset-0 z-0 flex items-end justify-center pointer-events-none">
+            <img src="usher.webp" alt="Usher and Chris Brown" class="w-[90%] md:w-[70%] lg:w-[60%] h-auto object-cover object-bottom mix-blend-multiply opacity-95" onerror="this.src='https://via.placeholder.com/1200x800?text=Usher+and+Chris+Brown'">
+        </div>
+        
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto mt-12 md:mt-0 flex-grow flex flex-col justify-start md:justify-center mb-16">
+            <p class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-6 text-[#e11d48]">
+                The Music Dept Presents
+            </p>
+            <h1 class="text-7xl md:text-9xl lg:text-[11rem] font-display uppercase tracking-normal mb-2 leading-[0.85]">
+                The Raymond <br /> <span class="text-[#e11d48]">&</span> Brown Tour
+            </h1>
+            <p class="mt-6 text-sm md:text-base font-bold tracking-[0.2em] uppercase text-black max-w-2xl mx-auto">
+                The Exclusive 2026 VIP R&B Experience
+            </p>
+        </div>
+
+        <!-- MARQUEE TAPE -->
+        <div class="absolute bottom-0 left-0 w-full bg-black text-white py-4 overflow-hidden z-20 flex flex-nowrap border-t border-b border-[#e11d48]/30 shadow-[0_0_30px_rgba(225,29,72,0.2)]">
+            <div class="animate-scroll shrink-0 flex items-center justify-around min-w-full text-xs md:text-sm font-bold tracking-[0.3em] uppercase">
+                <span class="mx-6 whitespace-nowrap">Strictly Limited Capacity</span><span class="text-[#e11d48]">•</span>
+                <span class="mx-6 whitespace-nowrap">Exclusive VIP Access</span><span class="text-[#e11d48]">•</span>
+                <span class="mx-6 whitespace-nowrap">Secure Your Spot</span><span class="text-[#e11d48]">•</span>
+                <span class="mx-6 whitespace-nowrap text-[#e11d48]">The Music Dept Presents</span><span class="text-[#e11d48]">•</span>
+            </div>
+            <div class="animate-scroll shrink-0 flex items-center justify-around min-w-full text-xs md:text-sm font-bold tracking-[0.3em] uppercase" aria-hidden="true">
+                <span class="mx-6 whitespace-nowrap">Strictly Limited Capacity</span><span class="text-[#e11d48]">•</span>
+                <span class="mx-6 whitespace-nowrap">Exclusive VIP Access</span><span class="text-[#e11d48]">•</span>
+                <span class="mx-6 whitespace-nowrap">Secure Your Spot</span><span class="text-[#e11d48]">•</span>
+                <span class="mx-6 whitespace-nowrap text-[#e11d48]">The Music Dept Presents</span><span class="text-[#e11d48]">•</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- THE BILLBOARD & COUNTDOWN -->
+    <section class="bg-black text-white py-24 md:py-32 overflow-hidden border-b border-gray-900 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#e11d48]/5 to-transparent pointer-events-none"></div>
+        <div class="w-full px-6 flex flex-col items-center justify-center text-center relative z-10">
+            <h2 class="text-[18vw] md:text-[14vw] font-display uppercase leading-[0.85] tracking-normal">
+                TWO ICONS.<br/>
+                <span class="text-stroke-purple">ONE NIGHT.</span>
+            </h2>
+            
+            <!-- Next Show Countdown -->
+            <div class="mt-20 border border-gray-800 bg-[#0a0a0a] p-8 md:p-12 w-full max-w-4xl shadow-[0_0_50px_rgba(225,29,72,0.05)]">
+                <p class="text-[#e11d48] font-bold tracking-[0.3em] uppercase text-xs mb-8">Next Stop: Washington, DC</p>
+                <div class="grid grid-cols-4 gap-4 md:gap-8 text-center divide-x divide-gray-800">
+                    <div class="flex flex-col">
+                        <span id="cd-days" class="text-5xl md:text-7xl font-display">00</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Days</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span id="cd-hours" class="text-5xl md:text-7xl font-display">00</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Hours</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span id="cd-minutes" class="text-5xl md:text-7xl font-display">00</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Minutes</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span id="cd-seconds" class="text-5xl md:text-7xl font-display text-[#e11d48]">00</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE PACKAGE DETAILS -->
+    <section id="experience" class="py-32 bg-[#050505] text-white relative z-20">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+                
+                <!-- Left Content Side -->
+                <div class="order-2 lg:order-1 lg:pt-12">
+                    <h2 class="text-5xl md:text-7xl font-display tracking-wide mb-6 uppercase">
+                        The <span class="text-[#e11d48]">Premium</span> <br /> Escape Package
+                    </h2>
+                    <p class="text-gray-400 text-lg md:text-xl font-light mb-12 leading-relaxed max-w-xl">
+                        A highly curated, full-service luxury experience designed for absolute comfort and unforgettable moments. Strictly limited to 12 guests per star coach.
+                    </p>
+
+                    <div class="flex flex-wrap items-baseline gap-3 mb-16 border-b border-gray-800 pb-8">
+                        <span class="text-6xl font-display tracking-wider">$2,500</span>
+                        <span class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500">Per Person</span>
+                        <span class="ml-0 md:ml-4 mt-2 md:mt-0 px-3 py-1 border border-[#e11d48] text-[#e11d48] bg-[#e11d48]/10 text-[10px] font-black tracking-widest uppercase shadow-[0_0_15px_rgba(225,29,72,0.3)]">Payment Plans Available</span>
+                    </div>
+
+                    <div class="space-y-12">
+                        <div class="flex items-start gap-8 group cursor-default">
+                            <div class="text-[#e11d48] font-display text-5xl opacity-50 group-hover:opacity-100 transition-opacity">01</div>
+                            <div>
+                                <h5 class="text-xl font-bold tracking-wide mb-2 uppercase">Luxury Coach Travel</h5>
+                                <p class="text-gray-400 text-sm font-light leading-relaxed">Premium star coach with round-trip transportation & VIP parking.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-8 group cursor-default">
+                            <div class="text-[#e11d48] font-display text-5xl opacity-50 group-hover:opacity-100 transition-opacity">02</div>
+                            <div>
+                                <h5 class="text-xl font-bold tracking-wide mb-2 uppercase">Overnight Lodging</h5>
+                                <p class="text-gray-400 text-sm font-light leading-relaxed">Onboard luxury sleep accommodations or hotel/Airbnb stays for overnight trips.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-8 group cursor-default">
+                            <div class="text-[#e11d48] font-display text-5xl opacity-50 group-hover:opacity-100 transition-opacity">03</div>
+                            <div>
+                                <h5 class="text-xl font-bold tracking-wide mb-2 uppercase">Curated Tailgate</h5>
+                                <p class="text-gray-400 text-sm font-light leading-relaxed">Fully catered, high-energy R&B tailgate experience before the show.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-8 group cursor-default">
+                            <div class="text-[#e11d48] font-display text-5xl opacity-50 group-hover:opacity-100 transition-opacity">04</div>
+                            <div>
+                                <h5 class="text-xl font-bold tracking-wide mb-2 uppercase">Premium Concert Access</h5>
+                                <p class="text-gray-400 text-sm font-light leading-relaxed">Your entry ticket to the show is completely covered.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-8 group cursor-default">
+                            <div class="text-[#e11d48] font-display text-5xl opacity-50 group-hover:opacity-100 transition-opacity">05</div>
+                            <div>
+                                <h5 class="text-xl font-bold tracking-wide mb-2 uppercase">VIP Bottle Service</h5>
+                                <p class="text-gray-400 text-sm font-light leading-relaxed">Your drink of choice waiting for you the moment you step onboard.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image Side (Hanging Badge) -->
+                <div class="order-1 lg:order-2 relative flex justify-center lg:justify-end -mt-16 lg:-mt-48 pointer-events-none">
+                    <div class="relative group w-full max-w-[300px] md:max-w-sm lg:max-w-md">
+                        <!-- Deep Purple/Magenta Glow -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-[#e11d48]/30 to-[#9333ea]/30 blur-[80px] rounded-full mix-blend-screen"></div>
+                        <img src="badge.png" alt="VIP All Access Badge" class="relative z-10 w-full object-contain drop-shadow-[0_40px_60px_rgba(0,0,0,1)] transition-transform duration-700 hover:rotate-3 origin-top pointer-events-auto" onerror="this.src='https://via.placeholder.com/300x500?text=VIP+Badge'">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- THE COACH PARALLAX ANIMATION -->
+    <section class="py-40 bg-black relative overflow-hidden border-t border-b border-gray-900">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#e11d48]/5 via-transparent to-[#9333ea]/5 pointer-events-none"></div>
+        <div class="text-center relative z-20 mb-20">
+            <p class="text-[#e11d48] font-bold tracking-[0.3em] uppercase text-xs mb-4">The Transport</p>
+            <h2 class="text-5xl md:text-7xl font-display text-white tracking-wide uppercase">Premium Star Coach</h2>
+        </div>
+        
+        <!-- Animated Bus Track -->
+        <div class="relative w-full h-[200px] md:h-[300px] flex items-center">
+            <div class="w-full h-px bg-gray-800 absolute top-1/2 -translate-y-1/2"></div>
+            
+            <div class="animate-drive absolute w-full flex justify-start items-center">
+                <!-- Stylized Luxury Coach Representation -->
+                <div class="relative w-[300px] md:w-[500px] h-[100px] md:h-[160px] bg-gradient-to-r from-gray-900 via-black to-gray-900 border border-gray-800 rounded-lg shadow-[0_20px_50px_rgba(225,29,72,0.15)] flex items-center justify-center">
+                    <!-- Windows -->
+                    <div class="absolute top-4 left-4 right-12 h-1/2 bg-black flex gap-2 overflow-hidden">
+                        <div class="w-1/4 h-full bg-gradient-to-b from-gray-800 to-black opacity-50"></div>
+                        <div class="w-1/4 h-full bg-gradient-to-b from-gray-800 to-black opacity-50"></div>
+                        <div class="w-1/4 h-full bg-gradient-to-b from-gray-800 to-black opacity-50"></div>
+                        <div class="w-1/4 h-full bg-gradient-to-b from-[#e11d48]/20 to-black opacity-50"></div>
+                    </div>
+                    <!-- Headlights Glow -->
+                    <div class="absolute right-0 top-1/2 w-32 h-32 bg-white/10 blur-2xl rounded-full translate-x-1/2"></div>
+                    <!-- Taillights Glow -->
+                    <div class="absolute left-0 top-1/2 w-20 h-20 bg-[#e11d48]/30 blur-xl rounded-full -translate-x-1/2"></div>
+                    
+                    <span class="relative z-10 text-white/10 font-black tracking-[0.4em] uppercase text-xl md:text-3xl">VIBE ESCAPE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOUR DATES SECTION -->
+    <section id="dates" class="py-32 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="mb-20 text-center md:text-left flex flex-col md:flex-row justify-between items-end gap-8 border-b border-gray-200 pb-8">
+                <div>
+                    <h2 class="text-5xl md:text-7xl font-display tracking-wide mb-2 uppercase">
+                        2026 Tour Itinerary
+                    </h2>
+                    <p class="text-gray-500 text-sm font-bold tracking-[0.2em] uppercase">Select your destination.</p>
+                </div>
+            </div>
+
+            <div id="tour-dates-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
+                <!-- Tour dates will be injected here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CLICK FUNNEL: HOW IT WORKS -->
+    <section class="py-24 bg-[#f8f8f8] border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-7xl font-display tracking-wide mb-2 uppercase">
+                    How to Secure Your Access
+                </h2>
+                <p class="text-[#e11d48] text-sm font-bold tracking-[0.2em] uppercase">A streamlined VIP process.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                <div class="text-center group">
+                    <div class="text-7xl font-display text-gray-200 mb-4 group-hover:text-[#e11d48] transition-colors leading-none">01</div>
+                    <h4 class="text-lg font-bold tracking-wide mb-2 uppercase">Request Allocation</h4>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+                        Submit your application below. Spots are highly contested and processed on a strict first-come, first-served basis.
+                    </p>
+                </div>
+                <div class="text-center group">
+                    <div class="text-7xl font-display text-gray-200 mb-4 group-hover:text-[#e11d48] transition-colors leading-none">02</div>
+                    <h4 class="text-lg font-bold tracking-wide mb-2 uppercase">Secure Deposit</h4>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+                        If approved, our concierge will send a private, encrypted link to lock in your spot with a deposit or payment plan.
+                    </p>
+                </div>
+                <div class="text-center group">
+                    <div class="text-7xl font-display text-gray-200 mb-4 group-hover:text-[#e11d48] transition-colors leading-none">03</div>
+                    <h4 class="text-lg font-bold tracking-wide mb-2 uppercase">Experience The Vibe</h4>
+                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+                        Step onto the star coach. We handle the driving, the drinks, the tailgate, and the tickets. You just vibe.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLICATION FORM SECTION -->
+    <section id="apply-section" class="py-32 bg-black text-white relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#9333ea]/10 via-[#e11d48]/5 to-transparent pointer-events-none"></div>
+        <div class="max-w-3xl mx-auto px-6 md:px-12 relative z-10">
+            
+            <!-- Success Message (Hidden by default) -->
+            <div id="success-message" class="hidden text-center py-24 border border-gray-800 p-12 bg-black shadow-[0_0_50px_rgba(225,29,72,0.1)]">
+                <i data-lucide="check-circle-2" class="w-16 h-16 text-[#e11d48] mx-auto mb-8 stroke-1"></i>
+                <h3 class="text-5xl font-display tracking-wide mb-4 uppercase">Application Received</h3>
+                <p class="text-gray-400 text-lg font-light leading-relaxed">
+                    Thank you for applying to the Vibe Escape VIP Experience. Our concierge team will contact you shortly to confirm availability and coordinate the next steps.
+                </p>
+            </div>
+
+            <!-- Form Container -->
+            <div id="form-container" class="border border-gray-800 p-8 md:p-16 bg-black/80 backdrop-blur-sm relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-[#e11d48]/20 blur-[100px]"></div>
+                
+                <div class="mb-12 relative z-10">
+                    <div class="inline-flex items-center gap-3 bg-[#e11d48]/10 text-[#e11d48] px-4 py-2 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-8 border border-[#e11d48]/20">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#e11d48] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#e11d48]"></span>
+                        </span>
+                        High Demand Warning
+                    </div>
+                    <h3 class="text-6xl md:text-7xl font-display tracking-widest mb-4 uppercase italic">
+                        Request Access
+                    </h3>
+                    <p class="text-gray-400 font-light text-lg">
+                        Capacity is strictly limited to 12 guests per coach. Submit your details below to secure your placement before your city sells out.
+                    </p>
+                </div>
+
+                <form id="apply-form" class="space-y-10 relative z-10">
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div class="relative">
+                            <input type="text" name="firstName" id="firstName" required
+                                class="peer w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#e11d48] transition-colors placeholder-transparent"
+                                placeholder="First Name">
+                            <label for="firstName" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#e11d48]">
+                                First Name
+                            </label>
+                        </div>
+                        <div class="relative">
+                            <input type="text" name="lastName" id="lastName" required
+                                class="peer w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#e11d48] transition-colors placeholder-transparent"
+                                placeholder="Last Name">
+                            <label for="lastName" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#e11d48]">
+                                Last Name
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div class="relative">
+                            <input type="email" name="email" id="email" required
+                                class="peer w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#e11d48] transition-colors placeholder-transparent"
+                                placeholder="Email Address">
+                            <label for="email" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#e11d48]">
+                                Email Address
+                            </label>
+                        </div>
+                        <div class="relative">
+                            <input type="tel" name="phone" id="phone" required
+                                class="peer w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#e11d48] transition-colors placeholder-transparent"
+                                placeholder="Phone Number">
+                            <label for="phone" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#e11d48]">
+                                Phone Number
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div class="relative">
+                            <select name="city" id="city-select" required
+                                class="w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#e11d48] transition-colors appearance-none font-light">
+                                <option value="" disabled selected class="text-black">Select a Tour Date</option>
+                                <!-- Options injected via JS -->
+                            </select>
+                            <label for="city-select" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-[#e11d48]">
+                                Preferred Date
+                            </label>
+                        </div>
+                        <div class="relative">
+                            <select name="guests" id="guests" required
+                                class="w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#e11d48] transition-colors appearance-none font-light">
+                                <option value="1" class="text-black">1 Guest</option>
+                                <option value="2" class="text-black">2 Guests</option>
+                                <option value="3" class="text-black">3 Guests</option>
+                                <option value="4" class="text-black">4 Guests</option>
+                                <option value="5" class="text-black">5 Guests</option>
+                                <option value="6" class="text-black">6 Guests</option>
+                                <option value="7" class="text-black">7 Guests</option>
+                                <option value="8" class="text-black">8 Guests</option>
+                                <option value="9" class="text-black">9 Guests</option>
+                                <option value="10" class="text-black">10 Guests</option>
+                                <option value="11" class="text-black">11 Guests</option>
+                                <option value="12" class="text-black">12 Guests</option>
+                            </select>
+                            <label for="guests" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-[#e11d48]">
+                                Party Size
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="pt-8">
+                        <button type="submit" id="submit-btn"
+                            class="w-full flex items-center justify-center gap-4 bg-[#e11d48] text-white text-sm md:text-base font-bold uppercase tracking-[0.2em] py-6 px-8 hover:bg-[#be123c] transition-colors disabled:opacity-70 disabled:cursor-not-allowed group shadow-[0_0_20px_rgba(225,29,72,0.4)]">
+                            <span id="submit-text">Secure My Allocation</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
+                        </button>
+                        <p class="mt-6 text-[10px] md:text-xs text-center text-gray-500 uppercase tracking-widest font-light">
+                            256-Bit Secure Application Process
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-20 text-center border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-xl font-black uppercase tracking-[0.3em] mb-8">
+                VIBE <span class="font-light text-[#e11d48]">ESCAPE</span>
+            </h2>
+            
+            <a href="https://instagram.com/THEMUSICDEPTDMV" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-3 text-xs font-bold tracking-[0.2em] uppercase text-gray-500 hover:text-[#e11d48] transition-colors mb-16">
+                <i data-lucide="instagram" class="w-4 h-4"></i>
+                Follow @THEMUSICDEPTDMV
+            </a>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-gray-400 uppercase tracking-[0.15em] font-bold">
+                <p>&copy; 2026 The Raymond & Brown Tour.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-black transition-colors">Terms</a>
+                    <a href="#" class="hover:text-black transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-black transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 1. Tour Dates Data & Injection
+        const tourDates = [
+            { date: "Fri, Jun 26", city: "Denver, CO", venue: "Empower Field at Mile High" },
+            { date: "Tue, Jun 30", city: "Minneapolis, MN", venue: "U.S. Bank Stadium" },
+            { date: "Thu, Jul 2", city: "Detroit, MI", venue: "Ford Field" },
+            { date: "Fri, Jul 3", city: "Detroit, MI", venue: "Ford Field" },
+            { date: "Tue, Jul 7", city: "Cleveland, OH", venue: "Huntington Bank Field" },
+            { date: "Fri, Jul 10", city: "Washington, DC", venue: "Northwest Stadium" },
+            { date: "Sat, Jul 11", city: "Washington, DC", venue: "Northwest Stadium" },
+            { date: "Fri, Jul 17", city: "Charlotte, NC", venue: "Bank of America Stadium" },
+            { date: "Tue, Jul 21", city: "St. Louis, MO", venue: "The Dome at America’s Center" },
+            { date: "Sat, Jul 25", city: "Nashville, TN", venue: "Nissan Stadium" },
+            { date: "Tue, Jul 28", city: "Birmingham, AL", venue: "Protective Stadium" },
+            { date: "Sat, Aug 1", city: "Syracuse, NY", venue: "JMA Wireless Dome" },
+            { date: "Fri, Aug 7", city: "East Rutherford, NJ", venue: "MetLife Stadium" },
+            { date: "Sat, Aug 8", city: "East Rutherford, NJ", venue: "MetLife Stadium" },
+            { date: "Tue, Aug 11", city: "Toronto, ON", venue: "Rogers Stadium" },
+            { date: "Wed, Aug 12", city: "Toronto, ON", venue: "Rogers Stadium" },
+            { date: "Mon, Aug 17", city: "Boston, MA", venue: "Gillette Stadium" },
+            { date: "Fri, Aug 21", city: "Chicago, IL", venue: "Soldier Field" },
+            { date: "Fri, Aug 28", city: "San Francisco, CA", venue: "Levi's Stadium" },
+            { date: "Sat, Sep 5", city: "Las Vegas, NV", venue: "Allegiant Stadium" },
+            { date: "Sun, Sep 6", city: "Las Vegas, NV", venue: "Allegiant Stadium" },
+            { date: "Thu, Sep 10", city: "Dallas, TX", venue: "AT&T Stadium" },
+            { date: "Fri, Sep 25", city: "Los Angeles, CA", venue: "SoFi Stadium" },
+            { date: "Sat, Sep 26", city: "Los Angeles, CA", venue: "SoFi Stadium" },
+            { date: "Tue, Sep 29", city: "Glendale, AZ", venue: "State Farm Stadium" },
+            { date: "Sat, Oct 3", city: "El Paso, TX", venue: "Sun Bowl Stadium" },
+            { date: "Mon, Oct 5", city: "San Antonio, TX", venue: "Alamodome" },
+            { date: "Fri, Oct 9", city: "Houston, TX", venue: "NRG Stadium" },
+            { date: "Sat, Nov 7", city: "Atlanta, GA", venue: "Mercedes-Benz Stadium" },
+            { date: "Sun, Nov 8", city: "Atlanta, GA", venue: "Mercedes-Benz Stadium" },
+            { date: "Fri, Nov 20", city: "New Orleans, LA", venue: "Caesars Superdome" },
+            { date: "Thu, Dec 3", city: "Miami, FL", venue: "Hard Rock Stadium" },
+            { date: "Fri, Dec 11", city: "Tampa, FL", venue: "Raymond James Stadium" }
+        ];
+
+        const gridContainer = document.getElementById('tour-dates-grid');
+        const selectContainer = document.getElementById('city-select');
+
+        tourDates.forEach(tour => {
+            // Populate Grid
+            const card = document.createElement('div');
+            card.className = "group border-b border-gray-100 pb-4 hover:border-[#e11d48] transition-colors cursor-default";
+            card.innerHTML = `
+                <p class="text-xs font-bold tracking-[0.15em] uppercase text-gray-400 group-hover:text-[#e11d48] transition-colors mb-2">${tour.date}</p>
+                <h4 class="text-xl font-bold tracking-tight mb-1">${tour.city}</h4>
+                <p class="text-sm text-gray-500 font-display font-semibold">${tour.venue}</p>
+            `;
+            gridContainer.appendChild(card);
+
+            // Populate Form Select
+            const option = document.createElement('option');
+            option.value = `${tour.city} - ${tour.date}`;
+            option.className = "text-black";
+            option.textContent = `${tour.city} (${tour.date})`;
+            selectContainer.appendChild(option);
+        });
+
+        // 2. Navbar Scroll Effect
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-md', 'py-4', 'border-gray-200');
+                nav.classList.remove('bg-transparent', 'py-6', 'border-transparent');
+            } else {
+                nav.classList.remove('bg-white/95', 'backdrop-blur-md', 'py-4', 'border-gray-200');
+                nav.classList.add('bg-transparent', 'py-6', 'border-transparent');
+            }
+        });
+
+        // 3. Countdown Timer (DC Show - July 10, 2026)
+        const targetDate = new Date("2026-07-10T19:00:00").getTime();
+        
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            if (diff > 0) {
+                document.getElementById('cd-days').innerText = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+                document.getElementById('cd-hours').innerText = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                document.getElementById('cd-minutes').innerText = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+                document.getElementById('cd-seconds').innerText = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+            }
+        }, 1000);
+
+        // 4. Social Proof Rotation
+        const socialProofs = [
+            { name: "Marcus T.", location: "Atlanta, GA", action: "secured 2 VIP spots." },
+            { name: "Sarah & Friends", location: "Washington, DC", action: "just booked their coach." },
+            { name: "David L.", location: "Los Angeles, CA", action: "secured 4 VIP spots." },
+            { name: "Chloe M.", location: "Chicago, IL", action: "is joining the Vibe Escape." }
+        ];
+        
+        let currentProofIndex = 0;
+        const spAlert = document.getElementById('social-proof-alert');
+        const spName = document.getElementById('sp-name');
+        const spAction = document.getElementById('sp-action');
+        const spLocation = document.getElementById('sp-location');
+
+        setInterval(() => {
+            // Update Data
+            spName.textContent = socialProofs[currentProofIndex].name;
+            spAction.textContent = socialProofs[currentProofIndex].action;
+            spLocation.textContent = socialProofs[currentProofIndex].location;
+
+            // Show Alert
+            spAlert.classList.remove('translate-y-10', 'opacity-0', 'pointer-events-none');
+            spAlert.classList.add('translate-y-0', 'opacity-100');
+
+            // Hide Alert after 5 seconds
+            setTimeout(() => {
+                spAlert.classList.add('translate-y-10', 'opacity-0', 'pointer-events-none');
+                spAlert.classList.remove('translate-y-0', 'opacity-100');
+                
+                // Increment index while hidden
+                setTimeout(() => {
+                    currentProofIndex = (currentProofIndex + 1) % socialProofs.length;
+                }, 700);
+            }, 5000);
+
+        }, 12000); // Trigger every 12 seconds
+
+        // 5. Form Submission Simulation
+        const form = document.getElementById('apply-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const submitText = document.getElementById('submit-text');
+        const formContainer = document.getElementById('form-container');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Loading State
+            submitBtn.disabled = true;
+            submitText.textContent = 'Processing...';
+            
+            // Simulate API Call (1.5 seconds)
+            setTimeout(() => {
+                formContainer.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

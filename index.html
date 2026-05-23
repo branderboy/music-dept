@@ -357,37 +357,98 @@
     </section>
 
     <!-- CLICK FUNNEL: HOW IT WORKS -->
-    <section class="py-24 bg-[#f8f8f8] border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl md:text-7xl font-display tracking-wide mb-2 uppercase">
-                    How to Secure Your Access
+    <section class="py-32 bg-black text-white border-y border-gray-900 relative overflow-hidden">
+        <!-- Ambient glows -->
+        <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#e11d48]/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#9333ea]/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="text-center mb-24">
+                <p class="text-[#e11d48] text-xs font-bold tracking-[0.4em] uppercase mb-6">Three Steps · Zero Friction</p>
+                <h2 class="text-6xl md:text-8xl font-display tracking-wide mb-4 uppercase leading-[0.9]">
+                    How To <span class="text-[#e11d48]">Secure</span> <br /> Your Access
                 </h2>
-                <p class="text-[#e11d48] text-sm font-bold tracking-[0.2em] uppercase">A streamlined VIP fan experience process.</p>
+                <p class="text-gray-400 text-base md:text-lg font-light max-w-2xl mx-auto mt-6">A streamlined, white-glove VIP fan experience process — from request to first sip onboard.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
-                <div class="text-center group">
-                    <div class="text-7xl font-display text-gray-200 mb-4 group-hover:text-[#e11d48] transition-colors leading-none">01</div>
-                    <h4 class="text-lg font-bold tracking-wide mb-2 uppercase">Request Allocation</h4>
-                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto relative">
+                <!-- Connecting line (desktop only) -->
+                <div class="hidden md:block absolute top-16 left-[16.66%] right-[16.66%] h-px bg-gradient-to-r from-transparent via-[#e11d48]/40 to-transparent pointer-events-none"></div>
+
+                <!-- Step 01 -->
+                <div class="group relative border border-gray-800 bg-[#0a0a0a]/80 backdrop-blur-sm p-8 md:p-10 hover:border-[#e11d48]/60 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(225,29,72,0.2)] transition-all duration-500">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="relative">
+                            <span class="text-7xl md:text-8xl font-display text-transparent leading-none" style="-webkit-text-stroke: 1px #e11d48;">01</span>
+                            <span class="absolute -inset-2 bg-[#e11d48]/20 blur-2xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        </div>
+                        <div class="w-14 h-14 rounded-full bg-[#e11d48]/10 border border-[#e11d48]/40 flex items-center justify-center group-hover:bg-[#e11d48] group-hover:border-[#e11d48] transition-colors">
+                            <i data-lucide="file-text" class="w-6 h-6 text-[#e11d48] group-hover:text-white transition-colors"></i>
+                        </div>
+                    </div>
+                    <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-[#e11d48] mb-3">Step One</p>
+                    <h4 class="text-2xl md:text-3xl font-display tracking-wide mb-4 uppercase">Request Allocation</h4>
+                    <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed mb-6">
                         Submit your application below. Spots are highly contested and processed on a strict first-come, first-served basis.
                     </p>
+                    <div class="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-gray-600 group-hover:text-[#e11d48] transition-colors">
+                        <span>2 Min Application</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
                 </div>
-                <div class="text-center group">
-                    <div class="text-7xl font-display text-gray-200 mb-4 group-hover:text-[#e11d48] transition-colors leading-none">02</div>
-                    <h4 class="text-lg font-bold tracking-wide mb-2 uppercase">Secure Deposit</h4>
-                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+
+                <!-- Step 02 -->
+                <div class="group relative border border-gray-800 bg-[#0a0a0a]/80 backdrop-blur-sm p-8 md:p-10 hover:border-[#e11d48]/60 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(225,29,72,0.2)] transition-all duration-500 md:mt-12">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="relative">
+                            <span class="text-7xl md:text-8xl font-display text-transparent leading-none" style="-webkit-text-stroke: 1px #e11d48;">02</span>
+                            <span class="absolute -inset-2 bg-[#e11d48]/20 blur-2xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        </div>
+                        <div class="w-14 h-14 rounded-full bg-[#e11d48]/10 border border-[#e11d48]/40 flex items-center justify-center group-hover:bg-[#e11d48] group-hover:border-[#e11d48] transition-colors">
+                            <i data-lucide="lock" class="w-6 h-6 text-[#e11d48] group-hover:text-white transition-colors"></i>
+                        </div>
+                    </div>
+                    <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-[#e11d48] mb-3">Step Two</p>
+                    <h4 class="text-2xl md:text-3xl font-display tracking-wide mb-4 uppercase">Secure Deposit</h4>
+                    <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed mb-6">
                         If approved, our concierge will send a private, encrypted link to lock in your spot with a deposit or payment plan.
                     </p>
+                    <div class="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-gray-600 group-hover:text-[#e11d48] transition-colors">
+                        <span>24-Hour Response</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
                 </div>
-                <div class="text-center group">
-                    <div class="text-7xl font-display text-gray-200 mb-4 group-hover:text-[#e11d48] transition-colors leading-none">03</div>
-                    <h4 class="text-lg font-bold tracking-wide mb-2 uppercase">Experience The Vibe</h4>
-                    <p class="text-gray-500 text-sm font-light leading-relaxed">
+
+                <!-- Step 03 -->
+                <div class="group relative border border-gray-800 bg-[#0a0a0a]/80 backdrop-blur-sm p-8 md:p-10 hover:border-[#e11d48]/60 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(225,29,72,0.2)] transition-all duration-500">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="relative">
+                            <span class="text-7xl md:text-8xl font-display text-transparent leading-none" style="-webkit-text-stroke: 1px #e11d48;">03</span>
+                            <span class="absolute -inset-2 bg-[#e11d48]/20 blur-2xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        </div>
+                        <div class="w-14 h-14 rounded-full bg-[#e11d48]/10 border border-[#e11d48]/40 flex items-center justify-center group-hover:bg-[#e11d48] group-hover:border-[#e11d48] transition-colors">
+                            <i data-lucide="sparkles" class="w-6 h-6 text-[#e11d48] group-hover:text-white transition-colors"></i>
+                        </div>
+                    </div>
+                    <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-[#e11d48] mb-3">Step Three</p>
+                    <h4 class="text-2xl md:text-3xl font-display tracking-wide mb-4 uppercase">Experience The Vibe</h4>
+                    <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed mb-6">
                         Step onto the star coach. We handle the driving, the drinks, the tailgate, and the tickets. You just vibe.
                     </p>
+                    <div class="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-gray-600 group-hover:text-[#e11d48] transition-colors">
+                        <span>Show Day</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
                 </div>
+            </div>
+
+            <!-- CTA below steps -->
+            <div class="text-center mt-20">
+                <button onclick="document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' })"
+                    class="inline-flex items-center justify-center gap-3 bg-[#e11d48] hover:bg-[#be123c] text-white px-10 py-5 text-sm font-bold tracking-[0.2em] uppercase shadow-[0_0_30px_rgba(225,29,72,0.4)] transition-colors group">
+                    Start With Step 01
+                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
+                </button>
             </div>
         </div>
     </section>

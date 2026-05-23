@@ -386,15 +386,15 @@
 
     <!-- TOUR DATES SECTION -->
     <section id="dates" class="pt-24 pb-16 bg-white relative">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <div class="mb-10 text-center border-b border-gray-200 pb-6">
+        <div class="max-w-6xl mx-auto px-6 md:px-12 flex flex-col items-center">
+            <div class="mb-10 text-center border-b border-gray-200 pb-6 w-full">
                 <h2 class="text-5xl md:text-7xl font-display tracking-wide mb-2 uppercase">
                     2026 Tour Itinerary
                 </h2>
                 <p class="text-gray-500 text-sm font-bold tracking-[0.2em] uppercase">Select your destination.</p>
             </div>
 
-            <div id="tour-dates-grid" class="flex flex-wrap justify-center gap-x-12 gap-y-8 text-center">
+            <div id="tour-dates-grid" class="flex flex-wrap justify-center items-start gap-x-10 gap-y-10 text-center w-full mx-auto">
                 <!-- Tour dates will be injected here via JavaScript -->
             </div>
         </div>
@@ -780,7 +780,7 @@
         tourDates.forEach(tour => {
             // Populate Grid
             const card = document.createElement('div');
-            card.className = "group border-b border-gray-100 pb-3 hover:border-[#9333ea] transition-colors cursor-default text-center w-full sm:w-[260px] md:w-[280px]";
+            card.className = "group pb-3 hover:text-[#9333ea] transition-colors cursor-default text-center w-[220px] md:w-[240px] flex flex-col items-center";
             card.innerHTML = `
                 <p class="text-xs font-bold tracking-[0.15em] uppercase text-gray-400 group-hover:text-[#9333ea] transition-colors mb-2">${tour.date}</p>
                 <h4 class="text-xl font-bold tracking-tight mb-1">${tour.city}</h4>

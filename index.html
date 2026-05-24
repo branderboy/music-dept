@@ -150,7 +150,6 @@
             <p class="mt-5 text-base md:text-lg font-light leading-relaxed text-gray-700 max-w-xl">
                 A luxury bus-to-concert experience for Usher &amp; Chris Brown — travel, tailgate, and tickets, all included.
             </p>
-            <img src="hero3.png" alt="Vibe Escape" class="hidden md:block absolute top-[18%] right-[10%] lg:right-[12%] xl:right-[14%] w-[260px] lg:w-[340px] xl:w-[420px] object-contain drop-shadow-[0_25px_40px_rgba(0,0,0,0.25)] z-10 pointer-events-none" onerror="this.src='https://via.placeholder.com/420x240?text=Vibe+Escape'">
 
             <!-- Hero CTA -->
             <div class="mt-8">
@@ -216,7 +215,7 @@
                         <li class="flex gap-3"><i data-lucide="wine" class="w-4 h-4 text-[#db2777] mt-1 shrink-0"></i><span>Your bottle of choice on the coach + overnight lodging when needed.</span></li>
                     </ul>
 
-                    <div class="flex flex-wrap items-baseline gap-3 border-b border-gray-800 pb-8">
+                    <div class="flex flex-wrap items-baseline gap-3 border-b border-[#db2777]/20 pb-8">
                         <span class="text-6xl font-display tracking-wider">$2,500</span>
                         <span class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500">Per Person · Everything Included</span>
                     </div>
@@ -310,7 +309,7 @@
             </div>
 
             <!-- Next Show Countdown -->
-            <div class="mt-20 border border-gray-800 bg-[#0a0a0a] p-8 md:p-12 w-full max-w-4xl shadow-[0_0_50px_rgba(219,39,119,0.05)]">
+            <div class="mt-20 border border-[#db2777]/20 bg-[#0a0a0a] p-8 md:p-12 w-full max-w-4xl shadow-[0_0_50px_rgba(219,39,119,0.05)]">
                 <p class="text-[#db2777] font-bold tracking-[0.3em] uppercase text-xs mb-8">Next Stop: Washington, DC</p>
                 <div class="grid grid-cols-4 gap-4 md:gap-8 text-center divide-x divide-gray-800">
                     <div class="flex flex-col">
@@ -332,14 +331,14 @@
                 </div>
 
                 <!-- Share + Add to Calendar -->
-                <div class="mt-10 pt-8 border-t border-gray-800 flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="mt-10 pt-8 border-t border-[#db2777]/20 flex flex-col sm:flex-row gap-4 justify-center">
                     <button type="button" id="add-calendar-btn"
                         class="flex items-center justify-center gap-3 border border-[#db2777] text-white bg-[#db2777]/10 hover:bg-[#be185d] transition-colors px-6 py-3 text-xs font-bold tracking-[0.2em] uppercase">
                         <i data-lucide="calendar-plus" class="w-4 h-4"></i>
                         Add To Calendar
                     </button>
                     <button type="button" id="share-btn"
-                        class="flex items-center justify-center gap-3 border border-gray-700 text-white hover:border-[#db2777] hover:text-[#db2777] transition-colors px-6 py-3 text-xs font-bold tracking-[0.2em] uppercase">
+                        class="flex items-center justify-center gap-3 border border-gray-300 text-white hover:border-[#db2777] hover:text-[#db2777] transition-colors px-6 py-3 text-xs font-bold tracking-[0.2em] uppercase">
                         <i data-lucide="share-2" class="w-4 h-4"></i>
                         <span id="share-btn-text">Share</span>
                     </button>
@@ -557,7 +556,7 @@
     </section>
 
     <!-- APPLICATION FORM SECTION -->
-    <section id="apply-section" class="py-16 md:py-32 bg-black text-white relative overflow-hidden">
+    <section id="apply-section" class="py-16 md:py-32 bg-gradient-to-br from-[#fff0f6] via-[#fde2ec] to-[#fbcfe8] text-black relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-[#db2777]/10 via-[#db2777]/5 to-transparent pointer-events-none"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-to-br from-[#db2777]/10 to-[#db2777]/10 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
@@ -568,20 +567,20 @@
                 <h2 class="text-6xl md:text-8xl font-display tracking-wide uppercase leading-[0.9]">
                     Secure Your <br /><span class="text-[#db2777]">Spot Today</span>
                 </h2>
-                <p class="mt-6 max-w-2xl mx-auto text-white font-light text-base md:text-lg">
+                <p class="mt-6 max-w-2xl mx-auto text-gray-700 font-light text-base md:text-lg">
                     12 seats per bus. First come, first served. Apply below or DM us on Instagram to reserve your seat now.
                 </p>
-                <a href="https://instagram.com/themusicdeptdmv" target="_blank" rel="noopener" class="inline-flex items-center gap-3 mt-8 px-6 py-3 border border-[#db2777] bg-[#db2777]/10 text-white hover:bg-[#db2777] text-xs font-bold tracking-[0.2em] uppercase transition-colors">
+                <a href="https://instagram.com/themusicdeptdmv" target="_blank" rel="noopener" class="inline-flex items-center gap-3 mt-8 px-6 py-3 border border-[#db2777] bg-white text-[#db2777] hover:bg-[#db2777] hover:text-white text-xs font-bold tracking-[0.2em] uppercase transition-colors">
                     <i data-lucide="instagram" class="w-4 h-4"></i>
                     DM Us To Reserve Now
                 </a>
             </div>
 
             <!-- Success Message (Hidden by default) -->
-            <div id="success-message" class="hidden text-center py-24 border border-gray-800 p-12 bg-black shadow-[0_0_50px_rgba(219,39,119,0.1)] max-w-3xl mx-auto">
+            <div id="success-message" class="hidden text-center py-24 border border-[#db2777]/20 p-12 bg-white shadow-[0_0_50px_rgba(219,39,119,0.1)] max-w-3xl mx-auto">
                 <i data-lucide="check-circle-2" class="w-16 h-16 text-[#db2777] mx-auto mb-8 stroke-1"></i>
                 <h3 class="text-5xl font-display tracking-wide mb-4 uppercase">Application Received</h3>
-                <p class="text-white text-lg font-light leading-relaxed">
+                <p class="text-gray-700 text-lg font-light leading-relaxed">
                     Thank you for applying to the Vibe Escape VIP Fan Experience. Our concierge team will contact you shortly to confirm availability and coordinate the next steps of your fan experience.
                 </p>
             </div>
@@ -590,16 +589,16 @@
             <div id="form-grid" class="grid lg:grid-cols-5 gap-10 lg:gap-12 items-start">
 
             <!-- Form Container -->
-            <div id="form-container" class="order-1 lg:order-2 lg:col-span-3 border border-white/10 bg-[#0a0a0a] relative overflow-hidden">
+            <div id="form-container" class="order-1 lg:order-2 lg:col-span-3 border border-[#db2777]/20 bg-white relative overflow-hidden shadow-[0_20px_60px_rgba(219,39,119,0.15)]">
                 <!-- Header strip -->
-                <div class="relative px-8 md:px-14 pt-10 md:pt-14 pb-8 border-b border-white/10">
+                <div class="relative px-8 md:px-14 pt-10 md:pt-14 pb-8 border-b border-[#db2777]/15">
                     <div class="flex items-center justify-between mb-3">
-                        <p class="text-[10px] md:text-xs font-bold tracking-[0.35em] uppercase text-gray-500">Vibe Escape · Reservation</p>
-                        <p class="text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-gray-500"><span id="step-counter">01</span> <span class="text-gray-700">/</span> 04</p>
+                        <p class="text-[10px] md:text-xs font-bold tracking-[0.35em] uppercase text-[#db2777]">Vibe Escape · Reservation</p>
+                        <p class="text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-gray-500"><span id="step-counter">01</span> <span class="text-gray-300">/</span> 04</p>
                     </div>
-                    <h3 id="step-label" class="text-2xl md:text-3xl font-display tracking-wide uppercase">What's Included</h3>
-                    <div class="mt-6 w-full h-px bg-white/10 overflow-hidden">
-                        <div id="progress-bar" class="h-full bg-white transition-all duration-500" style="width: 25%"></div>
+                    <h3 id="step-label" class="text-2xl md:text-3xl font-display tracking-wide uppercase text-black">What's Included</h3>
+                    <div class="mt-6 w-full h-px bg-[#db2777]/15 overflow-hidden">
+                        <div id="progress-bar" class="h-full bg-[#db2777] transition-all duration-500" style="width: 25%"></div>
                     </div>
                 </div>
 
@@ -609,7 +608,7 @@
 
                     <!-- STEP 1: What's Included -->
                     <div data-step="1" class="form-step">
-                        <p class="text-white text-sm font-light mb-8">Here's everything in your Vibe Escape package.</p>
+                        <p class="text-gray-600 text-sm font-light mb-8">Here's everything in your Vibe Escape package.</p>
                         <ul class="space-y-3 mb-8">
                             <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#db2777] shrink-0"></i><span>Luxury Star Coach Travel</span></li>
                             <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#db2777] shrink-0"></i><span>Room &amp; Board on the Coach</span></li>
@@ -627,27 +626,27 @@
 
                     <!-- STEP 2: Payment Preference -->
                     <div data-step="2" class="form-step hidden">
-                        <p class="text-white text-sm font-light mb-8">Choose how you'd like to lock in your spot.</p>
+                        <p class="text-gray-600 text-sm font-light mb-8">Choose how you'd like to lock in your spot.</p>
                         <div class="space-y-4">
-                            <label class="flex items-start gap-4 p-5 border border-gray-800 hover:border-[#db2777] has-[:checked]:border-[#db2777] has-[:checked]:bg-[#db2777]/10 cursor-pointer transition-colors">
+                            <label class="flex items-start gap-4 p-5 border border-[#db2777]/20 hover:border-[#db2777] has-[:checked]:border-[#db2777] has-[:checked]:bg-[#db2777]/10 cursor-pointer transition-colors">
                                 <input type="radio" name="payment" value="deposit" required class="mt-1 accent-[#db2777]">
                                 <div>
                                     <p class="text-base font-bold tracking-wide uppercase mb-1">$500 Deposit</p>
-                                    <p class="text-xs text-white font-light leading-relaxed">Remaining $2,000 due 30 days before departure.</p>
+                                    <p class="text-xs text-gray-600 font-light leading-relaxed">Remaining $2,000 due 30 days before departure.</p>
                                 </div>
                             </label>
-                            <label class="flex items-start gap-4 p-5 border border-gray-800 hover:border-[#db2777] has-[:checked]:border-[#db2777] has-[:checked]:bg-[#db2777]/10 cursor-pointer transition-colors">
+                            <label class="flex items-start gap-4 p-5 border border-[#db2777]/20 hover:border-[#db2777] has-[:checked]:border-[#db2777] has-[:checked]:bg-[#db2777]/10 cursor-pointer transition-colors">
                                 <input type="radio" name="payment" value="full" class="mt-1 accent-[#db2777]">
                                 <div>
                                     <p class="text-base font-bold tracking-wide uppercase mb-1">Pay In Full · $2,500</p>
-                                    <p class="text-xs text-white font-light leading-relaxed">Fully confirmed — no further invoices.</p>
+                                    <p class="text-xs text-gray-600 font-light leading-relaxed">Fully confirmed — no further invoices.</p>
                                 </div>
                             </label>
-                            <label class="flex items-start gap-4 p-5 border border-gray-800 hover:border-[#db2777] has-[:checked]:border-[#db2777] has-[:checked]:bg-[#db2777]/10 cursor-pointer transition-colors">
+                            <label class="flex items-start gap-4 p-5 border border-[#db2777]/20 hover:border-[#db2777] has-[:checked]:border-[#db2777] has-[:checked]:bg-[#db2777]/10 cursor-pointer transition-colors">
                                 <input type="radio" name="payment" value="plan" class="mt-1 accent-[#db2777]">
                                 <div>
                                     <p class="text-base font-bold tracking-wide uppercase mb-1">Payment Plan</p>
-                                    <p class="text-xs text-white font-light leading-relaxed">A team member will reach out to set up a schedule.</p>
+                                    <p class="text-xs text-gray-600 font-light leading-relaxed">A team member will reach out to set up a schedule.</p>
                                 </div>
                             </label>
                         </div>
@@ -655,18 +654,18 @@
 
                     <!-- STEP 3: Your Details -->
                     <div data-step="3" class="form-step hidden">
-                        <p class="text-white text-sm font-light mb-8">Who should we reach out to?</p>
+                        <p class="text-gray-600 text-sm font-light mb-8">Who should we reach out to?</p>
                         <div class="space-y-8">
                             <div class="grid md:grid-cols-2 gap-8">
                                 <div class="relative">
                                     <input type="text" name="firstName" id="firstName" required
-                                        class="peer w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#db2777] transition-colors placeholder-transparent"
+                                        class="peer w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#db2777] transition-colors placeholder-transparent"
                                         placeholder="First Name">
                                     <label for="firstName" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#db2777]">First Name</label>
                                 </div>
                                 <div class="relative">
                                     <input type="text" name="lastName" id="lastName" required
-                                        class="peer w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#db2777] transition-colors placeholder-transparent"
+                                        class="peer w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#db2777] transition-colors placeholder-transparent"
                                         placeholder="Last Name">
                                     <label for="lastName" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#db2777]">Last Name</label>
                                 </div>
@@ -674,13 +673,13 @@
                             <div class="grid md:grid-cols-2 gap-8">
                                 <div class="relative">
                                     <input type="email" name="email" id="email" required
-                                        class="peer w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#db2777] transition-colors placeholder-transparent"
+                                        class="peer w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#db2777] transition-colors placeholder-transparent"
                                         placeholder="Email">
                                     <label for="email" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#db2777]">Email Address</label>
                                 </div>
                                 <div class="relative">
                                     <input type="tel" name="phone" id="phone" required
-                                        class="peer w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#db2777] transition-colors placeholder-transparent"
+                                        class="peer w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#db2777] transition-colors placeholder-transparent"
                                         placeholder="Phone">
                                     <label for="phone" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#db2777]">Phone Number</label>
                                 </div>
@@ -688,14 +687,14 @@
                             <div class="grid md:grid-cols-2 gap-8">
                                 <div class="relative">
                                     <select name="city" id="city-select" required
-                                        class="w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#db2777] transition-colors appearance-none font-light">
+                                        class="w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#db2777] transition-colors appearance-none font-light">
                                         <option value="" disabled selected class="text-black">Select a Tour Date</option>
                                     </select>
                                     <label for="city-select" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-[#db2777]">Preferred Date</label>
                                 </div>
                                 <div class="relative">
                                     <select name="guests" id="guests" required
-                                        class="w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#db2777] transition-colors appearance-none font-light">
+                                        class="w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#db2777] transition-colors appearance-none font-light">
                                         <option value="1" class="text-black">1 Guest</option>
                                         <option value="2" class="text-black">2 Guests</option>
                                         <option value="3" class="text-black">3 Guests</option>
@@ -717,22 +716,22 @@
 
                     <!-- STEP 4: A Little More -->
                     <div data-step="4" class="form-step hidden">
-                        <p class="text-white text-sm font-light mb-8">Last couple of questions and you're done.</p>
+                        <p class="text-gray-600 text-sm font-light mb-8">Last couple of questions and you're done.</p>
                         <div class="space-y-8">
                             <div class="relative">
                                 <input type="text" name="referral" id="referral"
-                                    class="peer w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#db2777] transition-colors placeholder-transparent"
+                                    class="peer w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#db2777] transition-colors placeholder-transparent"
                                     placeholder="How did you hear about us?">
                                 <label for="referral" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#db2777]">How Did You Hear About Vibe Escape?</label>
                             </div>
                             <div class="relative">
                                 <textarea name="notes" id="notes" rows="4"
-                                    class="peer w-full bg-transparent border-b border-gray-700 py-3 text-white focus:outline-none focus:border-[#db2777] transition-colors placeholder-transparent resize-none"
+                                    class="peer w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#db2777] transition-colors placeholder-transparent resize-none"
                                     placeholder="Any questions or special requests?"></textarea>
                                 <label for="notes" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#db2777]">Questions or Special Requests?</label>
                                 <p class="mt-2 text-xs text-gray-500 font-light">Dietary needs, accessibility requirements, tour questions, etc.</p>
                             </div>
-                            <div class="border border-gray-800 bg-gray-900/50 p-4 text-xs text-white font-light leading-relaxed">
+                            <div class="border border-[#db2777]/20 bg-[#db2777]/5 p-4 text-xs text-gray-600 font-light leading-relaxed">
                                 <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-[#db2777] mb-2">Important</p>
                                 The Music Dept is an independent operator and is not affiliated with Usher, Chris Brown, or their management or tour promoters. All payments are non-refundable. Submitting this form is an expression of interest only — your seat is not confirmed until a deposit or full payment is received and your agreement is signed.
                             </div>
@@ -741,14 +740,14 @@
                     </div>
 
                     <!-- Navigation Buttons -->
-                    <div class="flex items-center justify-between gap-4 mt-12 pt-8 border-t border-white/10">
+                    <div class="flex items-center justify-between gap-4 mt-12 pt-8 border-t border-[#db2777]/15">
                         <button type="button" id="prev-btn"
-                            class="text-xs font-bold tracking-[0.25em] uppercase text-gray-500 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-2">
+                            class="text-xs font-bold tracking-[0.25em] uppercase text-gray-500 hover:text-[#db2777] transition-colors disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-2">
                             <i data-lucide="arrow-left" class="w-4 h-4"></i>
                             Back
                         </button>
                         <button type="button" id="next-btn"
-                            class="flex items-center gap-3 px-7 py-4 bg-white text-black text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#db2777] hover:text-white transition-colors">
+                            class="flex items-center gap-3 px-7 py-4 bg-[#db2777] text-white text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#be185d] transition-colors">
                             Continue
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </button>
@@ -762,10 +761,10 @@
                 </div>
 
                 <!-- Trust Footer -->
-                <div class="px-8 md:px-14 py-6 border-t border-white/10 bg-black/40 flex flex-col md:flex-row items-center justify-between gap-3 text-[10px] md:text-xs tracking-[0.2em] uppercase text-gray-500 font-bold">
-                    <span class="flex items-center gap-2"><i data-lucide="lock" class="w-3.5 h-3.5"></i> Secure · Encrypted</span>
-                    <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-3.5 h-3.5"></i> No Payment Until Approved</span>
-                    <span class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5"></i> Reply In 24–48 Hours</span>
+                <div class="px-8 md:px-14 py-6 border-t border-[#db2777]/15 bg-[#db2777]/5 flex flex-col md:flex-row items-center justify-between gap-3 text-[10px] md:text-xs tracking-[0.2em] uppercase text-gray-600 font-bold">
+                    <span class="flex items-center gap-2"><i data-lucide="lock" class="w-3.5 h-3.5 text-[#db2777]"></i> Secure · Encrypted</span>
+                    <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#db2777]"></i> No Payment Until Approved</span>
+                    <span class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5 text-[#db2777]"></i> Reply In 24–48 Hours</span>
                 </div>
             </div>
 
@@ -776,69 +775,69 @@
                     <h3 class="text-3xl md:text-4xl font-display tracking-wide uppercase">Frequently Asked</h3>
                 </div>
 
-                <details class="group border border-gray-800 bg-[#0a0a0a] open:border-[#db2777]/50 transition-colors">
+                <details class="group border border-[#db2777]/20 bg-white open:border-[#db2777]/60 open:bg-[#db2777]/5 transition-colors shadow-[0_4px_15px_rgba(219,39,119,0.08)]">
                     <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
                         <span>What's included?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-[#db2777] transition-transform group-open:rotate-45"></i>
                     </summary>
-                    <div class="px-5 pb-5 text-white text-sm font-light leading-relaxed">
+                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
                         Round-trip luxury coach transport, VIP venue parking, curated R&B tailgate with food and bar service, premium concert ticket, and onboard bottle service. Overnight accommodations included for multi-day fan experiences.
                     </div>
                 </details>
 
-                <details class="group border border-gray-800 bg-[#0a0a0a] open:border-[#db2777]/50 transition-colors">
+                <details class="group border border-[#db2777]/20 bg-white open:border-[#db2777]/60 open:bg-[#db2777]/5 transition-colors shadow-[0_4px_15px_rgba(219,39,119,0.08)]">
                     <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
                         <span>How much is it?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-[#db2777] transition-transform group-open:rotate-45"></i>
                     </summary>
-                    <div class="px-5 pb-5 text-white text-sm font-light leading-relaxed">
+                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
                         $2,500 per person, all-inclusive. Payment plans are available — our concierge will discuss options after your application is approved.
                     </div>
                 </details>
 
-                <details class="group border border-gray-800 bg-[#0a0a0a] open:border-[#db2777]/50 transition-colors">
+                <details class="group border border-[#db2777]/20 bg-white open:border-[#db2777]/60 open:bg-[#db2777]/5 transition-colors shadow-[0_4px_15px_rgba(219,39,119,0.08)]">
                     <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
                         <span>How many spots per coach?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-[#db2777] transition-transform group-open:rotate-45"></i>
                     </summary>
-                    <div class="px-5 pb-5 text-white text-sm font-light leading-relaxed">
+                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
                         Strictly 12 VIP guests per Premium Star Coach — by design. The intimacy is the experience.
                     </div>
                 </details>
 
-                <details class="group border border-gray-800 bg-[#0a0a0a] open:border-[#db2777]/50 transition-colors">
+                <details class="group border border-[#db2777]/20 bg-white open:border-[#db2777]/60 open:bg-[#db2777]/5 transition-colors shadow-[0_4px_15px_rgba(219,39,119,0.08)]">
                     <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
                         <span>When will I be contacted?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-[#db2777] transition-transform group-open:rotate-45"></i>
                     </summary>
-                    <div class="px-5 pb-5 text-white text-sm font-light leading-relaxed">
+                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
                         Our concierge team responds to approved applications within 24 hours with an encrypted link to lock in your deposit.
                     </div>
                 </details>
 
-                <details class="group border border-gray-800 bg-[#0a0a0a] open:border-[#db2777]/50 transition-colors">
+                <details class="group border border-[#db2777]/20 bg-white open:border-[#db2777]/60 open:bg-[#db2777]/5 transition-colors shadow-[0_4px_15px_rgba(219,39,119,0.08)]">
                     <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
                         <span>Can I book for a group?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-[#db2777] transition-transform group-open:rotate-45"></i>
                     </summary>
-                    <div class="px-5 pb-5 text-white text-sm font-light leading-relaxed">
+                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
                         Yes — select up to 12 guests in the party size field. Private full-coach buyouts are also available; mention it in your follow-up call.
                     </div>
                 </details>
 
-                <details class="group border border-gray-800 bg-[#0a0a0a] open:border-[#db2777]/50 transition-colors">
+                <details class="group border border-[#db2777]/20 bg-white open:border-[#db2777]/60 open:bg-[#db2777]/5 transition-colors shadow-[0_4px_15px_rgba(219,39,119,0.08)]">
                     <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
                         <span>Is my deposit refundable?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-[#db2777] transition-transform group-open:rotate-45"></i>
                     </summary>
-                    <div class="px-5 pb-5 text-white text-sm font-light leading-relaxed">
+                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
                         Deposits are non-refundable but fully transferable. The Vibe Escape concierge will walk you through the full policy before you commit.
                     </div>
                 </details>
 
                 <div class="border border-[#db2777]/40 bg-[#db2777]/5 p-5 mt-6">
                     <p class="text-xs font-bold tracking-[0.2em] uppercase text-[#db2777] mb-2">Still have questions?</p>
-                    <p class="text-gray-300 text-sm font-light">Email <a href="mailto:concierge@musicdept.com" class="underline hover:text-[#db2777]">concierge@musicdept.com</a> for white-glove support.</p>
+                    <p class="text-gray-700 text-sm font-light">Email <a href="mailto:concierge@musicdept.com" class="underline hover:text-[#db2777]">concierge@musicdept.com</a> for white-glove support.</p>
                 </div>
             </aside>
 

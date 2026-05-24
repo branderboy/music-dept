@@ -1,0 +1,32 @@
+{
+  "name": "Vibe Escape · VIP R&B Tour Experience",
+  "short_name": "Vibe Escape",
+  "description": "The Music Dept presents Vibe Escape — 2026 VIP R&B tour experience featuring Usher & Chris Brown.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0a",
+  "theme_color": "#db2777",
+  "icons": [
+    {
+      "src": "badge.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "badge.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "badge.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["entertainment", "music", "lifestyle"]
+}

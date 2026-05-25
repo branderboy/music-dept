@@ -184,7 +184,7 @@
     </header>
 
     <!-- THE PACKAGE DETAILS -->
-    <section id="experience" class="py-16 md:py-32 bg-gradient-to-br from-[#0a0a0a] via-[#1a0a14] to-[#0a0518] text-white relative z-20 overflow-hidden">
+    <section id="experience" class="pt-16 pb-8 md:pt-32 md:pb-12 bg-gradient-to-br from-[#0a0a0a] via-[#1a0a14] to-[#0a0518] text-white relative z-20 overflow-hidden">
         <div class="absolute top-0 left-0 w-[600px] h-[600px] bg-[#d97706]/15 blur-[140px] rounded-full pointer-events-none"></div>
         <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#d97706]/15 blur-[140px] rounded-full pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
@@ -226,60 +226,30 @@
 
             </div>
 
-            <!-- 5 Features Row (full width, under photo + content) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-6">
-                <div class="group cursor-default text-center flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center mb-3 transition-colors">
-                        <i data-lucide="bus" class="w-5 h-5 text-white transition-colors"></i>
+            <!-- 5 Features Carousel (one at a time, horizontal layout, swap via arrow) -->
+            <div class="relative flex items-center gap-6 md:gap-10 max-w-4xl mx-auto">
+                <button type="button" id="feat-prev" class="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full border border-[#d97706] text-[#d97706] hover:bg-[#d97706] hover:text-white transition-colors flex items-center justify-center" aria-label="Previous">
+                    <i data-lucide="arrow-left" class="w-5 h-5 md:w-6 md:h-6"></i>
+                </button>
+
+                <div id="feat-stage" class="flex-1 min-h-[180px] flex items-center gap-5 md:gap-7">
+                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#d97706] flex items-center justify-center shrink-0">
+                        <i id="feat-icon" data-lucide="bus" class="w-6 h-6 md:w-7 md:h-7 text-white"></i>
                     </div>
-                    <h5 class="text-base font-bold tracking-wide mb-2 uppercase">Luxury Star Coach Travel</h5>
-                    <ul class="text-white text-sm font-light leading-snug space-y-1 text-left self-stretch">
-                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Premium star coach ride</span></li>
-                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>VIP venue parking</span></li>
-                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Round-trip transport</span></li>
-                    </ul>
-                </div>
-                <div class="group cursor-default text-center flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center mb-3 transition-colors">
-                        <i data-lucide="bed-double" class="w-5 h-5 text-white transition-colors"></i>
+                    <div class="flex-1">
+                        <p class="text-[10px] md:text-xs font-black tracking-[0.3em] uppercase text-[#d97706] mb-2"><span id="feat-counter">01</span> / 05</p>
+                        <h5 id="feat-title" class="text-xl md:text-2xl font-bold tracking-wide mb-3 uppercase text-white">Luxury Star Coach Travel</h5>
+                        <ul id="feat-bullets" class="text-white text-sm md:text-base font-light leading-snug space-y-1">
+                            <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Premium star coach ride</span></li>
+                            <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>VIP venue parking</span></li>
+                            <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Round-trip transport</span></li>
+                        </ul>
                     </div>
-                    <h5 class="text-base font-bold tracking-wide mb-2 uppercase">Overnight Comfort &amp; Lodging</h5>
-                    <ul class="text-white text-sm font-light leading-snug space-y-1 text-left self-stretch">
-                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Sleep comfortably onboard</span></li>
-                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Hotel or Airbnb on overnight trips</span></li>
-                    </ul>
                 </div>
-                <div class="group cursor-default text-center flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center mb-3 transition-colors">
-                        <i data-lucide="utensils" class="w-5 h-5 text-white transition-colors"></i>
-                    </div>
-                    <h5 class="text-base font-bold tracking-wide mb-2 uppercase">Premium Tailgate Experience</h5>
-                    <ul class="text-white text-sm font-light leading-snug space-y-1 text-left self-stretch">
-                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Catered R&amp;B tailgate</span></li>
-                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Curated food &amp; vibes</span></li>
-                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>High-energy atmosphere</span></li>
-                    </ul>
-                </div>
-                <div class="group cursor-default text-center flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center mb-3 transition-colors">
-                        <i data-lucide="ticket" class="w-5 h-5 text-white transition-colors"></i>
-                    </div>
-                    <h5 class="text-base font-bold tracking-wide mb-2 uppercase">Concert Access Included</h5>
-                    <ul class="text-white text-sm font-light leading-snug space-y-1 text-left self-stretch">
-                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Concert ticket covered</span></li>
-                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Live Usher &amp; Chris Brown</span></li>
-                    </ul>
-                </div>
-                <div class="group cursor-default text-center flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center mb-3 transition-colors">
-                        <i data-lucide="wine" class="w-5 h-5 text-white transition-colors"></i>
-                    </div>
-                    <h5 class="text-base font-bold tracking-wide mb-2 uppercase">VIP Bottle Service</h5>
-                    <ul class="text-white text-sm font-light leading-snug space-y-1 text-left self-stretch">
-                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Full bottle of your choice</span></li>
-                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Vibes from the moment you board</span></li>
-                    </ul>
-                </div>
+
+                <button type="button" id="feat-next" class="shrink-0 w-14 h-14 md:w-20 md:h-20 rounded-full bg-[#d97706] text-white hover:bg-[#b45309] transition-colors flex items-center justify-center shadow-[0_10px_30px_rgba(217,119,6,0.4)]" aria-label="Next">
+                    <i data-lucide="arrow-right" class="w-6 h-6 md:w-8 md:h-8"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -1183,6 +1153,30 @@
 
         // Initial render
         renderStep();
+
+        // Features carousel (Premium Escape Package)
+        const features = [
+            { icon: 'bus', title: 'Luxury Star Coach Travel', bullets: ['Premium star coach ride', 'VIP venue parking', 'Round-trip transport'] },
+            { icon: 'bed-double', title: 'Overnight Comfort & Lodging', bullets: ['Sleep comfortably onboard', 'Hotel or Airbnb on overnight trips'] },
+            { icon: 'utensils', title: 'Premium Tailgate Experience', bullets: ['Catered R&B tailgate', 'Curated food & vibes', 'High-energy atmosphere'] },
+            { icon: 'ticket', title: 'Concert Access Included', bullets: ['Concert ticket covered', 'Live Usher & Chris Brown'] },
+            { icon: 'wine', title: 'VIP Bottle Service', bullets: ['Full bottle of your choice', 'Vibes from the moment you board'] }
+        ];
+        let featIndex = 0;
+        const featIcon = document.getElementById('feat-icon');
+        const featTitle = document.getElementById('feat-title');
+        const featBullets = document.getElementById('feat-bullets');
+        const featCounter = document.getElementById('feat-counter');
+        function renderFeature() {
+            const f = features[featIndex];
+            featIcon.setAttribute('data-lucide', f.icon);
+            featTitle.textContent = f.title;
+            featBullets.innerHTML = f.bullets.map(b => `<li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>${b}</span></li>`).join('');
+            featCounter.textContent = String(featIndex + 1).padStart(2, '0');
+            lucide.createIcons();
+        }
+        document.getElementById('feat-next').addEventListener('click', () => { featIndex = (featIndex + 1) % features.length; renderFeature(); });
+        document.getElementById('feat-prev').addEventListener('click', () => { featIndex = (featIndex - 1 + features.length) % features.length; renderFeature(); });
 
         // 6. Service Worker registration (PWA)
         if ('serviceWorker' in navigator) {

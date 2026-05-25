@@ -534,8 +534,9 @@
             </div>
 
             <!-- Search (Location + Dates) -->
-            <div class="w-full max-w-3xl mb-16 md:mb-20">
-              <div class="flex flex-col md:flex-row md:items-stretch gap-3 md:gap-0 bg-white border border-gray-300 md:rounded-full md:shadow-[0_4px_20px_rgba(0,0,0,0.06)] md:overflow-hidden focus-within:border-[#db2777] transition-colors">
+            <div class="w-full max-w-3xl mb-16 md:mb-20 relative">
+              <div class="absolute -inset-1 md:-inset-2 bg-gradient-to-r from-[#db2777] via-[#f472b6] to-[#db2777] rounded-2xl md:rounded-full blur-md opacity-60 animate-pulse pointer-events-none"></div>
+              <div class="relative flex flex-col md:flex-row md:items-stretch gap-3 md:gap-0 bg-white border-2 border-[#db2777] rounded-2xl md:rounded-full shadow-[0_10px_40px_rgba(219,39,119,0.35)] md:shadow-[0_8px_30px_rgba(219,39,119,0.25)] overflow-hidden focus-within:border-[#9d174d] focus-within:shadow-[0_15px_50px_rgba(219,39,119,0.5)] transition-all duration-300">
                     <!-- Location -->
                     <div class="flex-1 md:flex-[2] relative px-5 py-3 md:py-4 border-b md:border-b-0 md:border-r border-gray-200">
                         <label for="tour-location" class="block text-[10px] font-black tracking-[0.25em] uppercase text-gray-700 mb-1">Location</label>

@@ -82,6 +82,13 @@
         .pink-on-dark {
             color: #db2777;
         }
+        /* Mobile: lighten the brand hot pink so it actually reads on dark bgs */
+        @media (max-width: 767px) {
+            [class~="text-[#db2777]"] { color: #ec4899 !important; }
+            [class~="bg-[#db2777]"] { background-color: #ec4899 !important; }
+            [class~="border-[#db2777]"] { border-color: #ec4899 !important; }
+            .pink-on-dark { color: #ec4899; }
+        }
         /* Smooth font rendering so text doesn't look razor-sharp on dark bgs */
         body {
             -webkit-font-smoothing: antialiased;
@@ -104,11 +111,11 @@
         }
         @media (max-width: 767px) {
             .pink-on-dark {
-                color: #f9a8d4;
+                color: #db2777;
             }
             .text-stroke-purple {
                 -webkit-text-stroke: 0;
-                color: #f9a8d4;
+                color: #db2777;
             }
         }
         @keyframes cta-pulse {
@@ -341,7 +348,7 @@
                     </ul>
 
                     <div class="flex flex-wrap items-baseline gap-3 border-b border-[#db2777]/20 pb-8">
-                        <span class="text-6xl font-display tracking-wider text-gray-400 line-through decoration-[#f9a8d4] decoration-[3px]">$2,500</span>
+                        <span class="text-6xl font-display tracking-wider text-gray-400 line-through decoration-[#db2777] decoration-[3px]">$2,500</span>
                         <span class="text-6xl font-display tracking-wider text-white">$1,000</span>
                         <span class="text-xs font-bold tracking-[0.2em] uppercase text-white">Per Person · Everything Included</span>
                     </div>
@@ -381,7 +388,7 @@
 
             <!-- Next Show Countdown -->
             <div class="mt-6 md:mt-8 border border-[#db2777]/20 bg-[#0a0a0a] p-8 md:p-12 w-full max-w-4xl shadow-[0_0_50px_rgba(219,39,119,0.05)] text-center">
-                <p class="text-[#f472b6] font-bold tracking-[0.3em] uppercase text-xs mb-3">Next Stop</p>
+                <p class="text-[#db2777] font-bold tracking-[0.3em] uppercase text-xs mb-3">Next Stop</p>
                 <h3 class="text-4xl md:text-6xl font-display tracking-wide uppercase text-white leading-[0.95]">Northwest Stadium</h3>
                 <p class="text-white text-base md:text-lg font-bold tracking-wide mt-3 mb-10">Friday · July 11</p>
 

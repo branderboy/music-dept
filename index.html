@@ -121,12 +121,18 @@
                 <a href="#experience" class="hover:text-[#db2777] transition-colors">Experience</a>
                 <a href="#dates" class="hover:text-[#db2777] transition-colors">Tour Dates</a>
             </div>
-            <a href="sms:+12025551212&body=Raymondbrown"
-                class="inline-flex items-center gap-2 text-[10px] sm:text-xs font-black tracking-[0.15em] sm:tracking-[0.2em] uppercase text-black hover:text-[#db2777] transition-colors">
-                <i data-lucide="message-square" class="w-4 h-4"></i>
-                <span class="hidden sm:inline">Text <span class="text-[#db2777]">Raymondbrown</span> to (202) 555-1212</span>
-                <span class="sm:hidden text-[#db2777]">Text Us</span>
-            </a>
+            <div class="flex items-center gap-4">
+                <a href="sms:+12025551212&body=Raymondbrown"
+                    class="hidden md:inline-flex items-center gap-2 text-xs font-black tracking-[0.2em] uppercase text-black hover:text-[#db2777] transition-colors">
+                    <i data-lucide="message-square" class="w-4 h-4"></i>
+                    <span>Text <span class="text-[#db2777]">Raymondbrown</span> to (202) 555-1212</span>
+                </a>
+                <button onclick="document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' })"
+                    class="inline-flex items-center gap-2 bg-[#db2777] hover:bg-[#be185d] text-white px-5 py-2.5 text-[10px] sm:text-xs font-black tracking-[0.2em] uppercase transition-colors shadow-[0_4px_15px_rgba(219,39,119,0.35)]">
+                    <i data-lucide="lock" class="w-3.5 h-3.5"></i>
+                    Reserve Your Spot
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -564,7 +570,7 @@
                 <!-- Header strip -->
                 <div class="relative px-8 md:px-14 pt-10 md:pt-14 pb-8 border-b border-[#db2777]/15">
                     <div class="flex items-center justify-between mb-3">
-                        <p class="text-[10px] md:text-xs font-bold tracking-[0.35em] uppercase text-[#db2777] flex items-center gap-2"><i data-lucide="lock" class="w-3 h-3"></i>Vibe Escape · Reservation</p>
+                        <p class="text-[10px] md:text-xs font-bold tracking-[0.35em] uppercase text-[#db2777] flex items-center gap-2"><i data-lucide="lock" class="w-3.5 h-3.5"></i>Vibe Escape · Reservation</p>
                         <p class="text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-gray-500"><span id="step-counter">01</span> <span class="text-gray-300">/</span> 04</p>
                     </div>
                     <h3 id="step-label" class="text-2xl md:text-3xl font-display tracking-wide uppercase text-black">What's Included</h3>
@@ -750,9 +756,9 @@
 
                 <!-- Trust Footer -->
                 <div class="px-8 md:px-14 py-6 border-t border-[#db2777]/15 bg-[#db2777]/5 flex flex-col md:flex-row items-center justify-between gap-3 text-[10px] md:text-xs tracking-[0.2em] uppercase text-gray-600 font-bold">
-                    <span class="flex items-center gap-2"><i data-lucide="lock" class="w-3.5 h-3.5 text-[#db2777]"></i> Secure · Encrypted</span>
-                    <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#db2777]"></i> No Payment Until Approved</span>
-                    <span class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5 text-[#db2777]"></i> Reply In 24–48 Hours</span>
+                    <span class="flex items-center gap-2"><i data-lucide="lock" class="w-3.5 h-3.5 text-black"></i> Secure · Encrypted</span>
+                    <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-black"></i> No Payment Until Approved</span>
+                    <span class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5 text-black"></i> Reply In 24–48 Hours</span>
                 </div>
             </div>
 

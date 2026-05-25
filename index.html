@@ -122,7 +122,7 @@
                 <a href="#dates" class="hover:text-[#db2777] transition-colors">Tour Dates</a>
             </div>
             <a href="sms:+12025551212&body=Raymondbrown"
-                class="hidden sm:inline-flex items-center gap-2 text-xs font-bold tracking-[0.15em] uppercase text-black hover:text-[#db2777] transition-colors">
+                class="hidden sm:inline-flex items-center gap-2 text-xs font-black tracking-[0.2em] uppercase text-black hover:text-[#db2777] transition-colors">
                 <i data-lucide="message-square" class="w-4 h-4"></i>
                 Text <span class="text-[#db2777]">Raymondbrown</span> to (202) 555-1212
             </a>
@@ -311,25 +311,42 @@
             </div>
 
             <!-- Next Show Countdown -->
-            <div class="mt-20 border border-[#db2777]/20 bg-[#0a0a0a] p-8 md:p-12 w-full max-w-4xl shadow-[0_0_50px_rgba(219,39,119,0.05)]">
-                <p class="text-[#db2777] font-bold tracking-[0.3em] uppercase text-xs mb-8">Next Stop: Washington, DC</p>
+            <div class="mt-20 border border-[#db2777]/20 bg-[#0a0a0a] p-8 md:p-12 w-full max-w-4xl shadow-[0_0_50px_rgba(219,39,119,0.05)] text-left">
+                <p class="text-[#db2777] font-bold tracking-[0.3em] uppercase text-xs mb-3">Next Stop · Launch Show</p>
+                <h3 class="text-3xl md:text-5xl font-display tracking-wide uppercase text-white mb-2 leading-[0.95]">Washington, DC</h3>
+                <p class="text-white/80 text-sm md:text-base font-light mb-2">Northwest Stadium · Friday, July 11</p>
+                <p class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-[#db2777] mb-8">Friends &amp; Supporters Price: <span class="line-through text-white/40 mr-1">$2,500</span> $1,000 · use code FORMYPEOPLE</p>
+
                 <div class="grid grid-cols-4 gap-4 md:gap-8 text-center divide-x divide-gray-800">
                     <div class="flex flex-col">
                         <span id="cd-days" class="text-5xl md:text-7xl font-display">00</span>
-                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Days</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-300 mt-2">Days</span>
                     </div>
                     <div class="flex flex-col">
                         <span id="cd-hours" class="text-5xl md:text-7xl font-display">00</span>
-                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Hours</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-300 mt-2">Hours</span>
                     </div>
                     <div class="flex flex-col">
                         <span id="cd-minutes" class="text-5xl md:text-7xl font-display">00</span>
-                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Minutes</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-300 mt-2">Minutes</span>
                     </div>
                     <div class="flex flex-col">
                         <span id="cd-seconds" class="text-5xl md:text-7xl font-display text-[#db2777]">00</span>
-                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Seconds</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-300 mt-2">Seconds</span>
                     </div>
+                </div>
+
+                <!-- What's Included -->
+                <div class="mt-10 pt-8 border-t border-[#db2777]/20">
+                    <p class="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-[#db2777] mb-4">What You're Saving On</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-white text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#db2777] shrink-0"></i>Luxury star coach travel</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#db2777] shrink-0"></i>VIP venue parking</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#db2777] shrink-0"></i>Round-trip transportation</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#db2777] shrink-0"></i>Catered R&amp;B tailgate</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#db2777] shrink-0"></i>Concert ticket included</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#db2777] shrink-0"></i>VIP bottle service onboard</li>
+                    </ul>
                 </div>
 
                 <!-- Share + Add to Calendar -->

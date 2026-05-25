@@ -122,15 +122,16 @@
                 <a href="#dates" class="hover:text-[#db2777] transition-colors">Tour Dates</a>
             </div>
             <a href="sms:+12025551212&body=Raymondbrown"
-                class="hidden sm:inline-flex items-center gap-2 text-xs font-black tracking-[0.2em] uppercase text-black hover:text-[#db2777] transition-colors">
+                class="inline-flex items-center gap-2 text-[10px] sm:text-xs font-black tracking-[0.15em] sm:tracking-[0.2em] uppercase text-black hover:text-[#db2777] transition-colors">
                 <i data-lucide="message-square" class="w-4 h-4"></i>
-                Text <span class="text-[#db2777]">Raymondbrown</span> to (202) 555-1212
+                <span class="hidden sm:inline">Text <span class="text-[#db2777]">Raymondbrown</span> to (202) 555-1212</span>
+                <span class="sm:hidden text-[#db2777]">Text Us</span>
             </a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="relative min-h-[110vh] flex flex-col justify-center bg-[#f8f8f8] pt-20 pb-24 overflow-hidden">
+    <header class="relative min-h-screen md:min-h-[110vh] flex flex-col justify-center bg-[#f8f8f8] pt-20 pb-20 md:pb-24 overflow-hidden">
         <!-- Subtle Purple Glow behind hero -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-[#db2777]/10 to-[#db2777]/5 rounded-full blur-[100px] pointer-events-none"></div>
 
@@ -227,7 +228,7 @@
 
             <!-- 5 Features Row (full width, under photo + content) -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-6">
-                <div class="group cursor-default text-center flex flex-col items-center p-6 bg-gradient-to-br from-[#db2777]/25 via-[#db2777]/15 to-[#db2777]/5 border border-[#db2777]/60 transition-colors shadow-[0_4px_20px_rgba(219,39,119,0.2)]">
+                <div class="group cursor-default text-center flex flex-col items-center">
                     <div class="w-12 h-12 rounded-full bg-[#db2777] border border-[#db2777] flex items-center justify-center mb-3 transition-colors">
                         <i data-lucide="bus" class="w-5 h-5 text-white transition-colors"></i>
                     </div>
@@ -238,7 +239,7 @@
                         <li class="flex justify-center gap-2"><span class="text-[#db2777] shrink-0">•</span><span>Round-trip transport</span></li>
                     </ul>
                 </div>
-                <div class="group cursor-default text-center flex flex-col items-center p-6 bg-gradient-to-br from-[#db2777]/25 via-[#db2777]/15 to-[#db2777]/5 border border-[#db2777]/60 transition-colors shadow-[0_4px_20px_rgba(219,39,119,0.2)]">
+                <div class="group cursor-default text-center flex flex-col items-center">
                     <div class="w-12 h-12 rounded-full bg-[#db2777] border border-[#db2777] flex items-center justify-center mb-3 transition-colors">
                         <i data-lucide="bed-double" class="w-5 h-5 text-white transition-colors"></i>
                     </div>
@@ -248,7 +249,7 @@
                         <li class="flex justify-center gap-2"><span class="text-[#db2777] shrink-0">•</span><span>Hotel or Airbnb on overnight trips</span></li>
                     </ul>
                 </div>
-                <div class="group cursor-default text-center flex flex-col items-center p-6 bg-gradient-to-br from-[#db2777]/25 via-[#db2777]/15 to-[#db2777]/5 border border-[#db2777]/60 transition-colors shadow-[0_4px_20px_rgba(219,39,119,0.2)]">
+                <div class="group cursor-default text-center flex flex-col items-center">
                     <div class="w-12 h-12 rounded-full bg-[#db2777] border border-[#db2777] flex items-center justify-center mb-3 transition-colors">
                         <i data-lucide="utensils" class="w-5 h-5 text-white transition-colors"></i>
                     </div>
@@ -259,7 +260,7 @@
                         <li class="flex justify-center gap-2"><span class="text-[#db2777] shrink-0">•</span><span>High-energy atmosphere</span></li>
                     </ul>
                 </div>
-                <div class="group cursor-default text-center flex flex-col items-center p-6 bg-gradient-to-br from-[#db2777]/25 via-[#db2777]/15 to-[#db2777]/5 border border-[#db2777]/60 transition-colors shadow-[0_4px_20px_rgba(219,39,119,0.2)]">
+                <div class="group cursor-default text-center flex flex-col items-center">
                     <div class="w-12 h-12 rounded-full bg-[#db2777] border border-[#db2777] flex items-center justify-center mb-3 transition-colors">
                         <i data-lucide="ticket" class="w-5 h-5 text-white transition-colors"></i>
                     </div>
@@ -269,7 +270,7 @@
                         <li class="flex justify-center gap-2"><span class="text-[#db2777] shrink-0">•</span><span>Live Usher &amp; Chris Brown</span></li>
                     </ul>
                 </div>
-                <div class="group cursor-default text-center flex flex-col items-center p-6 bg-gradient-to-br from-[#db2777]/25 via-[#db2777]/15 to-[#db2777]/5 border border-[#db2777]/60 transition-colors shadow-[0_4px_20px_rgba(219,39,119,0.2)]">
+                <div class="group cursor-default text-center flex flex-col items-center">
                     <div class="w-12 h-12 rounded-full bg-[#db2777] border border-[#db2777] flex items-center justify-center mb-3 transition-colors">
                         <i data-lucide="wine" class="w-5 h-5 text-white transition-colors"></i>
                     </div>
@@ -354,7 +355,7 @@
     </section>
 
     <!-- THE COACH PARALLAX ANIMATION -->
-    <section class="py-20 bg-white relative overflow-hidden border-t border-b border-gray-200">
+    <section class="py-12 md:py-20 bg-white relative overflow-hidden border-t border-b border-gray-200">
         <div class="text-center relative z-20 mb-8">
             <p class="text-[#db2777] font-bold tracking-[0.3em] uppercase text-xs mb-4">The Transport · Fan Experience</p>
             <h2 class="text-6xl md:text-8xl font-display text-black tracking-wide uppercase leading-[0.9]">Premium Star Coach</h2>
@@ -865,7 +866,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-white py-20 text-center border-t border-gray-100">
+    <footer class="bg-white py-12 md:py-20 text-center border-t border-gray-100">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-6xl md:text-8xl font-display uppercase tracking-wide mb-10 leading-none">
                 VIBE <span class="text-[#db2777]">ESCAPE</span>

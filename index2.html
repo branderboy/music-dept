@@ -8,7 +8,6 @@
     <meta name="keywords" content="Vibe Escape, VIP R&B tour, Music Dept, Usher tour, Chris Brown tour, luxury concert experience, fan experience, premium star coach">
 
     <!-- PWA -->
-    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#d97706">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -1179,11 +1178,12 @@
         document.getElementById('feat-next').addEventListener('click', () => { featIndex = (featIndex + 1) % features.length; renderFeature(); });
         document.getElementById('feat-prev').addEventListener('click', () => { featIndex = (featIndex - 1 + features.length) % features.length; renderFeature(); });
 
-        // 6. Service Worker registration (PWA)
+        // Auto-unregister any stale service worker so visitors don't see cached old content
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js').catch(err => console.warn('SW register failed', err));
-            });
+            navigator.serviceWorker.getRegistrations().then(regs => regs.forEach(r => r.unregister()));
+            if (window.caches) {
+                caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+            }
         }
     </script>
 </body>

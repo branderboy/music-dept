@@ -92,30 +92,12 @@
 </head>
 <body class="min-h-screen bg-white text-black font-sans selection:bg-[#db2777] selection:text-white overflow-x-hidden">
 
-    <!-- LAUNCH SHOW POPUP (iMessage text) -->
+    <!-- LAUNCH SHOW POPUP -->
     <div id="launch-popup" class="fixed inset-0 z-[100] hidden items-center justify-center px-4 py-8 bg-black/70 backdrop-blur-sm overflow-y-auto" style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;">
-        <div class="relative w-full max-w-2xl bg-white rounded-[2rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.6)] animate-[popup-in_0.4s_ease-out] my-auto max-h-[90vh] flex flex-col">
-            <!-- iPhone notch -->
-            <div class="bg-white pt-2 pb-1 flex items-center justify-center">
-                <div class="w-24 h-5 bg-black rounded-full"></div>
-            </div>
+        <div class="relative w-full max-w-2xl my-auto animate-[popup-in_0.4s_ease-out]">
+            <button id="launch-popup-close" class="absolute -top-3 -right-3 w-9 h-9 rounded-full bg-white text-black text-xl flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors z-10">×</button>
 
-            <!-- Header bar -->
-            <div class="bg-[#f6f6f6] border-b border-gray-200 px-4 py-3 flex items-center gap-3">
-                <button id="launch-popup-close" class="text-[#007aff] text-lg leading-none">‹</button>
-                <div class="flex-1 flex flex-col items-center">
-                    <div class="w-10 h-10 rounded-full bg-[#db2777] flex items-center justify-center text-white font-bold text-xs mb-0.5">MD</div>
-                    <p class="text-[11px] font-semibold text-black leading-tight">The Music Dept</p>
-                    <p class="text-[9px] text-gray-500">iMessage</p>
-                </div>
-                <div class="w-4"></div>
-            </div>
-
-            <!-- Conversation -->
-            <div class="bg-white px-4 py-4 flex-1 overflow-y-auto">
-                <p class="text-center text-[10px] text-gray-400 mb-3">iMessage · Today 11:42 AM</p>
-                <div class="flex">
-                    <div class="max-w-[88%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-4 py-3 text-[15px] leading-relaxed whitespace-pre-line">I don&rsquo;t do this often &mdash; this one&rsquo;s for my people. 🖤
+            <div class="bg-[#e9e9eb] text-black rounded-[22px] rounded-bl-[6px] px-6 py-5 text-[16px] leading-relaxed whitespace-pre-line shadow-[0_30px_80px_rgba(0,0,0,0.6)]">I don&rsquo;t do this often &mdash; this one&rsquo;s for my people. 🖤
 
 We&rsquo;re taking a group to see Usher &amp; Chris Brown at Northwest Stadium on July 11th, and I opened a few discounted spots just for friends/supporters.
 
@@ -124,16 +106,10 @@ Luxury coach, VIP parking, catered tailgate, bottles, and concert ticket include
 Regularly $2,500 &mdash; for my people: $1,000.
 
 If you&rsquo;ve ever said &ldquo;let me know when you do something&rdquo; &mdash; this is that moment.</div>
-                </div>
-                <p class="text-center text-[10px] text-gray-400 pt-2">Delivered</p>
-            </div>
 
-            <!-- iMessage input bar (CTA) -->
-            <div class="bg-[#f6f6f6] border-t border-gray-200 px-3 py-2.5 flex items-center gap-2">
-                <button id="launch-popup-cta" class="flex-1 bg-[#db2777] hover:bg-[#be185d] text-white rounded-full py-2.5 text-sm font-semibold transition-colors">
-                    I'm In →
-                </button>
-            </div>
+            <button id="launch-popup-cta" class="mt-4 bg-[#db2777] hover:bg-[#be185d] text-white px-7 py-3.5 text-sm font-semibold rounded-full transition-colors shadow-lg">
+                I want in →
+            </button>
         </div>
     </div>
 

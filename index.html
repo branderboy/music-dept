@@ -173,7 +173,7 @@
     </div>
 
     <!-- NAVIGATION -->
-    <nav id="main-nav" class="fixed w-full z-50 transition-all duration-500 border-b bg-transparent py-6 border-transparent">
+    <nav id="main-nav" class="fixed w-full z-50 transition-colors duration-500 border-b bg-transparent py-4 border-transparent">
         <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <span class="text-xl md:text-2xl font-black tracking-[0.2em] uppercase">
@@ -194,7 +194,7 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="relative min-h-screen md:min-h-[110vh] flex flex-col justify-center bg-[#f8f8f8] pt-20 pb-20 md:pb-24 overflow-hidden">
+    <header class="relative min-h-screen md:min-h-[110vh] flex flex-col justify-center bg-[#f8f8f8] pt-20 pb-12 md:pb-16 overflow-hidden">
         <!-- Subtle Purple Glow behind hero -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-[#db2777]/10 to-[#db2777]/5 rounded-full blur-[100px] pointer-events-none"></div>
 
@@ -206,7 +206,7 @@
             </div>
         </div>
 
-        <div class="relative z-10 text-left px-6 md:px-12 w-full max-w-7xl mx-auto flex-grow flex flex-col items-start justify-center pt-16 md:pt-24 pb-24 md:pb-28">
+        <div class="relative z-10 text-left px-6 md:px-12 w-full max-w-7xl mx-auto flex-grow flex flex-col items-start justify-center pt-16 md:pt-24 pb-10 md:pb-12">
             <!-- Mobile VIP Badge (inline) -->
             <div class="md:hidden w-44 sm:w-52 mx-auto mb-6 relative">
                 <div class="absolute inset-0 bg-gradient-to-tr from-[#db2777]/40 to-[#db2777]/40 blur-[40px] rounded-full"></div>
@@ -650,12 +650,8 @@
                     Secure Your <br /><span class="text-[#db2777]">Spot Today</span>
                 </h2>
                 <p class="mt-6 max-w-2xl mx-auto text-white font-medium text-base md:text-lg">
-                    12 seats per bus. First come, first served. Apply below or DM us on Instagram to reserve your seat now.
+                    12 seats per bus. First come, first served. Apply below to reserve your seat.
                 </p>
-                <a href="https://instagram.com/themusicdeptdmv" target="_blank" rel="noopener" class="inline-flex items-center gap-3 mt-8 px-6 py-3 border border-[#db2777] bg-[#db2777]/10 text-white hover:bg-[#db2777] text-xs font-bold tracking-[0.2em] uppercase transition-colors">
-                    <i data-lucide="instagram" class="w-4 h-4"></i>
-                    DM Us To Reserve Now
-                </a>
             </div>
 
             <!-- Success Message (Hidden by default) -->
@@ -709,11 +705,7 @@
                 </div>
                 <!-- Header strip -->
                 <div class="relative px-5 sm:px-8 md:px-14 pt-10 md:pt-14 pb-8 border-b border-[#db2777]/15">
-                    <div class="flex items-center justify-between mb-3">
-                        <div class="inline-flex items-center gap-2 bg-black text-white px-3 py-1.5">
-                            <i data-lucide="lock-keyhole" class="w-4 h-4 text-white"></i>
-                            <span class="text-xs font-bold tracking-[0.15em] uppercase">Your Information Is Protected</span>
-                        </div>
+                    <div class="flex items-center justify-end mb-3">
                         <p class="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-gray-800"><span id="step-counter">01</span> <span class="text-gray-400">/</span> 04</p>
                     </div>
                     <h3 id="step-label" class="text-2xl md:text-3xl font-display tracking-wide uppercase text-black">What's Included</h3>
@@ -982,9 +974,9 @@
                     </div>
                 </details>
 
-                <div class="border border-[#db2777]/40 bg-white p-5 mt-6">
+                <div class="pt-6 mt-6 border-t border-[#db2777]/30">
                     <p class="text-xs font-bold tracking-[0.2em] uppercase text-[#db2777] mb-2">Still have questions?</p>
-                    <p class="text-black text-sm font-medium">Email <a href="mailto:concierge@musicdept.com" class="underline hover:text-[#db2777]">concierge@musicdept.com</a> for white-glove support.</p>
+                    <p class="text-white text-sm font-medium">Email <a href="mailto:concierge@musicdept.com" class="underline hover:text-[#db2777]">concierge@musicdept.com</a> for white-glove support.</p>
                 </div>
             </aside>
 
@@ -1000,16 +992,11 @@
             </h2>
 
             <!-- Studio Time CTA (compact inline) -->
-            <div class="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-5 mb-5">
-                <p class="text-sm text-gray-800 font-medium">Also from The Music Dept: rehearsal rooms, recording studios, podcast spaces in Bethesda.</p>
-                <a href="https://www.themusicdeptdmv.com/" target="_blank" rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 bg-black hover:bg-[#db2777] text-white px-4 py-2 text-[11px] font-bold tracking-[0.2em] uppercase transition-colors whitespace-nowrap">
-                    Book Studio Time
-                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-                </a>
-            </div>
+            <p class="text-sm font-bold mb-5">
+                <a href="https://www.themusicdeptdmv.com/" target="_blank" rel="noopener noreferrer" class="text-black underline decoration-[#db2777] underline-offset-4 hover:text-[#db2777] transition-colors">Music Dept Recording Studio in Bethesda</a>
+            </p>
 
-            <div class="flex flex-col md:flex-row justify-between items-center gap-3 pt-4 border-t border-gray-200 text-[11px] text-gray-700 uppercase tracking-[0.15em] font-bold">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-3 pt-4 border-t border-gray-200 text-[11px] text-black uppercase tracking-[0.15em] font-bold">
                 <p>&copy; 2026 Vibe Escape · The Music Dept.</p>
                 <div class="flex gap-5">
                     <a href="https://instagram.com/THEMUSICDEPTDMV" target="_blank" rel="noopener noreferrer" class="hover:text-[#db2777] transition-colors inline-flex items-center gap-1.5"><i data-lucide="instagram" class="w-3.5 h-3.5"></i>@THEMUSICDEPTDMV</a>
@@ -1160,19 +1147,19 @@
         const applySection = document.getElementById('apply-section');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                nav.classList.add('bg-white/95', 'backdrop-blur-md', 'py-4', 'border-gray-200');
-                nav.classList.remove('bg-transparent', 'py-6', 'border-transparent');
+                nav.classList.add('bg-white/95', 'backdrop-blur-md', 'border-gray-200');
+                nav.classList.remove('bg-transparent', 'border-transparent');
             } else {
-                nav.classList.remove('bg-white/95', 'backdrop-blur-md', 'py-4', 'border-gray-200');
-                nav.classList.add('bg-transparent', 'py-6', 'border-transparent');
+                nav.classList.remove('bg-white/95', 'backdrop-blur-md', 'border-gray-200');
+                nav.classList.add('bg-transparent', 'border-transparent');
             }
 
-            // Mobile sticky CTA: show after scrolling past hero, hide when form is in view
+            // Mobile sticky CTA: show after scrolling past hero, hide once user is inside the form
             if (mobileCta && applySection) {
                 const applyRect = applySection.getBoundingClientRect();
-                const showThreshold = window.innerHeight * 0.6;
-                const formInView = applyRect.top < window.innerHeight * 0.6;
-                if (window.scrollY > showThreshold && !formInView) {
+                const pastHero = window.scrollY > window.innerHeight * 0.5;
+                const insideForm = applyRect.top < 80 && applyRect.bottom > 200;
+                if (pastHero && !insideForm) {
                     mobileCta.classList.remove('translate-y-full');
                 } else {
                     mobileCta.classList.add('translate-y-full');

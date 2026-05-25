@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Escape | VIP R&B Tour Experience by The Music Dept</title>
+    <meta name="description" content="The Music Dept presents Vibe Escape — a 2026 VIP R&B tour experience featuring Usher & Chris Brown. Luxury star coach, curated tailgate, and concert access for the ultimate fan experience.">
+    <meta name="keywords" content="Vibe Escape, VIP R&B tour, Music Dept, Usher tour, Chris Brown tour, luxury concert experience, fan experience, premium star coach">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#d97706">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Vibe Escape">
+    <link rel="apple-touch-icon" href="badge.png">
+    <link rel="icon" type="image/png" href="badge.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Vibe Escape | VIP R&B Tour Experience">
+    <meta property="og:description" content="The Music Dept presents Vibe Escape — 2026 VIP R&B tour featuring Usher & Chris Brown.">
+    <meta property="og:image" content="badge.png">
+    <meta property="og:type" content="website">
+
+    <!-- ADDED: Modern, younger Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- ADDED: Tailwind Configuration to use the new fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                        display: ['"Bebas Neue"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        @keyframes drive {
+            0% { transform: translateX(-120%); }
+            100% { transform: translateX(120%); }
+        }
+        .animate-scroll {
+            animation: scroll 20s linear infinite;
+        }
+        .animate-drive {
+            animation: drive 15s ease-in-out infinite;
+        }
+        @keyframes sway {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+        @keyframes popup-in {
+            0% { opacity: 0; transform: rotate(-1deg) scale(0.85) translateY(20px); }
+            100% { opacity: 1; transform: rotate(-1deg) scale(1) translateY(0); }
+        }
+        .animate-sway {
+            animation: sway 4s ease-in-out infinite;
+            transform-origin: top center;
+        }
+        .text-stroke {
+            -webkit-text-stroke: 2px black;
+            color: transparent;
+        }
+        .text-stroke-purple {
+            -webkit-text-stroke: 1px #d97706;
+            color: transparent;
+        }
+        @media (min-width: 768px) {
+            .text-stroke {
+                -webkit-text-stroke: 3px black;
+            }
+            .text-stroke-purple {
+                -webkit-text-stroke: 2px #d97706;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white text-black font-sans selection:bg-[#d97706] selection:text-white overflow-x-hidden">
+
+    <!-- LAUNCH SHOW POPUP (iMessage text) -->
+    <div id="launch-popup" class="fixed inset-0 z-[100] hidden items-center justify-center px-4 py-8 bg-black/70 backdrop-blur-sm overflow-y-auto" style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;">
+        <div class="relative w-full max-w-sm bg-white rounded-[2rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.6)] animate-[popup-in_0.4s_ease-out]">
+            <!-- iPhone notch -->
+            <div class="bg-white pt-2 pb-1 flex items-center justify-center">
+                <div class="w-24 h-5 bg-black rounded-full"></div>
+            </div>
+
+            <!-- Header bar -->
+            <div class="bg-[#f6f6f6] border-b border-gray-200 px-4 py-3 flex items-center gap-3">
+                <button id="launch-popup-close" class="text-[#007aff] text-lg leading-none">‹</button>
+                <div class="flex-1 flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full bg-[#d97706] flex items-center justify-center text-white font-bold text-xs mb-0.5">MD</div>
+                    <p class="text-[11px] font-semibold text-black leading-tight">The Music Dept</p>
+                    <p class="text-[9px] text-gray-500">iMessage</p>
+                </div>
+                <div class="w-4"></div>
+            </div>
+
+            <!-- Conversation -->
+            <div class="bg-white px-3 py-4 space-y-1.5">
+                <p class="text-center text-[10px] text-gray-400 mb-2">iMessage · Today 11:42 AM</p>
+
+                <div class="flex">
+                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
+                        yo — this one's for my people 🖤
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
+                        Usher &amp; Chris Brown · July 11 · DC
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
+                        coach + tailgate + bottles + ticket
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
+                        normally $2,500. for you → <span class="font-bold">$1,000</span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
+                        you in?
+                    </div>
+                </div>
+                <p class="text-center text-[10px] text-gray-400 pt-1">Delivered</p>
+            </div>
+
+            <!-- iMessage input bar (CTA) -->
+            <div class="bg-[#f6f6f6] border-t border-gray-200 px-3 py-2.5 flex items-center gap-2">
+                <button id="launch-popup-cta" class="flex-1 bg-[#d97706] hover:bg-[#b45309] text-white rounded-full py-2.5 text-sm font-semibold transition-colors">
+                    I'm In →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOCIAL PROOF ALERT -->
+    <div id="social-proof-alert" class="fixed bottom-6 right-6 z-50 transition-all duration-700 transform translate-y-10 opacity-0 pointer-events-none">
+        <div class="bg-black/90 backdrop-blur-lg border border-[#d97706]/40 p-4 rounded-sm shadow-[0_10px_40px_rgba(217,119,6,0.2)] flex items-start gap-4 max-w-sm">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#d97706] to-[#d97706] flex items-center justify-center shrink-0 mt-1">
+                <i data-lucide="bell" class="w-4 h-4 text-white"></i>
+            </div>
+            <div>
+                <p class="text-white text-sm font-medium">
+                    <span id="sp-name" class="font-bold"></span> <span id="sp-action"></span>
+                </p>
+                <p class="text-white text-xs mt-1 flex items-center gap-1">
+                    <i data-lucide="map-pin" class="w-3 h-3 text-[#d97706]"></i> <span id="sp-location"></span> • Just now
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav id="main-nav" class="fixed w-full z-50 transition-all duration-500 border-b bg-transparent py-6 border-transparent">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl md:text-2xl font-black tracking-[0.2em] uppercase">
+                    VIBE <span class="font-light text-[#d97706]">ESCAPE</span>
+                </span>
+            </div>
+            <div class="hidden md:flex space-x-12 text-xs font-bold tracking-[0.15em] uppercase text-gray-500">
+                <a href="#experience" class="hover:text-[#d97706] transition-colors">Experience</a>
+                <a href="#dates" class="hover:text-[#d97706] transition-colors">Tour Dates</a>
+            </div>
+            <button onclick="document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' })"
+                class="border border-black bg-black text-white px-6 py-2.5 text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#b45309] hover:border-[#d97706] transition-colors">
+                Apply
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-[110vh] flex flex-col justify-center bg-[#f8f8f8] pt-20 pb-24 overflow-hidden">
+        <!-- Subtle Purple Glow behind hero -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-[#d97706]/10 to-[#d97706]/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <!-- Floating VIP Badge - Hero Right Side -->
+        <div class="hidden md:block absolute top-1/2 -translate-y-1/2 right-12 lg:right-24 xl:right-40 z-20 w-[280px] lg:w-[380px] xl:w-[460px] pointer-events-none">
+            <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-tr from-[#d97706]/40 to-[#d97706]/40 blur-[60px] rounded-full mix-blend-screen"></div>
+                <img src="badge.png" alt="VIP All Access Badge" class="relative z-10 w-full object-contain drop-shadow-[0_25px_40px_rgba(0,0,0,0.45)] animate-sway origin-top pointer-events-auto transition-transform duration-700 hover:rotate-3" onerror="this.src='https://via.placeholder.com/460x520?text=VIP+Badge'">
+            </div>
+        </div>
+
+        <div class="relative z-10 text-left px-6 md:px-12 w-full max-w-7xl mx-auto flex-grow flex flex-col items-start justify-center pt-16 md:pt-24 pb-24 md:pb-28">
+            <p class="text-xs md:text-sm font-black tracking-[0.35em] uppercase mb-5 text-[#d97706]">
+                The Music Dept Presents
+            </p>
+            <h1 class="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display uppercase tracking-normal mb-3 leading-[0.9]">
+                Vibe <span class="text-[#d97706]">Escape</span>
+            </h1>
+            <p class="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-black max-w-2xl">
+                VIP R&amp;B Tour Experience
+            </p>
+            <p class="mt-5 text-base md:text-lg font-light leading-relaxed text-gray-700 max-w-xl">
+                A luxury bus-to-concert experience for Usher &amp; Chris Brown — travel, tailgate, and tickets, all included.
+            </p>
+
+            <!-- Hero CTA -->
+            <div class="mt-8">
+                <button onclick="document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' })"
+                    class="group inline-flex items-center gap-3 bg-[#d97706] hover:bg-[#b45309] text-white px-7 py-4 text-xs md:text-sm font-bold tracking-[0.25em] uppercase transition-colors shadow-[0_10px_30px_rgba(217,119,6,0.35)]">
+                    Book Your Fan Experience
+                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MARQUEE TAPE -->
+        <div class="absolute bottom-0 left-0 w-full bg-black text-white py-4 overflow-hidden z-20 flex flex-nowrap border-t border-b border-[#d97706]/30 shadow-[0_0_30px_rgba(217,119,6,0.2)]">
+            <div class="animate-scroll shrink-0 flex items-center justify-around min-w-full text-xs md:text-sm font-bold tracking-[0.3em] uppercase">
+                <span class="mx-6 whitespace-nowrap">Strictly Limited Capacity</span><span class="text-[#d97706]">•</span>
+                <span class="mx-6 whitespace-nowrap">Exclusive VIP Access</span><span class="text-[#d97706]">•</span>
+                <span class="mx-6 whitespace-nowrap">Secure Your Spot</span><span class="text-[#d97706]">•</span>
+                <span class="mx-6 whitespace-nowrap">Ultimate Fan Experience</span><span class="text-[#d97706]">•</span>
+                <span class="mx-6 whitespace-nowrap text-[#d97706]">The Music Dept Presents</span><span class="text-[#d97706]">•</span>
+            </div>
+            <div class="animate-scroll shrink-0 flex items-center justify-around min-w-full text-xs md:text-sm font-bold tracking-[0.3em] uppercase" aria-hidden="true">
+                <span class="mx-6 whitespace-nowrap">Strictly Limited Capacity</span><span class="text-[#d97706]">•</span>
+                <span class="mx-6 whitespace-nowrap">Exclusive VIP Access</span><span class="text-[#d97706]">•</span>
+                <span class="mx-6 whitespace-nowrap">Secure Your Spot</span><span class="text-[#d97706]">•</span>
+                <span class="mx-6 whitespace-nowrap">Ultimate Fan Experience</span><span class="text-[#d97706]">•</span>
+                <span class="mx-6 whitespace-nowrap text-[#d97706]">The Music Dept Presents</span><span class="text-[#d97706]">•</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- THE PACKAGE DETAILS -->
+    <section id="experience" class="py-16 md:py-32 bg-gradient-to-br from-[#0a0a0a] via-[#1a0a14] to-[#0a0518] text-white relative z-20 overflow-hidden">
+        <div class="absolute top-0 left-0 w-[600px] h-[600px] bg-[#d97706]/15 blur-[140px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#d97706]/15 blur-[140px] rounded-full pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start mb-12 md:mb-16">
+
+                <!-- Left Image Side -->
+                <div class="order-2 lg:order-1 relative flex justify-center lg:justify-start pointer-events-none">
+                    <div class="relative group w-full max-w-[400px] md:max-w-lg lg:max-w-xl">
+                        <!-- Deep Purple/Magenta Glow -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-[#d97706]/30 to-[#d97706]/30 blur-[80px] rounded-full mix-blend-screen"></div>
+                        <img src="hero3.png" alt="The Premium Escape Package" class="relative z-10 w-full object-contain drop-shadow-[0_40px_60px_rgba(0,0,0,0.8)] transition-transform duration-700 group-hover:scale-[1.02] pointer-events-auto" onerror="this.src='https://via.placeholder.com/600x500?text=Premium+Escape'">
+                    </div>
+                </div>
+
+                <!-- Right Content Side -->
+                <div class="order-1 lg:order-2">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="w-12 h-px bg-[#d97706]"></span>
+                        <span class="text-white text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase">What To Expect</span>
+                    </div>
+                    <h2 class="text-6xl md:text-8xl font-display tracking-wide mb-6 uppercase leading-[0.9]">
+                        Luxury Concert <br /> <span class="text-[#d97706]">Experience</span> Package
+                    </h2>
+                    <p class="text-gray-300 text-lg md:text-xl font-light mt-2 mb-6 leading-relaxed max-w-xl">
+                        Here's exactly what you get when you book a seat on the bus.
+                    </p>
+                    <ul class="text-white text-sm md:text-base font-light space-y-2 mb-10 max-w-xl">
+                        <li class="flex gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-[#d97706] mt-1 shrink-0"></i><span>We pick you up — round-trip star coach travel from your city to the venue.</span></li>
+                        <li class="flex gap-3"><i data-lucide="utensils" class="w-4 h-4 text-[#d97706] mt-1 shrink-0"></i><span>Curated R&amp;B tailgate party with food, drinks, and the vibes before the show.</span></li>
+                        <li class="flex gap-3"><i data-lucide="ticket" class="w-4 h-4 text-[#d97706] mt-1 shrink-0"></i><span>Concert ticket to Usher &amp; Chris Brown included — no separate purchase.</span></li>
+                        <li class="flex gap-3"><i data-lucide="wine" class="w-4 h-4 text-[#d97706] mt-1 shrink-0"></i><span>Your bottle of choice on the coach + overnight lodging when needed.</span></li>
+                    </ul>
+
+                    <div class="flex flex-wrap items-baseline gap-3 border-b border-[#d97706]/20 pb-8">
+                        <span class="text-6xl font-display tracking-wider">$2,500</span>
+                        <span class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500">Per Person · Everything Included</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 5 Features Row (full width, under photo + content) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-6">
+                <div class="group cursor-default text-center flex flex-col items-center p-6 bg-gradient-to-br from-[#d97706]/25 via-[#d97706]/15 to-[#d97706]/5 border border-[#d97706]/60 transition-colors shadow-[0_4px_20px_rgba(217,119,6,0.2)]">
+                    <div class="w-12 h-12 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center mb-3 transition-colors">
+                        <i data-lucide="bus" class="w-5 h-5 text-white transition-colors"></i>
+                    </div>
+                    <h5 class="text-base font-bold tracking-wide mb-2 uppercase">Luxury Star Coach Travel</h5>
+                    <ul class="text-white text-sm font-light leading-snug space-y-1 text-left self-stretch">
+                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Premium star coach ride</span></li>
+                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>VIP venue parking</span></li>
+                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Round-trip transport</span></li>
+                    </ul>
+                </div>
+                <div class="group cursor-default text-center flex flex-col items-center p-6 bg-gradient-to-br from-[#d97706]/25 via-[#d97706]/15 to-[#d97706]/5 border border-[#d97706]/60 transition-colors shadow-[0_4px_20px_rgba(217,119,6,0.2)]">
+                    <div class="w-12 h-12 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center mb-3 transition-colors">
+                        <i data-lucide="bed-double" class="w-5 h-5 text-white transition-colors"></i>
+                    </div>
+                    <h5 class="text-base font-bold tracking-wide mb-2 uppercase">Overnight Comfort &amp; Lodging</h5>
+                    <ul class="text-white text-sm font-light leading-snug space-y-1 text-left self-stretch">
+                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Sleep comfortably onboard</span></li>
+                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Hotel or Airbnb on overnight trips</span></li>
+                    </ul>
+                </div>
+                <div class="group cursor-default text-center flex flex-col items-center p-6 bg-gradient-to-br from-[#d97706]/25 via-[#d97706]/15 to-[#d97706]/5 border border-[#d97706]/60 transition-colors shadow-[0_4px_20px_rgba(217,119,6,0.2)]">
+                    <div class="w-12 h-12 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center mb-3 transition-colors">
+                        <i data-lucide="utensils" class="w-5 h-5 text-white transition-colors"></i>
+                    </div>
+                    <h5 class="text-base font-bold tracking-wide mb-2 uppercase">Premium Tailgate Experience</h5>
+                    <ul class="text-white text-sm font-light leading-snug space-y-1 text-left self-stretch">
+                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Catered R&amp;B tailgate</span></li>
+                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Curated food &amp; vibes</span></li>
+                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>High-energy atmosphere</span></li>
+                    </ul>
+                </div>
+                <div class="group cursor-default text-center flex flex-col items-center p-6 bg-gradient-to-br from-[#d97706]/25 via-[#d97706]/15 to-[#d97706]/5 border border-[#d97706]/60 transition-colors shadow-[0_4px_20px_rgba(217,119,6,0.2)]">
+                    <div class="w-12 h-12 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center mb-3 transition-colors">
+                        <i data-lucide="ticket" class="w-5 h-5 text-white transition-colors"></i>
+                    </div>
+                    <h5 class="text-base font-bold tracking-wide mb-2 uppercase">Concert Access Included</h5>
+                    <ul class="text-white text-sm font-light leading-snug space-y-1 text-left self-stretch">
+                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Concert ticket covered</span></li>
+                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Live Usher &amp; Chris Brown</span></li>
+                    </ul>
+                </div>
+                <div class="group cursor-default text-center flex flex-col items-center p-6 bg-gradient-to-br from-[#d97706]/25 via-[#d97706]/15 to-[#d97706]/5 border border-[#d97706]/60 transition-colors shadow-[0_4px_20px_rgba(217,119,6,0.2)]">
+                    <div class="w-12 h-12 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center mb-3 transition-colors">
+                        <i data-lucide="wine" class="w-5 h-5 text-white transition-colors"></i>
+                    </div>
+                    <h5 class="text-base font-bold tracking-wide mb-2 uppercase">VIP Bottle Service</h5>
+                    <ul class="text-white text-sm font-light leading-snug space-y-1 text-left self-stretch">
+                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Full bottle of your choice</span></li>
+                        <li class="flex gap-2"><span class="text-[#d97706] shrink-0">•</span><span>Vibes from the moment you board</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE BILLBOARD & COUNTDOWN -->
+    <section class="bg-black text-white py-24 md:py-32 overflow-hidden border-b border-gray-900 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#d97706]/5 to-transparent pointer-events-none"></div>
+        <div class="w-full px-6 flex flex-col items-center justify-center text-center relative z-10">
+            <!-- Separator -->
+            <div class="flex items-center gap-4 mb-10">
+                <span class="w-16 md:w-24 h-px bg-[#d97706]"></span>
+                <span class="text-white text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase">The Headline Act</span>
+                <span class="w-16 md:w-24 h-px bg-[#d97706]"></span>
+            </div>
+            <h2 class="text-[18vw] md:text-[14vw] font-display uppercase leading-[0.85] tracking-normal">
+                TWO ICONS.<br/>
+                <span class="text-stroke-purple">ONE NIGHT.</span>
+            </h2>
+
+            <!-- Payment + Capacity Badges -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mt-10">
+                <span class="px-4 py-2 border border-white/30 text-white bg-white/5 text-[10px] md:text-xs font-black tracking-widest uppercase">Payment Plans Available</span>
+                <span class="px-4 py-2 border border-white/30 text-white bg-white/5 text-[10px] md:text-xs font-black tracking-widest uppercase">12 People Per Bus</span>
+            </div>
+
+            <!-- Fan Access Image -->
+            <div class="mt-16 relative max-w-3xl w-full px-6">
+                <div class="absolute inset-0 bg-gradient-to-tr from-[#d97706]/20 to-[#d97706]/20 blur-[80px] rounded-full"></div>
+                <img src="fanaccess.png" alt="VIP Fan Access" class="relative z-10 w-full object-contain drop-shadow-[0_30px_60px_rgba(217,119,6,0.25)]" onerror="this.src='https://via.placeholder.com/900x500/0a0a0a/e11d48?text=FAN+ACCESS'">
+            </div>
+
+            <!-- Next Show Countdown -->
+            <div class="mt-20 border border-[#d97706]/20 bg-[#0a0a0a] p-8 md:p-12 w-full max-w-4xl shadow-[0_0_50px_rgba(217,119,6,0.05)]">
+                <p class="text-[#d97706] font-bold tracking-[0.3em] uppercase text-xs mb-8">Next Stop: Washington, DC</p>
+                <div class="grid grid-cols-4 gap-4 md:gap-8 text-center divide-x divide-gray-800">
+                    <div class="flex flex-col">
+                        <span id="cd-days" class="text-5xl md:text-7xl font-display">00</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Days</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span id="cd-hours" class="text-5xl md:text-7xl font-display">00</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Hours</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span id="cd-minutes" class="text-5xl md:text-7xl font-display">00</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Minutes</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span id="cd-seconds" class="text-5xl md:text-7xl font-display text-[#d97706]">00</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Seconds</span>
+                    </div>
+                </div>
+
+                <!-- Share + Add to Calendar -->
+                <div class="mt-10 pt-8 border-t border-[#d97706]/20 flex flex-col sm:flex-row gap-4 justify-center">
+                    <button type="button" id="add-calendar-btn"
+                        class="flex items-center justify-center gap-3 border border-[#d97706] text-white bg-[#d97706]/10 hover:bg-[#b45309] transition-colors px-6 py-3 text-xs font-bold tracking-[0.2em] uppercase">
+                        <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+                        Add To Calendar
+                    </button>
+                    <button type="button" id="share-btn"
+                        class="flex items-center justify-center gap-3 border border-gray-300 text-white hover:border-[#d97706] hover:text-[#d97706] transition-colors px-6 py-3 text-xs font-bold tracking-[0.2em] uppercase">
+                        <i data-lucide="share-2" class="w-4 h-4"></i>
+                        <span id="share-btn-text">Share</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE COACH PARALLAX ANIMATION -->
+    <section class="py-20 bg-white relative overflow-hidden border-t border-b border-gray-200">
+        <div class="text-center relative z-20 mb-8">
+            <p class="text-[#d97706] font-bold tracking-[0.3em] uppercase text-xs mb-4">The Transport · Fan Experience</p>
+            <h2 class="text-6xl md:text-8xl font-display text-black tracking-wide uppercase leading-[0.9]">Premium Star Coach</h2>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto text-sm md:text-base font-light leading-relaxed">The official Vibe Escape tour bus — a fully outfitted luxury coach engineered for the ultimate R&B fan experience. Plush reclining seats, ambient lighting, premium sound system, full bar, and onboard restroom. Strictly limited to 12 VIP guests per coach.</p>
+        </div>
+
+        <!-- Real Tour Bus Image -->
+        <div class="relative z-20 max-w-7xl mx-auto px-6 mb-8">
+            <div class="relative group">
+                <img src="usher-Photoroom.png" alt="Vibe Escape Premium Star Coach" class="relative z-10 w-full object-contain transition-transform duration-700 group-hover:scale-[1.02]" onerror="this.src='https://via.placeholder.com/1200x500/ffffff/db2777?text=VIBE+ESCAPE+TOUR+BUS'">
+            </div>
+        </div>
+
+        <!-- Coach Features Grid -->
+        <div class="relative z-20 max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-5">
+            <div class="group relative overflow-hidden border border-gray-200 bg-white p-7 hover:border-[#d97706] hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] hover:-translate-y-1 transition-all duration-500">
+                <div class="absolute top-0 right-0 w-24 h-24 hidden"></div>
+                <div class="relative">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center group-hover:bg-[#b45309] transition-colors">
+                            <i data-lucide="users" class="w-5 h-5 text-white transition-colors"></i>
+                        </div>
+                        <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-gray-500">Capacity</span>
+                    </div>
+                    <p class="text-[#d97706] font-display text-5xl md:text-6xl mb-1 leading-none">12</p>
+                    <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-700 mt-3">VIP Guests Max</p>
+                    <div class="w-8 h-px bg-[#d97706]/40 mt-4 group-hover:w-full transition-all duration-500"></div>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden border border-gray-200 bg-white p-7 hover:border-[#d97706] hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] hover:-translate-y-1 transition-all duration-500">
+                <div class="absolute top-0 right-0 w-24 h-24 hidden"></div>
+                <div class="relative">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center group-hover:bg-[#b45309] transition-colors">
+                            <i data-lucide="bell-ring" class="w-5 h-5 text-white transition-colors"></i>
+                        </div>
+                        <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-gray-500">Support</span>
+                    </div>
+                    <p class="text-[#d97706] font-display text-5xl md:text-6xl mb-1 leading-none">24/7</p>
+                    <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-700 mt-3">Concierge Service</p>
+                    <div class="w-8 h-px bg-[#d97706]/40 mt-4 group-hover:w-full transition-all duration-500"></div>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden border border-gray-200 bg-white p-7 hover:border-[#d97706] hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] hover:-translate-y-1 transition-all duration-500">
+                <div class="absolute top-0 right-0 w-24 h-24 hidden"></div>
+                <div class="relative">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center group-hover:bg-[#b45309] transition-colors">
+                            <i data-lucide="wine" class="w-5 h-5 text-white transition-colors"></i>
+                        </div>
+                        <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-gray-500">Onboard</span>
+                    </div>
+                    <p class="text-[#d97706] font-display text-5xl md:text-6xl mb-1 leading-none">Full</p>
+                    <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-700 mt-3">Open Bar</p>
+                    <div class="w-8 h-px bg-[#d97706]/40 mt-4 group-hover:w-full transition-all duration-500"></div>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden border border-gray-200 bg-white p-7 hover:border-[#d97706] hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] hover:-translate-y-1 transition-all duration-500">
+                <div class="absolute top-0 right-0 w-24 h-24 hidden"></div>
+                <div class="relative">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center group-hover:bg-[#b45309] transition-colors">
+                            <i data-lucide="parking-square" class="w-5 h-5 text-white transition-colors"></i>
+                        </div>
+                        <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-gray-500">Arrival</span>
+                    </div>
+                    <p class="text-[#d97706] font-display text-5xl md:text-6xl mb-1 leading-none">VIP</p>
+                    <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-700 mt-3">Venue Parking</p>
+                    <div class="w-8 h-px bg-[#d97706]/40 mt-4 group-hover:w-full transition-all duration-500"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAN EXPERIENCE SECTION -->
+    <section class="py-16 md:py-32 bg-[#050505] text-white relative overflow-hidden border-t border-gray-900">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#d97706]/10 via-transparent to-[#d97706]/10 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div>
+                    <p class="text-[#d97706] font-bold tracking-[0.3em] uppercase text-xs mb-4">The Energy</p>
+                    <h2 class="text-6xl md:text-8xl font-display tracking-wide mb-6 uppercase leading-[0.9]">
+                        Live The <br /> <span class="text-[#d97706]">Fan Experience</span>
+                    </h2>
+                    <p class="text-white text-lg font-light leading-relaxed max-w-xl mb-8">
+                        From the moment you board to the final encore, every detail is engineered for pure vibe. Real fans. Real energy. Front-row memories you'll never forget.
+                    </p>
+                    <div class="flex items-center gap-4 text-xs font-bold tracking-[0.2em] uppercase text-gray-500">
+                        <span class="w-12 h-px bg-[#d97706]"></span>
+                        <span>Curated for true R&B lovers</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-[#d97706]/30 to-[#d97706]/30 blur-[80px] rounded-full mix-blend-screen"></div>
+                    <img src="fan-experience.png" alt="Fans enjoying the VIP concert experience" class="relative z-10 w-full object-cover shadow-[0_30px_80px_rgba(0,0,0,0.6)] transition-transform duration-700 group-hover:scale-[1.02]" onerror="this.src='https://via.placeholder.com/800x600?text=Fan+Experience'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOUR DATES SECTION -->
+    <section id="dates" class="pt-24 pb-16 bg-white relative">
+        <div class="max-w-6xl mx-auto px-6 md:px-12 flex flex-col items-center">
+            <div class="mb-10 text-center border-b border-gray-200 pb-6 w-full">
+                <h2 class="text-6xl md:text-8xl font-display tracking-wide mb-2 uppercase leading-[0.9]">
+                    2026 Tour Itinerary
+                </h2>
+                <p class="text-gray-500 text-sm font-bold tracking-[0.2em] uppercase">Select your destination.</p>
+            </div>
+
+            <div id="tour-dates-grid" class="flex flex-wrap justify-center items-start gap-x-10 gap-y-10 text-center w-full mx-auto">
+                <!-- Tour dates will be injected here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CLICK FUNNEL: HOW IT WORKS -->
+    <section class="py-16 md:py-32 bg-white text-black border-y border-gray-200 relative overflow-hidden">
+        <!-- Ambient glows -->
+        <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#d97706]/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#d97706]/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="text-center mb-24">
+                <p class="text-[#d97706] text-xs md:text-sm font-black tracking-[0.4em] uppercase mb-6">Three Steps · Zero Friction</p>
+                <h2 class="text-6xl md:text-8xl font-display tracking-wide mb-4 uppercase leading-[0.9]">
+                    How To <span class="text-[#d97706]">Secure</span> <br /> Your Access
+                </h2>
+                <p class="text-gray-600 text-base md:text-lg font-light max-w-2xl mx-auto mt-6">A streamlined, white-glove VIP fan experience process — from request to first sip onboard.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto relative">
+                <!-- Connecting line (desktop only) -->
+                <div class="hidden md:block absolute top-16 left-[16.66%] right-[16.66%] h-px bg-gradient-to-r from-transparent via-[#d97706]/40 to-transparent pointer-events-none"></div>
+
+                <!-- Step 01 -->
+                <div class="group relative border border-gray-200 bg-white p-8 md:p-10 hover:border-[#d97706]/60 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(217,119,6,0.15)] transition-all duration-500">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="relative">
+                            <span class="text-7xl md:text-8xl font-display text-transparent leading-none" style="-webkit-text-stroke: 1px #d97706;">01</span>
+                            <span class="absolute -inset-2 bg-[#d97706]/20 blur-2xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        </div>
+                    </div>
+                    <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-[#d97706] mb-3">Step One</p>
+                    <h4 class="text-2xl md:text-3xl font-display tracking-wide mb-4 uppercase">Request Your Spot</h4>
+                    <p class="text-gray-600 text-sm md:text-base font-light leading-relaxed mb-6">
+                        Submit your application below. Spots are highly contested and processed on a strict first-come, first-served basis.
+                    </p>
+                    <div class="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-gray-500 group-hover:text-[#d97706] transition-colors">
+                        <span>2 Min Application</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="group relative border border-gray-200 bg-white p-8 md:p-10 hover:border-[#d97706]/60 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(217,119,6,0.15)] transition-all duration-500 md:mt-12">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="relative">
+                            <span class="text-7xl md:text-8xl font-display text-transparent leading-none" style="-webkit-text-stroke: 1px #d97706;">02</span>
+                            <span class="absolute -inset-2 bg-[#d97706]/20 blur-2xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        </div>
+                    </div>
+                    <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-[#d97706] mb-3">Step Two</p>
+                    <h4 class="text-2xl md:text-3xl font-display tracking-wide mb-4 uppercase">Secure Deposit</h4>
+                    <p class="text-gray-600 text-sm md:text-base font-light leading-relaxed mb-6">
+                        If approved, our concierge will send a private, encrypted link to lock in your spot with a deposit or payment plan.
+                    </p>
+                    <div class="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-gray-500 group-hover:text-[#d97706] transition-colors">
+                        <span>24-Hour Response</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="group relative border border-gray-200 bg-white p-8 md:p-10 hover:border-[#d97706]/60 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(217,119,6,0.15)] transition-all duration-500">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="relative">
+                            <span class="text-7xl md:text-8xl font-display text-transparent leading-none" style="-webkit-text-stroke: 1px #d97706;">03</span>
+                            <span class="absolute -inset-2 bg-[#d97706]/20 blur-2xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        </div>
+                    </div>
+                    <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-[#d97706] mb-3">Step Three</p>
+                    <h4 class="text-2xl md:text-3xl font-display tracking-wide mb-4 uppercase">Experience The Vibe</h4>
+                    <p class="text-gray-600 text-sm md:text-base font-light leading-relaxed mb-6">
+                        Step onto the star coach. We handle the driving, the drinks, the tailgate, and the tickets. You just vibe.
+                    </p>
+                    <div class="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-gray-500 group-hover:text-[#d97706] transition-colors">
+                        <span>Show Day</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA below steps -->
+            <div class="text-center mt-20">
+                <button onclick="document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' })"
+                    class="inline-flex items-center justify-center gap-3 bg-[#d97706] hover:bg-[#b45309] text-white px-10 py-5 text-sm font-bold tracking-[0.2em] uppercase shadow-[0_0_30px_rgba(217,119,6,0.4)] transition-colors group">
+                    Start With Step 01
+                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLICATION FORM SECTION -->
+    <section id="apply-section" class="py-16 md:py-32 bg-black text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#d97706]/10 via-[#d97706]/5 to-transparent pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-to-br from-[#d97706]/10 to-[#d97706]/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <p class="text-[#d97706] font-bold tracking-[0.3em] uppercase text-xs mb-4">Spots Are Limited</p>
+                <h2 class="text-6xl md:text-8xl font-display tracking-wide uppercase leading-[0.9]">
+                    Secure Your <br /><span class="text-[#d97706]">Spot Today</span>
+                </h2>
+                <p class="mt-6 max-w-2xl mx-auto text-white font-light text-base md:text-lg">
+                    12 seats per bus. First come, first served. Apply below or DM us on Instagram to reserve your seat now.
+                </p>
+                <a href="https://instagram.com/themusicdeptdmv" target="_blank" rel="noopener" class="inline-flex items-center gap-3 mt-8 px-6 py-3 border border-[#d97706] bg-[#d97706]/10 text-white hover:bg-[#d97706] text-xs font-bold tracking-[0.2em] uppercase transition-colors">
+                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                    DM Us To Reserve Now
+                </a>
+            </div>
+
+            <!-- Success Message (Hidden by default) -->
+            <div id="success-message" class="hidden text-center py-24 border border-[#d97706]/20 p-12 bg-white shadow-[0_0_50px_rgba(217,119,6,0.1)] max-w-3xl mx-auto">
+                <i data-lucide="check-circle-2" class="w-16 h-16 text-[#d97706] mx-auto mb-8 stroke-1"></i>
+                <h3 class="text-5xl font-display tracking-wide mb-4 uppercase">Application Received</h3>
+                <p class="text-gray-700 text-lg font-light leading-relaxed">
+                    Thank you for applying to the Vibe Escape VIP Fan Experience. Our concierge team will contact you shortly to confirm availability and coordinate the next steps of your fan experience.
+                </p>
+            </div>
+
+            <!-- Form + FAQ Grid -->
+            <div id="form-grid" class="grid lg:grid-cols-5 gap-10 lg:gap-12 items-start">
+
+            <!-- Form Container -->
+            <div id="form-container" class="order-1 lg:order-2 lg:col-span-3 border border-[#d97706]/20 bg-white relative overflow-hidden shadow-[0_20px_60px_rgba(217,119,6,0.15)]">
+                <!-- Header strip -->
+                <div class="relative px-8 md:px-14 pt-10 md:pt-14 pb-8 border-b border-[#d97706]/15">
+                    <div class="flex items-center justify-between mb-3">
+                        <p class="text-[10px] md:text-xs font-bold tracking-[0.35em] uppercase text-[#d97706]">Vibe Escape · Reservation</p>
+                        <p class="text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-gray-500"><span id="step-counter">01</span> <span class="text-gray-300">/</span> 04</p>
+                    </div>
+                    <h3 id="step-label" class="text-2xl md:text-3xl font-display tracking-wide uppercase text-black">What's Included</h3>
+                    <div class="mt-6 w-full h-px bg-[#d97706]/15 overflow-hidden">
+                        <div id="progress-bar" class="h-full bg-[#d97706] transition-all duration-500" style="width: 25%"></div>
+                    </div>
+                </div>
+
+                <div class="px-8 md:px-14 py-10 md:py-14">
+
+                <form id="apply-form" class="relative z-10">
+
+                    <!-- STEP 1: What's Included -->
+                    <div data-step="1" class="form-step">
+                        <p class="text-gray-600 text-sm font-light mb-8">Here's everything in your Vibe Escape package.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Luxury Star Coach Travel</span></li>
+                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Room &amp; Board on the Coach</span></li>
+                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>VIP Bottle Service</span></li>
+                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Concert Access (Usher &amp; Chris Brown)</span></li>
+                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Premium R&amp;B Tailgate Experience</span></li>
+                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Round-Trip Transportation</span></li>
+                        </ul>
+                        <div class="border border-[#d97706]/40 bg-[#d97706]/10 p-5 mb-2">
+                            <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-[#d97706] mb-1">Total Package</p>
+                            <p class="text-3xl md:text-4xl font-display tracking-wider">$2,500 <span class="text-base font-sans font-light text-white">/ person</span></p>
+                            <p class="text-xs font-bold tracking-[0.15em] uppercase text-gray-300 mt-2">$500 Deposit To Reserve</p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Payment Preference -->
+                    <div data-step="2" class="form-step hidden">
+                        <p class="text-gray-600 text-sm font-light mb-8">Choose how you'd like to lock in your spot.</p>
+                        <div class="space-y-4">
+                            <label class="flex items-start gap-4 p-5 border border-[#d97706]/20 hover:border-[#d97706] has-[:checked]:border-[#d97706] has-[:checked]:bg-[#d97706]/10 cursor-pointer transition-colors">
+                                <input type="radio" name="payment" value="deposit" required class="mt-1 accent-[#d97706]">
+                                <div>
+                                    <p class="text-base font-bold tracking-wide uppercase mb-1">$500 Deposit</p>
+                                    <p class="text-xs text-gray-600 font-light leading-relaxed">Remaining $2,000 due 30 days before departure.</p>
+                                </div>
+                            </label>
+                            <label class="flex items-start gap-4 p-5 border border-[#d97706]/20 hover:border-[#d97706] has-[:checked]:border-[#d97706] has-[:checked]:bg-[#d97706]/10 cursor-pointer transition-colors">
+                                <input type="radio" name="payment" value="full" class="mt-1 accent-[#d97706]">
+                                <div>
+                                    <p class="text-base font-bold tracking-wide uppercase mb-1">Pay In Full · $2,500</p>
+                                    <p class="text-xs text-gray-600 font-light leading-relaxed">Fully confirmed — no further invoices.</p>
+                                </div>
+                            </label>
+                            <label class="flex items-start gap-4 p-5 border border-[#d97706]/20 hover:border-[#d97706] has-[:checked]:border-[#d97706] has-[:checked]:bg-[#d97706]/10 cursor-pointer transition-colors">
+                                <input type="radio" name="payment" value="plan" class="mt-1 accent-[#d97706]">
+                                <div>
+                                    <p class="text-base font-bold tracking-wide uppercase mb-1">Payment Plan</p>
+                                    <p class="text-xs text-gray-600 font-light leading-relaxed">A team member will reach out to set up a schedule.</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Your Details -->
+                    <div data-step="3" class="form-step hidden">
+                        <p class="text-gray-600 text-sm font-light mb-8">Who should we reach out to?</p>
+                        <div class="space-y-8">
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div class="relative">
+                                    <input type="text" name="firstName" id="firstName" required
+                                        class="peer w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#d97706] transition-colors placeholder-transparent"
+                                        placeholder="First Name">
+                                    <label for="firstName" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#d97706]">First Name</label>
+                                </div>
+                                <div class="relative">
+                                    <input type="text" name="lastName" id="lastName" required
+                                        class="peer w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#d97706] transition-colors placeholder-transparent"
+                                        placeholder="Last Name">
+                                    <label for="lastName" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#d97706]">Last Name</label>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div class="relative">
+                                    <input type="email" name="email" id="email" required
+                                        class="peer w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#d97706] transition-colors placeholder-transparent"
+                                        placeholder="Email">
+                                    <label for="email" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#d97706]">Email Address</label>
+                                </div>
+                                <div class="relative">
+                                    <input type="tel" name="phone" id="phone" required
+                                        class="peer w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#d97706] transition-colors placeholder-transparent"
+                                        placeholder="Phone">
+                                    <label for="phone" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#d97706]">Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div class="relative">
+                                    <select name="city" id="city-select" required
+                                        class="w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#d97706] transition-colors appearance-none font-light">
+                                        <option value="" disabled selected class="text-black">Select a Tour Date</option>
+                                    </select>
+                                    <label for="city-select" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-[#d97706]">Preferred Date</label>
+                                </div>
+                                <div class="relative">
+                                    <select name="guests" id="guests" required
+                                        class="w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#d97706] transition-colors appearance-none font-light">
+                                        <option value="1" class="text-black">1 Guest</option>
+                                        <option value="2" class="text-black">2 Guests</option>
+                                        <option value="3" class="text-black">3 Guests</option>
+                                        <option value="4" class="text-black">4 Guests</option>
+                                        <option value="5" class="text-black">5 Guests</option>
+                                        <option value="6" class="text-black">6 Guests</option>
+                                        <option value="7" class="text-black">7 Guests</option>
+                                        <option value="8" class="text-black">8 Guests</option>
+                                        <option value="9" class="text-black">9 Guests</option>
+                                        <option value="10" class="text-black">10 Guests</option>
+                                        <option value="11" class="text-black">11 Guests</option>
+                                        <option value="12" class="text-black">12 Guests</option>
+                                    </select>
+                                    <label for="guests" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-[#d97706]">Party Size</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: A Little More -->
+                    <div data-step="4" class="form-step hidden">
+                        <p class="text-gray-600 text-sm font-light mb-8">Last couple of questions and you're done.</p>
+                        <div class="space-y-8">
+                            <div class="relative">
+                                <input type="text" name="referral" id="referral"
+                                    class="peer w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#d97706] transition-colors placeholder-transparent"
+                                    placeholder="How did you hear about us?">
+                                <label for="referral" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#d97706]">How Did You Hear About Vibe Escape?</label>
+                            </div>
+                            <div class="relative">
+                                <textarea name="notes" id="notes" rows="4"
+                                    class="peer w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#d97706] transition-colors placeholder-transparent resize-none"
+                                    placeholder="Any questions or special requests?"></textarea>
+                                <label for="notes" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#d97706]">Questions or Special Requests?</label>
+                                <p class="mt-2 text-xs text-gray-500 font-light">Dietary needs, accessibility requirements, tour questions, etc.</p>
+                            </div>
+                            <div class="border border-[#d97706]/20 bg-[#d97706]/5 p-4 text-xs text-gray-600 font-light leading-relaxed">
+                                <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-[#d97706] mb-2">Important</p>
+                                The Music Dept is an independent operator and is not affiliated with Usher, Chris Brown, or their management or tour promoters. All payments are non-refundable. Submitting this form is an expression of interest only — your seat is not confirmed until a deposit or full payment is received and your agreement is signed.
+                            </div>
+                            <p class="text-xs text-gray-500 font-light text-center">A member of The Music Dept team will follow up within 24–48 hours. Spots are limited to 12 per bus — don't wait!</p>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="flex items-center justify-between gap-4 mt-12 pt-8 border-t border-[#d97706]/15">
+                        <button type="button" id="prev-btn"
+                            class="text-xs font-bold tracking-[0.25em] uppercase text-gray-500 hover:text-[#d97706] transition-colors disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-2">
+                            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                            Back
+                        </button>
+                        <button type="button" id="next-btn"
+                            class="flex items-center gap-3 px-7 py-4 bg-[#d97706] text-white text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#b45309] transition-colors">
+                            Continue
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                        <button type="submit" id="submit-btn"
+                            class="hidden flex items-center gap-3 px-7 py-4 bg-[#d97706] text-white text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#b45309] transition-colors disabled:opacity-70 disabled:cursor-not-allowed">
+                            <span id="submit-text">Submit My Interest</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </form>
+                </div>
+
+                <!-- Trust Footer -->
+                <div class="px-8 md:px-14 py-6 border-t border-[#d97706]/15 bg-[#d97706]/5 flex flex-col md:flex-row items-center justify-between gap-3 text-[10px] md:text-xs tracking-[0.2em] uppercase text-gray-600 font-bold">
+                    <span class="flex items-center gap-2"><i data-lucide="lock" class="w-3.5 h-3.5 text-[#d97706]"></i> Secure · Encrypted</span>
+                    <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#d97706]"></i> No Payment Until Approved</span>
+                    <span class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5 text-[#d97706]"></i> Reply In 24–48 Hours</span>
+                </div>
+            </div>
+
+            <!-- FAQ Column -->
+            <aside class="order-2 lg:order-1 lg:col-span-2 lg:sticky lg:top-24 space-y-4">
+                <div class="mb-6">
+                    <p class="text-[#d97706] font-bold tracking-[0.3em] uppercase text-xs mb-3">Before You Apply</p>
+                    <h3 class="text-3xl md:text-4xl font-display tracking-wide uppercase">Frequently Asked</h3>
+                </div>
+
+                <details class="group border border-[#d97706]/20 bg-white open:border-[#d97706]/60 open:bg-[#d97706]/5 transition-colors shadow-[0_4px_15px_rgba(217,119,6,0.08)]">
+                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
+                        <span>What's included?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-[#d97706] transition-transform group-open:rotate-45"></i>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
+                        Round-trip luxury coach transport, VIP venue parking, curated R&B tailgate with food and bar service, premium concert ticket, and onboard bottle service. Overnight accommodations included for multi-day fan experiences.
+                    </div>
+                </details>
+
+                <details class="group border border-[#d97706]/20 bg-white open:border-[#d97706]/60 open:bg-[#d97706]/5 transition-colors shadow-[0_4px_15px_rgba(217,119,6,0.08)]">
+                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
+                        <span>How much is it?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-[#d97706] transition-transform group-open:rotate-45"></i>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
+                        $2,500 per person, all-inclusive. Payment plans are available — our concierge will discuss options after your application is approved.
+                    </div>
+                </details>
+
+                <details class="group border border-[#d97706]/20 bg-white open:border-[#d97706]/60 open:bg-[#d97706]/5 transition-colors shadow-[0_4px_15px_rgba(217,119,6,0.08)]">
+                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
+                        <span>How many spots per coach?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-[#d97706] transition-transform group-open:rotate-45"></i>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
+                        Strictly 12 VIP guests per Premium Star Coach — by design. The intimacy is the experience.
+                    </div>
+                </details>
+
+                <details class="group border border-[#d97706]/20 bg-white open:border-[#d97706]/60 open:bg-[#d97706]/5 transition-colors shadow-[0_4px_15px_rgba(217,119,6,0.08)]">
+                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
+                        <span>When will I be contacted?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-[#d97706] transition-transform group-open:rotate-45"></i>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
+                        Our concierge team responds to approved applications within 24 hours with an encrypted link to lock in your deposit.
+                    </div>
+                </details>
+
+                <details class="group border border-[#d97706]/20 bg-white open:border-[#d97706]/60 open:bg-[#d97706]/5 transition-colors shadow-[0_4px_15px_rgba(217,119,6,0.08)]">
+                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
+                        <span>Can I book for a group?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-[#d97706] transition-transform group-open:rotate-45"></i>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
+                        Yes — select up to 12 guests in the party size field. Private full-coach buyouts are also available; mention it in your follow-up call.
+                    </div>
+                </details>
+
+                <details class="group border border-[#d97706]/20 bg-white open:border-[#d97706]/60 open:bg-[#d97706]/5 transition-colors shadow-[0_4px_15px_rgba(217,119,6,0.08)]">
+                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
+                        <span>Is my deposit refundable?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-[#d97706] transition-transform group-open:rotate-45"></i>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
+                        Deposits are non-refundable but fully transferable. The Vibe Escape concierge will walk you through the full policy before you commit.
+                    </div>
+                </details>
+
+                <div class="border border-[#d97706]/40 bg-[#d97706]/5 p-5 mt-6">
+                    <p class="text-xs font-bold tracking-[0.2em] uppercase text-[#d97706] mb-2">Still have questions?</p>
+                    <p class="text-gray-700 text-sm font-light">Email <a href="mailto:concierge@musicdept.com" class="underline hover:text-[#d97706]">concierge@musicdept.com</a> for white-glove support.</p>
+                </div>
+            </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-20 text-center border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-6xl md:text-8xl font-display uppercase tracking-wide mb-10 leading-none">
+                VIBE <span class="text-[#d97706]">ESCAPE</span>
+            </h2>
+
+            <a href="https://instagram.com/THEMUSICDEPTDMV" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-4 text-base md:text-xl font-bold tracking-[0.25em] uppercase text-black hover:text-[#d97706] transition-colors mb-16">
+                <i data-lucide="instagram" class="w-6 h-6 md:w-7 md:h-7"></i>
+                Follow @THEMUSICDEPTDMV
+            </a>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-xs md:text-sm text-gray-500 uppercase tracking-[0.15em] font-bold">
+                <p>&copy; 2026 Vibe Escape · The Music Dept.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-black transition-colors">Terms</a>
+                    <a href="#" class="hover:text-black transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-black transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 1. Tour Dates Data & Injection (grouped by leg)
+        const tourLegs = [
+            {
+                title: "June – July · Tour Kickoff",
+                dates: [
+                    { date: "Jun 26", city: "Denver, CO", venue: "Empower Field" },
+                    { date: "Jun 30", city: "Minneapolis, MN", venue: "" },
+                    { date: "Jul 2",  city: "Detroit, MI", venue: "" },
+                    { date: "Jul 5",  city: "Cleveland, OH", venue: "" },
+                    { date: "Jul 10", city: "Washington, DC", venue: "Nights" },
+                    { date: "Jul 17", city: "Charlotte, NC", venue: "" },
+                    { date: "Jul 25", city: "St. Louis, MO", venue: "" },
+                    { date: "Jul 29", city: "Nashville, TN", venue: "" },
+                    { date: "Jul 29", city: "Birmingham, AL", venue: "" }
+                ]
+            },
+            {
+                title: "Big East Coast + Canada Run",
+                dates: [
+                    { date: "Aug 1",   city: "Syracuse, NY", venue: "" },
+                    { date: "Aug 7–8", city: "East Rutherford, NJ", venue: "" },
+                    { date: "Aug 11",  city: "Toronto, ON", venue: "2 Nights" },
+                    { date: "Aug 17",  city: "Foxborough / Boston, MA", venue: "" },
+                    { date: "Aug 21",  city: "Chicago, IL", venue: "" },
+                    { date: "Aug 28",  city: "Santa Clara, CA", venue: "" }
+                ]
+            },
+            {
+                title: "West Coast + Texas Stretch",
+                dates: [
+                    { date: "Sep 5–6",   city: "Las Vegas, NV", venue: "2 Nights" },
+                    { date: "Sep 10",    city: "Arlington / Dallas, TX", venue: "" },
+                    { date: "Sep 25–26", city: "Los Angeles, CA", venue: "SoFi Stadium · 2 Nights" },
+                    { date: "Sep 29",    city: "Glendale, AZ", venue: "" }
+                ]
+            },
+            {
+                title: "October – December · Final Leg",
+                dates: [
+                    { date: "Oct 3",   city: "El Paso, TX", venue: "" },
+                    { date: "Oct 5",   city: "San Antonio, TX", venue: "" },
+                    { date: "Nov 9",   city: "Houston, TX", venue: "" },
+                    { date: "Nov 7–8", city: "Atlanta, GA", venue: "2 Nights" },
+                    { date: "Nov 20",  city: "New Orleans, LA", venue: "" },
+                    { date: "Dec 3",   city: "Miami, FL", venue: "" },
+                    { date: "Dec 11",  city: "Tampa, FL", venue: "Final Show" }
+                ]
+            }
+        ];
+
+        const gridContainer = document.getElementById('tour-dates-grid');
+        const selectContainer = document.getElementById('city-select');
+
+        tourLegs.forEach(leg => {
+            // Leg Header (full width)
+            const header = document.createElement('div');
+            header.className = "w-full text-center mt-8 mb-4";
+            header.innerHTML = `
+                <div class="inline-flex items-center gap-4">
+                    <span class="w-10 h-px bg-[#d97706]"></span>
+                    <span class="text-[#d97706] text-2xl md:text-4xl font-display tracking-wide uppercase">${leg.title}</span>
+                    <span class="w-10 h-px bg-[#d97706]"></span>
+                </div>
+            `;
+            gridContainer.appendChild(header);
+
+            leg.dates.forEach(tour => {
+                const card = document.createElement('div');
+                card.className = "group pb-3 hover:text-[#d97706] transition-colors cursor-default text-center w-[220px] md:w-[240px] flex flex-col items-center";
+                card.innerHTML = `
+                    <p class="text-xs font-bold tracking-[0.15em] uppercase text-white group-hover:text-[#d97706] transition-colors mb-2">${tour.date}</p>
+                    <h4 class="text-xl font-bold tracking-tight mb-1">${tour.city}</h4>
+                    ${tour.venue ? `<p class="text-sm text-gray-500 font-display font-semibold">${tour.venue}</p>` : ''}
+                `;
+                gridContainer.appendChild(card);
+
+                // Populate Form Select
+                const option = document.createElement('option');
+                option.value = `${tour.city} - ${tour.date}`;
+                option.className = "text-black";
+                option.textContent = `${tour.city} (${tour.date})`;
+                selectContainer.appendChild(option);
+            });
+        });
+
+        // 2. Navbar Scroll Effect
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-md', 'py-4', 'border-gray-200');
+                nav.classList.remove('bg-transparent', 'py-6', 'border-transparent');
+            } else {
+                nav.classList.remove('bg-white/95', 'backdrop-blur-md', 'py-4', 'border-gray-200');
+                nav.classList.add('bg-transparent', 'py-6', 'border-transparent');
+            }
+        });
+
+        // 2b. Share + Add to Calendar (DC Show)
+        const showStartUTC = '20260710T230000Z';
+        const showEndUTC = '20260711T030000Z';
+        const showTitle = 'Vibe Escape — Usher & Chris Brown · Washington, DC';
+        const showDetails = 'VIP Fan Experience by The Music Dept. Premium Star Coach, curated tailgate, premium concert access.';
+        const showLocation = 'Washington, DC';
+        const calUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(showTitle)}&dates=${showStartUTC}/${showEndUTC}&details=${encodeURIComponent(showDetails)}&location=${encodeURIComponent(showLocation)}`;
+
+        document.getElementById('add-calendar-btn').addEventListener('click', () => {
+            window.open(calUrl, '_blank', 'noopener');
+        });
+
+        const shareBtn = document.getElementById('share-btn');
+        const shareBtnText = document.getElementById('share-btn-text');
+        shareBtn.addEventListener('click', async () => {
+            const shareData = {
+                title: showTitle,
+                text: 'Join me on Vibe Escape — VIP R&B Tour Experience featuring Usher & Chris Brown.',
+                url: window.location.href
+            };
+            try {
+                if (navigator.share) {
+                    await navigator.share(shareData);
+                } else {
+                    await navigator.clipboard.writeText(shareData.url);
+                    shareBtnText.textContent = 'Link Copied';
+                    setTimeout(() => { shareBtnText.textContent = 'Share'; }, 2000);
+                }
+            } catch (err) {
+                // user cancelled or share failed - no-op
+            }
+        });
+
+        // 3. Countdown Timer (DC Show - July 10, 2026)
+        const targetDate = new Date("2026-07-10T19:00:00").getTime();
+        
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            if (diff > 0) {
+                document.getElementById('cd-days').innerText = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+                document.getElementById('cd-hours').innerText = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                document.getElementById('cd-minutes').innerText = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+                document.getElementById('cd-seconds').innerText = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+            }
+        }, 1000);
+
+        // 4. Social Proof Rotation
+        const socialProofs = [
+            { name: "Marcus T.", location: "Atlanta, GA", action: "secured 2 VIP spots." },
+            { name: "Sarah & Friends", location: "Washington, DC", action: "just booked their coach." },
+            { name: "David L.", location: "Los Angeles, CA", action: "secured 4 VIP spots." },
+            { name: "Chloe M.", location: "Chicago, IL", action: "is joining the Vibe Escape." }
+        ];
+        
+        let currentProofIndex = 0;
+        const spAlert = document.getElementById('social-proof-alert');
+        const spName = document.getElementById('sp-name');
+        const spAction = document.getElementById('sp-action');
+        const spLocation = document.getElementById('sp-location');
+
+        setInterval(() => {
+            // Update Data
+            spName.textContent = socialProofs[currentProofIndex].name;
+            spAction.textContent = socialProofs[currentProofIndex].action;
+            spLocation.textContent = socialProofs[currentProofIndex].location;
+
+            // Show Alert
+            spAlert.classList.remove('translate-y-10', 'opacity-0', 'pointer-events-none');
+            spAlert.classList.add('translate-y-0', 'opacity-100');
+
+            // Hide Alert after 5 seconds
+            setTimeout(() => {
+                spAlert.classList.add('translate-y-10', 'opacity-0', 'pointer-events-none');
+                spAlert.classList.remove('translate-y-0', 'opacity-100');
+                
+                // Increment index while hidden
+                setTimeout(() => {
+                    currentProofIndex = (currentProofIndex + 1) % socialProofs.length;
+                }, 700);
+            }, 5000);
+
+        }, 12000); // Trigger every 12 seconds
+
+        // 5. Multi-Step Form Navigation + Submission
+        const form = document.getElementById('apply-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const submitText = document.getElementById('submit-text');
+        const formContainer = document.getElementById('form-container');
+        const successMessage = document.getElementById('success-message');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const stepLabel = document.getElementById('step-label');
+        const stepCounter = document.getElementById('step-counter');
+        const steps = form.querySelectorAll('.form-step');
+        const stepTitles = ["What's Included", "Payment Preference", "Your Details", "A Little More"];
+        let currentStep = 1;
+        const totalSteps = steps.length;
+
+        function renderStep() {
+            steps.forEach(s => {
+                s.classList.toggle('hidden', parseInt(s.dataset.step) !== currentStep);
+            });
+            progressBar.style.width = `${(currentStep / totalSteps) * 100}%`;
+            stepLabel.textContent = stepTitles[currentStep - 1];
+            stepCounter.textContent = String(currentStep).padStart(2, '0');
+            prevBtn.disabled = currentStep === 1;
+            const isLast = currentStep === totalSteps;
+            nextBtn.classList.toggle('hidden', isLast);
+            submitBtn.classList.toggle('hidden', !isLast);
+            submitBtn.classList.toggle('flex', isLast);
+        }
+
+        function validateStep() {
+            const current = form.querySelector(`.form-step[data-step="${currentStep}"]`);
+            const requiredFields = current.querySelectorAll('[required]');
+            for (const field of requiredFields) {
+                if (!field.checkValidity()) {
+                    field.reportValidity();
+                    return false;
+                }
+            }
+            // For radio groups, ensure one is selected
+            const radioGroups = new Set();
+            current.querySelectorAll('input[type="radio"][required]').forEach(r => radioGroups.add(r.name));
+            for (const name of radioGroups) {
+                const checked = current.querySelector(`input[name="${name}"]:checked`);
+                if (!checked) {
+                    alert('Please select an option to continue.');
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (!validateStep()) return;
+            if (currentStep < totalSteps) {
+                currentStep++;
+                renderStep();
+                lucide.createIcons();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentStep > 1) {
+                currentStep--;
+                renderStep();
+                lucide.createIcons();
+            }
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (!validateStep()) return;
+
+            submitBtn.disabled = true;
+            submitText.textContent = 'Submitting...';
+
+            setTimeout(() => {
+                formContainer.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+            }, 1500);
+        });
+
+        // Initial render
+        renderStep();
+
+        // 6. Launch Show Popup
+        const launchPopup = document.getElementById('launch-popup');
+        const launchClose = document.getElementById('launch-popup-close');
+        const launchCta = document.getElementById('launch-popup-cta');
+
+        function hideLaunchPopup() {
+            launchPopup.classList.remove('flex');
+            launchPopup.classList.add('hidden');
+        }
+
+        function showLaunchPopup() {
+            launchPopup.classList.remove('hidden');
+            launchPopup.classList.add('flex');
+            lucide.createIcons();
+        }
+
+        setTimeout(showLaunchPopup, 800);
+
+        launchClose.addEventListener('click', hideLaunchPopup);
+        launchPopup.addEventListener('click', (e) => {
+            if (e.target === launchPopup) hideLaunchPopup();
+        });
+        launchCta.addEventListener('click', () => {
+            hideLaunchPopup();
+            document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // 7. Service Worker registration (PWA)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js').catch(err => console.warn('SW register failed', err));
+            });
+        }
+    </script>
+</body>
+</html>

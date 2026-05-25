@@ -643,7 +643,10 @@
                 <!-- Header strip -->
                 <div class="relative px-5 sm:px-8 md:px-14 pt-10 md:pt-14 pb-8 border-b border-[#db2777]/15">
                     <div class="flex items-center justify-between mb-3">
-                        <p class="text-[10px] md:text-xs font-bold tracking-[0.35em] uppercase text-[#db2777] flex items-center gap-2"><i data-lucide="lock" class="w-3.5 h-3.5"></i>Vibe Escape · Reservation</p>
+                        <div class="inline-flex items-center gap-2 bg-black text-white px-3 py-1.5">
+                            <i data-lucide="lock-keyhole" class="w-4 h-4 text-white"></i>
+                            <span class="text-xs font-bold tracking-[0.15em] uppercase">Your Information Is Protected</span>
+                        </div>
                         <p class="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-gray-800"><span id="step-counter">01</span> <span class="text-gray-400">/</span> 04</p>
                     </div>
                     <h3 id="step-label" class="text-2xl md:text-3xl font-display tracking-wide uppercase text-black">What's Included</h3>
@@ -828,10 +831,32 @@
                 </div>
 
                 <!-- Trust Footer -->
-                <div class="px-5 sm:px-8 md:px-14 py-6 border-t border-[#db2777]/15 bg-[#db2777]/5 flex flex-col md:flex-row items-center justify-between gap-3 text-[11px] md:text-xs tracking-[0.2em] uppercase text-gray-900 font-bold">
-                    <span class="flex items-center gap-2"><i data-lucide="lock" class="w-3.5 h-3.5 text-black"></i> Secure · Encrypted</span>
-                    <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-black"></i> No Payment Until Approved</span>
-                    <span class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5 text-black"></i> Reply In 24–48 Hours</span>
+                <div class="px-5 sm:px-8 md:px-14 py-8 border-t border-[#db2777]/15 bg-black text-white">
+                    <p class="text-center text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-5">Why You Can Trust This Reservation</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="lock-keyhole" class="w-6 h-6 text-[#db2777] shrink-0 mt-0.5"></i>
+                            <div>
+                                <p class="text-sm font-black tracking-wide uppercase">256-Bit SSL Encryption</p>
+                                <p class="text-xs text-gray-300 font-normal mt-1">Every field you submit is encrypted in transit.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-[#db2777] shrink-0 mt-0.5"></i>
+                            <div>
+                                <p class="text-sm font-black tracking-wide uppercase">No Charge Until Approved</p>
+                                <p class="text-xs text-gray-300 font-normal mt-1">We confirm your spot first. You never pay before then.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="user-check" class="w-6 h-6 text-[#db2777] shrink-0 mt-0.5"></i>
+                            <div>
+                                <p class="text-sm font-black tracking-wide uppercase">Real Humans · Real Reply</p>
+                                <p class="text-xs text-gray-300 font-normal mt-1">A team member personally responds within 24 to 48 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center text-[10px] tracking-[0.25em] uppercase text-gray-300 font-bold mt-6 pt-5 border-t border-white/10">The Music Dept · 4848 Battery Lane, Bethesda MD</p>
                 </div>
             </div>
 

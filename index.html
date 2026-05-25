@@ -112,11 +112,14 @@
             pointer-events: none;
         }
         @keyframes arrow-bounce-down {
-            0%, 100% { transform: translateY(0); opacity: 0.7; }
+            0%, 100% { transform: translateY(0); opacity: 0.85; }
             50% { transform: translateY(14px); opacity: 1; }
         }
         .arrow-bounce {
             animation: arrow-bounce-down 1.4s ease-in-out infinite;
+        }
+        .arrow-thick svg {
+            stroke-width: 3.5;
         }
         .linen-pink {
             background-color: #fbcfe8;
@@ -348,7 +351,7 @@
             </div>
 
             <!-- Next Show Countdown -->
-            <div class="mt-20 border border-[#db2777]/20 bg-[#0a0a0a] p-8 md:p-12 w-full max-w-4xl shadow-[0_0_50px_rgba(219,39,119,0.05)] text-center">
+            <div class="mt-6 md:mt-8 border border-[#db2777]/20 bg-[#0a0a0a] p-8 md:p-12 w-full max-w-4xl shadow-[0_0_50px_rgba(219,39,119,0.05)] text-center">
                 <p class="text-[#db2777] font-bold tracking-[0.3em] uppercase text-xs mb-3">Next Stop</p>
                 <h3 class="text-4xl md:text-6xl font-display tracking-wide uppercase text-white leading-[0.95]">Northwest Stadium</h3>
                 <p class="text-white text-base md:text-lg font-bold tracking-wide mt-3 mb-10">Friday · July 11</p>
@@ -667,8 +670,10 @@
             <!-- Animated Arrow Pointing To Form -->
             <div class="flex justify-center mb-8 md:mb-10">
                 <div class="arrow-bounce flex flex-col items-center gap-2">
-                    <span class="text-[10px] md:text-xs font-black tracking-[0.35em] uppercase text-[#db2777]">Apply Below</span>
-                    <i data-lucide="arrow-down" class="w-10 h-10 md:w-12 md:h-12 text-[#db2777]"></i>
+                    <span class="text-[10px] md:text-xs font-black tracking-[0.35em] uppercase text-white">Apply Here</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 60" class="w-10 h-10 md:w-12 md:h-12" fill="white" stroke="#db2777" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+                        <path d="M19 4 H29 V32 H43 L24 56 L5 32 H19 Z" />
+                    </svg>
                 </div>
             </div>
 

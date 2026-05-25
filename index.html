@@ -126,6 +126,17 @@
 </head>
 <body class="min-h-screen bg-white text-black font-sans selection:bg-[#db2777] selection:text-white overflow-x-hidden">
 
+    <!-- MOBILE STICKY CTA BAR -->
+    <div id="mobile-sticky-cta" class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-black/95 backdrop-blur-md border-t border-[#db2777]/40 px-4 py-3 shadow-[0_-8px_30px_rgba(0,0,0,0.4)] transition-transform duration-500 translate-y-full">
+        <button onclick="document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' })"
+            class="w-full bg-[#db2777] hover:bg-[#be185d] text-white py-3.5 px-4 flex items-center justify-center gap-2 text-xs font-bold tracking-[0.2em] uppercase shadow-[0_6px_18px_rgba(219,39,119,0.5)]">
+            <i data-lucide="lock" class="w-3.5 h-3.5"></i>
+            Reserve Your Spot
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </button>
+        <p class="text-center text-[10px] text-gray-400 mt-1.5 tracking-wide">Secure checkout · Powered by Stripe</p>
+    </div>
+
     <!-- SOCIAL PROOF ALERT -->
     <div id="social-proof-alert" class="fixed bottom-3 right-3 md:bottom-6 md:right-6 left-3 md:left-auto z-50 transition-all duration-700 transform translate-y-10 opacity-0 pointer-events-none">
         <div class="bg-black/90 backdrop-blur-lg border border-[#db2777]/40 p-3 md:p-4 rounded-sm shadow-[0_10px_40px_rgba(219,39,119,0.2)] flex items-start gap-3 md:gap-4 max-w-full md:max-w-sm">
@@ -483,18 +494,14 @@
     </section>
 
     <!-- CLICK FUNNEL: HOW IT WORKS -->
-    <section class="py-16 md:py-32 bg-white text-black border-y border-gray-200 relative overflow-hidden">
-        <!-- Ambient glows -->
-        <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#db2777]/10 blur-[120px] rounded-full pointer-events-none"></div>
-        <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#db2777]/10 blur-[120px] rounded-full pointer-events-none"></div>
-
+    <section class="py-16 md:py-32 bg-[#fbcfe8] text-black border-y border-[#db2777]/30 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
             <div class="text-center mb-24">
-                <p class="text-[#db2777] text-xs md:text-sm font-black tracking-[0.4em] uppercase mb-6">Three Steps · Zero Friction</p>
+                <p class="text-[#9d174d] text-xs md:text-sm font-black tracking-[0.4em] uppercase mb-6">Three Steps · Zero Friction</p>
                 <h2 class="text-4xl sm:text-5xl md:text-8xl font-display tracking-wide mb-4 uppercase leading-[0.9] text-black" style="-webkit-text-stroke: 1px black;">
-                    How To <span class="text-[#db2777]" style="-webkit-text-stroke: 1px #db2777;">Secure</span> <br /> Your Access
+                    How To <span class="text-[#9d174d]" style="-webkit-text-stroke: 1px #9d174d;">Secure</span> <br /> Your Access
                 </h2>
-                <p class="text-gray-800 text-base md:text-lg font-medium max-w-2xl mx-auto mt-6">A streamlined, white-glove VIP fan experience process. From request to first sip onboard.</p>
+                <p class="text-gray-900 text-base md:text-lg font-medium max-w-2xl mx-auto mt-6">A streamlined, white-glove VIP fan experience process. From request to first sip onboard.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto relative">
@@ -955,17 +962,29 @@
             </h2>
 
             <a href="https://instagram.com/THEMUSICDEPTDMV" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-4 text-base md:text-xl font-bold tracking-[0.25em] uppercase text-black hover:text-[#db2777] transition-colors mb-16">
+                class="inline-flex items-center gap-4 text-base md:text-xl font-bold tracking-[0.25em] uppercase text-black hover:text-[#db2777] transition-colors mb-10">
                 <i data-lucide="instagram" class="w-6 h-6 md:w-7 md:h-7"></i>
                 Follow @THEMUSICDEPTDMV
             </a>
 
+            <!-- Studio Time CTA -->
+            <div class="mb-16 pt-10 border-t border-gray-200">
+                <p class="text-[#db2777] text-xs md:text-sm font-black tracking-[0.35em] uppercase mb-3">Also From The Music Dept</p>
+                <h3 class="text-3xl md:text-5xl font-display tracking-wide uppercase text-black mb-3 leading-tight">Book Studio Time</h3>
+                <p class="text-gray-800 text-base md:text-lg font-medium mb-6 max-w-xl mx-auto">Professional rehearsal rooms, recording studios, and podcast spaces in Bethesda, MD.</p>
+                <a href="https://www.themusicdeptdmv.com/" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-3 bg-black hover:bg-[#db2777] text-white px-8 py-4 text-xs md:text-sm font-bold tracking-[0.25em] uppercase transition-colors">
+                    Visit themusicdeptdmv.com
+                    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
             <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-xs md:text-sm text-gray-800 uppercase tracking-[0.15em] font-bold">
                 <p>&copy; 2026 Vibe Escape · The Music Dept.</p>
                 <div class="flex gap-8">
+                    <a href="https://www.themusicdeptdmv.com/" target="_blank" rel="noopener noreferrer" class="hover:text-[#db2777] transition-colors">Studio</a>
                     <a href="#" class="hover:text-black transition-colors">Terms</a>
                     <a href="#" class="hover:text-black transition-colors">Privacy</a>
-                    <a href="#" class="hover:text-black transition-colors">Contact</a>
                 </div>
             </div>
         </div>
@@ -1066,6 +1085,8 @@
 
         // 2. Navbar Scroll Effect
         const nav = document.getElementById('main-nav');
+        const mobileCta = document.getElementById('mobile-sticky-cta');
+        const applySection = document.getElementById('apply-section');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 nav.classList.add('bg-white/95', 'backdrop-blur-md', 'py-4', 'border-gray-200');
@@ -1073,6 +1094,18 @@
             } else {
                 nav.classList.remove('bg-white/95', 'backdrop-blur-md', 'py-4', 'border-gray-200');
                 nav.classList.add('bg-transparent', 'py-6', 'border-transparent');
+            }
+
+            // Mobile sticky CTA: show after scrolling past hero, hide when form is in view
+            if (mobileCta && applySection) {
+                const applyRect = applySection.getBoundingClientRect();
+                const showThreshold = window.innerHeight * 0.6;
+                const formInView = applyRect.top < window.innerHeight * 0.6;
+                if (window.scrollY > showThreshold && !formInView) {
+                    mobileCta.classList.remove('translate-y-full');
+                } else {
+                    mobileCta.classList.add('translate-y-full');
+                }
             }
         });
 

@@ -81,20 +81,25 @@
             color: transparent;
         }
         @keyframes cta-pulse {
-            0%, 100% { box-shadow: 0 10px 30px rgba(219,39,119,0.35), 0 0 0 0 rgba(219,39,119,0.6); }
-            50% { box-shadow: 0 18px 50px rgba(219,39,119,0.55), 0 0 0 14px rgba(219,39,119,0); }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(219,39,119,0.55), 0 8px 24px rgba(219,39,119,0.15); }
+            50% { box-shadow: 0 0 0 12px rgba(219,39,119,0), 0 12px 32px rgba(219,39,119,0.25); }
         }
         @keyframes cta-shimmer {
             0% { transform: translateX(-150%) skewX(-20deg); }
             100% { transform: translateX(350%) skewX(-20deg); }
         }
         .hero-cta {
-            background-image: linear-gradient(135deg, #f43f9e 0%, #db2777 50%, #9d174d 100%);
+            background-color: transparent;
+            border: 2px solid #db2777;
+            color: #db2777;
             animation: cta-pulse 2.6s ease-in-out infinite;
             position: relative;
             overflow: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
         }
         .hero-cta:hover {
+            background-color: #db2777;
+            color: #ffffff;
             transform: translateY(-2px);
         }
         .hero-cta::before {
@@ -104,9 +109,18 @@
             left: 0;
             width: 40%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+            background: linear-gradient(90deg, transparent, rgba(219,39,119,0.18), transparent);
             animation: cta-shimmer 3.5s ease-in-out infinite;
             pointer-events: none;
+        }
+        .hero-cta:hover::before {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+        }
+        .hero-cta-divider {
+            border-left-color: rgba(219, 39, 119, 0.45);
+        }
+        .hero-cta:hover .hero-cta-divider {
+            border-left-color: rgba(255, 255, 255, 0.55);
         }
         @media (min-width: 768px) {
             .text-stroke {
@@ -186,10 +200,10 @@
             <!-- Hero CTA -->
             <div class="mt-8">
                 <button onclick="document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' })"
-                    class="hero-cta group inline-flex items-center gap-2 sm:gap-3 text-white px-5 sm:px-8 md:px-9 py-3.5 sm:py-4 md:py-[18px] text-[11px] sm:text-xs md:text-sm font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase transition-transform duration-300 ring-1 ring-white/15 max-w-full">
+                    class="hero-cta group inline-flex items-center gap-2 sm:gap-3 px-5 sm:px-8 md:px-9 py-3.5 sm:py-4 md:py-[18px] text-[11px] sm:text-xs md:text-sm font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase max-w-full">
                     <span class="relative z-10 whitespace-nowrap">Reserve Your Spot</span>
                     <i data-lucide="arrow-right" class="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0"></i>
-                    <span class="relative z-10 flex items-center gap-1 sm:gap-1.5 pl-2 sm:pl-3 ml-0.5 sm:ml-1 border-l border-white/40 normal-case tracking-wide shrink-0">
+                    <span class="hero-cta-divider relative z-10 flex items-center gap-1 sm:gap-1.5 pl-2 sm:pl-3 ml-0.5 sm:ml-1 border-l normal-case tracking-wide shrink-0">
                         <i data-lucide="lock" class="w-3 h-3 sm:w-3.5 sm:h-3.5"></i>
                         <span class="hidden sm:inline text-[10px] md:text-xs">Powered by</span>
                         <span class="font-bold italic text-xs sm:text-sm md:text-base tracking-tight">stripe</span>

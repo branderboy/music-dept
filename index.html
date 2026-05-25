@@ -1211,7 +1211,6 @@
         function hideLaunchPopup() {
             launchPopup.classList.remove('flex');
             launchPopup.classList.add('hidden');
-            try { localStorage.setItem('vibeEscapeLaunchSeen', '1'); } catch (e) {}
         }
 
         function showLaunchPopup() {
@@ -1220,14 +1219,7 @@
             lucide.createIcons();
         }
 
-        const forceShow = new URLSearchParams(window.location.search).has('popup');
-        try {
-            if (forceShow || !localStorage.getItem('vibeEscapeLaunchSeen')) {
-                setTimeout(showLaunchPopup, forceShow ? 0 : 1200);
-            }
-        } catch (e) {
-            setTimeout(showLaunchPopup, 1200);
-        }
+        setTimeout(showLaunchPopup, 800);
 
         launchClose.addEventListener('click', hideLaunchPopup);
         launchPopup.addEventListener('click', (e) => {

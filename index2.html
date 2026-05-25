@@ -198,11 +198,11 @@
                     </div>
 
                     <!-- Compact Features Carousel -->
-                    <div class="relative flex items-start gap-5">
-                        <div id="feat-stage" class="min-h-[120px] flex items-start gap-3">
-                            <div class="w-10 h-10 rounded-full bg-[#d97706] flex items-center justify-center shrink-0">
-                                <i id="feat-icon" data-lucide="bus" class="w-4 h-4 text-white"></i>
-                            </div>
+                    <div class="relative flex items-center gap-6">
+                        <button type="button" id="feat-prev" class="shrink-0 w-12 h-12 rounded-full border border-[#d97706] text-[#d97706] hover:bg-[#d97706] hover:text-white transition-colors flex items-center justify-center" aria-label="Previous">
+                            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                        </button>
+                        <div id="feat-stage" class="flex-1 min-h-[120px] flex items-center">
                             <div>
                                 <p class="text-[10px] font-black tracking-[0.3em] uppercase text-white mb-1"><span id="feat-counter">01</span> / 05</p>
                                 <h5 id="feat-title" class="text-xl font-bold tracking-wide mb-2 uppercase text-white">Luxury Star Coach Travel</h5>
@@ -213,11 +213,10 @@
                                 </ul>
                             </div>
                         </div>
-                        <button type="button" id="feat-next" class="shrink-0 self-center w-12 h-12 rounded-full bg-[#d97706] text-white hover:bg-[#b45309] transition-colors flex items-center justify-center shadow-[0_8px_20px_rgba(217,119,6,0.4)]" aria-label="Next">
+                        <button type="button" id="feat-next" class="shrink-0 w-12 h-12 rounded-full bg-[#d97706] text-white hover:bg-[#b45309] transition-colors flex items-center justify-center shadow-[0_8px_20px_rgba(217,119,6,0.4)]" aria-label="Next">
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </button>
                     </div>
-                    <button type="button" id="feat-prev" class="hidden"></button>
                 </div>
 
                 <!-- Right Content Side -->
@@ -1159,17 +1158,14 @@
             { icon: 'wine', title: 'VIP Bottle Service', bullets: ['Full bottle of your choice', 'Vibes from the moment you board'] }
         ];
         let featIndex = 0;
-        const featIcon = document.getElementById('feat-icon');
         const featTitle = document.getElementById('feat-title');
         const featBullets = document.getElementById('feat-bullets');
         const featCounter = document.getElementById('feat-counter');
         function renderFeature() {
             const f = features[featIndex];
-            featIcon.setAttribute('data-lucide', f.icon);
             featTitle.textContent = f.title;
             featBullets.innerHTML = f.bullets.map(b => `<li class="flex gap-2"><span class="text-white shrink-0">•</span><span>${b}</span></li>`).join('');
             featCounter.textContent = String(featIndex + 1).padStart(2, '0');
-            lucide.createIcons();
         }
         document.getElementById('feat-next').addEventListener('click', () => { featIndex = (featIndex + 1) % features.length; renderFeature(); });
         document.getElementById('feat-prev').addEventListener('click', () => { featIndex = (featIndex - 1 + features.length) % features.length; renderFeature(); });

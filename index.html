@@ -496,7 +496,7 @@
             </div>
 
             <!-- Search (Location + Dates) -->
-            <div class="w-full max-w-3xl mb-8">
+            <div class="w-full max-w-3xl mb-16 md:mb-20">
                 <div class="flex flex-col md:flex-row md:items-stretch gap-3 md:gap-0 bg-white border border-gray-300 md:rounded-full md:shadow-[0_4px_20px_rgba(0,0,0,0.06)] md:overflow-hidden focus-within:border-[#db2777] transition-colors">
                     <!-- Location -->
                     <div class="flex-1 md:flex-[2] relative px-5 py-3 md:py-4 border-b md:border-b-0 md:border-r border-gray-200">
@@ -538,7 +538,7 @@
                     <span id="dates-section-label" class="text-[10px] md:text-xs font-black tracking-[0.3em] uppercase text-[#db2777]">Upcoming Shows</span>
                     <span class="flex-1 h-px bg-gray-200"></span>
                 </div>
-                <div id="featured-dates" class="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0"></div>
+                <div id="featured-dates" class="flex md:grid md:grid-cols-4 gap-x-6 gap-y-8 overflow-x-auto md:overflow-visible pb-2 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0"></div>
             </div>
         </div>
     </section>
@@ -1088,7 +1088,7 @@
         }
 
         // Default: show the next 4 upcoming dates
-        renderDates(allTourDates.slice(0, 4));
+        renderDates(allTourDates.slice(0, 8));
 
         // Wire Location + Dates filters
         const locationInput = document.getElementById('tour-location');
@@ -1107,7 +1107,7 @@
             if (range) {
                 if (range === 'next30' || range === 'next60') {
                     // Show the first 4 or 8 upcoming shows as a rough next-N-days proxy
-                    const count = range === 'next30' ? 4 : 8;
+                    const count = range === 'next30' ? 4 : 12;
                     matches = matches.slice(0, count);
                 } else if (monthAbbrev[range]) {
                     matches = matches.filter(t => t.date.toLowerCase().startsWith(monthAbbrev[range]));
@@ -1117,7 +1117,7 @@
             const noFilters = !loc && !range;
             if (noFilters) {
                 sectionLabel.textContent = 'Upcoming Shows';
-                renderDates(allTourDates.slice(0, 4));
+                renderDates(allTourDates.slice(0, 8));
                 emptyState.classList.add('hidden');
                 return;
             }

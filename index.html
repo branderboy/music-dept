@@ -147,18 +147,20 @@
             <p class="text-xs md:text-sm font-black tracking-[0.35em] uppercase mb-5 text-[#db2777]">
                 The Music Dept Presents
             </p>
-            <h1 class="text-[36px] md:text-[46px] lg:text-[56px] xl:text-[72px] font-display uppercase tracking-normal mb-5 leading-[0.95]">
-                Are You Ready <br /> For The Next <span class="text-[#db2777]">Vibe Escape?</span>
+            <h1 class="text-[36px] md:text-[46px] lg:text-[56px] xl:text-[72px] font-display uppercase tracking-normal mb-6 leading-[0.95]">
+                One Night. One Bus. <br /> <span class="text-[#db2777]">One Experience.</span>
             </h1>
-            <p class="text-base md:text-lg font-normal leading-relaxed text-black max-w-2xl">
-                The <span class="font-bold">Usher <span class="font-bold">Usher &amp; Chris Brown</span> at Northwest Stadiumamp; Chris Brown</span> Concert at Northwest Stadium on <span class="font-bold">July 11th</span> is going to be crazy. We only have a few discounted spots available just for friends &amp; supporters for <span class="font-bold text-[#db2777]">$1k</span> only.
-            </p>
+            <div class="space-y-4 max-w-2xl text-base md:text-lg font-normal leading-relaxed text-black">
+                <p>We're taking a private group to see <span class="font-bold">Usher &amp; Chris Brown</span> live at Northwest Stadium on <span class="font-bold">July 11th</span>.</p>
+                <p>Luxury coach transportation, catered tailgate, VIP parking, bottles, and concert ticket included.</p>
+                <p>This isn't a random bus trip. It's a full experience with good people, good energy, and memories we're building for future cities.</p>
+            </div>
 
             <!-- Hero CTA -->
             <div class="mt-8">
                 <button onclick="document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' })"
                     class="group inline-flex items-center gap-3 bg-[#db2777] hover:bg-[#be185d] text-white px-7 py-4 text-xs md:text-sm font-bold tracking-[0.25em] uppercase transition-colors shadow-[0_10px_30px_rgba(219,39,119,0.35)]">
-                    Click Here To Get Started
+                    Reserve Your Spot
                     <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                 </button>
             </div>
@@ -171,14 +173,14 @@
                 <span class="mx-6 whitespace-nowrap">Exclusive VIP Access</span><span class="text-[#db2777]">•</span>
                 <span class="mx-6 whitespace-nowrap">Secure Your Spot</span><span class="text-[#db2777]">•</span>
                 <span class="mx-6 whitespace-nowrap">Ultimate Fan Experience</span><span class="text-[#db2777]">•</span>
-                <span class="mx-6 whitespace-nowrap text-[#db2777]">The Music Dept Presents</span><span class="text-[#db2777]">•</span>
+                <span class="mx-6 whitespace-nowrap text-[#db2777]">The Music Dept Presents The R&B Tour Experience</span><span class="text-[#db2777]">•</span>
             </div>
             <div class="animate-scroll shrink-0 flex items-center justify-around min-w-full text-xs md:text-sm font-bold tracking-[0.3em] uppercase" aria-hidden="true">
                 <span class="mx-6 whitespace-nowrap">Strictly Limited Capacity</span><span class="text-[#db2777]">•</span>
                 <span class="mx-6 whitespace-nowrap">Exclusive VIP Access</span><span class="text-[#db2777]">•</span>
                 <span class="mx-6 whitespace-nowrap">Secure Your Spot</span><span class="text-[#db2777]">•</span>
                 <span class="mx-6 whitespace-nowrap">Ultimate Fan Experience</span><span class="text-[#db2777]">•</span>
-                <span class="mx-6 whitespace-nowrap text-[#db2777]">The Music Dept Presents</span><span class="text-[#db2777]">•</span>
+                <span class="mx-6 whitespace-nowrap text-[#db2777]">The Music Dept Presents The R&B Tour Experience</span><span class="text-[#db2777]">•</span>
             </div>
         </div>
     </header>
@@ -202,14 +204,14 @@
                         <button type="button" id="feat-prev" class="shrink-0 w-12 h-12 rounded-full border border-[#db2777] text-[#db2777] hover:bg-[#db2777] hover:text-white transition-colors flex items-center justify-center" aria-label="Previous">
                             <i data-lucide="arrow-left" class="w-5 h-5"></i>
                         </button>
-                        <div id="feat-stage" class="flex-1 min-h-[120px] flex items-center">
+                        <div id="feat-stage" class="flex-1 min-h-[120px] flex items-center justify-center text-center">
                             <div>
                                 <p class="text-[10px] font-black tracking-[0.3em] uppercase text-white mb-1"><span id="feat-counter">01</span> / 05</p>
                                 <h5 id="feat-title" class="text-xl font-bold tracking-wide mb-2 uppercase text-white">Luxury Star Coach Travel</h5>
                                 <ul id="feat-bullets" class="text-white text-base font-light leading-snug space-y-1">
-                                    <li class="flex gap-2"><span class="text-white shrink-0">•</span><span>Premium star coach ride</span></li>
-                                    <li class="flex gap-2"><span class="text-white shrink-0">•</span><span>VIP venue parking</span></li>
-                                    <li class="flex gap-2"><span class="text-white shrink-0">•</span><span>Round-trip transport</span></li>
+                                    <li class="flex justify-center gap-2"><span class="text-white shrink-0">•</span><span>Premium star coach ride</span></li>
+                                    <li class="flex justify-center gap-2"><span class="text-white shrink-0">•</span><span>VIP venue parking</span></li>
+                                    <li class="flex justify-center gap-2"><span class="text-white shrink-0">•</span><span>Round-trip transport</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -1164,7 +1166,7 @@
         function renderFeature() {
             const f = features[featIndex];
             featTitle.textContent = f.title;
-            featBullets.innerHTML = f.bullets.map(b => `<li class="flex gap-2"><span class="text-white shrink-0">•</span><span>${b}</span></li>`).join('');
+            featBullets.innerHTML = f.bullets.map(b => `<li class="flex justify-center gap-2"><span class="text-white shrink-0">•</span><span>${b}</span></li>`).join('');
             featCounter.textContent = String(featIndex + 1).padStart(2, '0');
         }
         document.getElementById('feat-next').addEventListener('click', () => { featIndex = (featIndex + 1) % features.length; renderFeature(); });

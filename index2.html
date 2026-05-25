@@ -564,7 +564,7 @@
                 <!-- Header strip -->
                 <div class="relative px-8 md:px-14 pt-10 md:pt-14 pb-8 border-b border-[#d97706]/15">
                     <div class="flex items-center justify-between mb-3">
-                        <p class="text-[10px] md:text-xs font-bold tracking-[0.35em] uppercase text-[#d97706]">Vibe Escape · Reservation</p>
+                        <p class="text-[10px] md:text-xs font-bold tracking-[0.35em] uppercase text-[#d97706] flex items-center gap-2"><i data-lucide="lock" class="w-3 h-3"></i>Vibe Escape · Reservation</p>
                         <p class="text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-gray-500"><span id="step-counter">01</span> <span class="text-gray-300">/</span> 04</p>
                     </div>
                     <h3 id="step-label" class="text-2xl md:text-3xl font-display tracking-wide uppercase text-black">What's Included</h3>
@@ -576,6 +576,8 @@
                 <div class="px-8 md:px-14 py-6 md:py-8">
 
                 <form id="apply-form" class="relative z-10">
+                    <!-- Honeypot anti-spam (hidden from humans, bots fill it) -->
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 
                     <!-- STEP 1: What's Included -->
                     <div data-step="1" class="form-step">
@@ -760,6 +762,16 @@
                     <p class="text-[#d97706] font-bold tracking-[0.3em] uppercase text-xs mb-3">Before You Apply</p>
                     <h3 class="text-3xl md:text-4xl font-display tracking-wide uppercase">Frequently Asked</h3>
                 </div>
+
+                <details class="group border border-[#d97706]/30 open:border-[#d97706] transition-colors">
+                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide text-white">
+                        <span>Who is The Music Dept?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-[#d97706] transition-transform group-open:rotate-45"></i>
+                    </summary>
+                    <div class="px-5 pb-5 text-white text-sm font-light leading-relaxed">
+                        The Music Dept (4848 Battery Lane, Bethesda, MD) is the premier band rehearsal space, recording studio, and event venue in the area. Operating in the historic former "Track Recorders" space, it offers professional studios, podcast spaces, and hosts local musician events.
+                    </div>
+                </details>
 
                 <details class="group border border-[#d97706]/30 open:border-[#d97706] transition-colors">
                     <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide text-white">
@@ -1116,6 +1128,8 @@
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+            // Honeypot — if filled, treat as spam and silently drop
+            if (form.elements['website'] && form.elements['website'].value) return;
             if (!validateStep()) return;
 
             submitBtn.disabled = true;

@@ -88,6 +88,18 @@
         .dark-section .text-\[\#db2777\] {
             color: #f472b6 !important;
         }
+        /* Lighten hot pink borders inside dark-bg sections so they read */
+        #apply-section .border-\[\#db2777\],
+        #apply-section .border-\[\#db2777\]\/30,
+        #apply-section .border-\[\#db2777\]\/40,
+        #apply-section .border-\[\#db2777\]\/20,
+        #apply-section [class*="border-\[\#db2777\]"],
+        .dark-section [class*="border-\[\#db2777\]"] {
+            border-color: rgba(244, 114, 182, 0.55) !important;
+        }
+        #apply-section details[open] {
+            border-color: #f472b6 !important;
+        }
         /* Smooth font rendering so text doesn't look razor-sharp on dark bgs */
         body {
             -webkit-font-smoothing: antialiased;

@@ -8,6 +8,7 @@
     <meta name="keywords" content="Vibe Escape, VIP R&B tour, Music Dept, Usher tour, Chris Brown tour, luxury concert experience, fan experience, premium star coach">
 
     <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#d97706">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -196,6 +197,27 @@
                         <img src="hero3.png" alt="The Premium Escape Package" class="relative z-10 w-full object-contain drop-shadow-[0_40px_60px_rgba(0,0,0,0.8)] transition-transform duration-700 group-hover:scale-[1.02] pointer-events-auto" onerror="this.src='https://via.placeholder.com/600x500?text=Premium+Escape'">
                     </div>
 
+                    <!-- Compact Features Carousel -->
+                    <div class="relative flex items-start gap-5">
+                        <div id="feat-stage" class="min-h-[120px] flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-[#d97706] flex items-center justify-center shrink-0">
+                                <i id="feat-icon" data-lucide="bus" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black tracking-[0.3em] uppercase text-white mb-1"><span id="feat-counter">01</span> / 05</p>
+                                <h5 id="feat-title" class="text-xl font-bold tracking-wide mb-2 uppercase text-white">Luxury Star Coach Travel</h5>
+                                <ul id="feat-bullets" class="text-white text-base font-light leading-snug space-y-1">
+                                    <li class="flex gap-2"><span class="text-white shrink-0">•</span><span>Premium star coach ride</span></li>
+                                    <li class="flex gap-2"><span class="text-white shrink-0">•</span><span>VIP venue parking</span></li>
+                                    <li class="flex gap-2"><span class="text-white shrink-0">•</span><span>Round-trip transport</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button type="button" id="feat-next" class="shrink-0 self-center w-12 h-12 rounded-full bg-[#d97706] text-white hover:bg-[#b45309] transition-colors flex items-center justify-center shadow-[0_8px_20px_rgba(217,119,6,0.4)]" aria-label="Next">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                    <button type="button" id="feat-prev" class="hidden"></button>
                 </div>
 
                 <!-- Right Content Side -->
@@ -1128,13 +1150,35 @@
         // Initial render
         renderStep();
 
+        // Features carousel (Premium Escape Package)
+        const features = [
+            { icon: 'bus', title: 'Luxury Star Coach Travel', bullets: ['Premium star coach ride', 'VIP venue parking', 'Round-trip transport'] },
+            { icon: 'bed-double', title: 'Overnight Comfort & Lodging', bullets: ['Sleep comfortably onboard', 'Hotel or Airbnb on overnight trips'] },
+            { icon: 'utensils', title: 'Premium Tailgate Experience', bullets: ['Catered R&B tailgate', 'Curated food & vibes', 'High-energy atmosphere'] },
+            { icon: 'ticket', title: 'Concert Access Included', bullets: ['Concert ticket covered', 'Live Usher & Chris Brown'] },
+            { icon: 'wine', title: 'VIP Bottle Service', bullets: ['Full bottle of your choice', 'Vibes from the moment you board'] }
+        ];
+        let featIndex = 0;
+        const featIcon = document.getElementById('feat-icon');
+        const featTitle = document.getElementById('feat-title');
+        const featBullets = document.getElementById('feat-bullets');
+        const featCounter = document.getElementById('feat-counter');
+        function renderFeature() {
+            const f = features[featIndex];
+            featIcon.setAttribute('data-lucide', f.icon);
+            featTitle.textContent = f.title;
+            featBullets.innerHTML = f.bullets.map(b => `<li class="flex gap-2"><span class="text-white shrink-0">•</span><span>${b}</span></li>`).join('');
+            featCounter.textContent = String(featIndex + 1).padStart(2, '0');
+            lucide.createIcons();
+        }
+        document.getElementById('feat-next').addEventListener('click', () => { featIndex = (featIndex + 1) % features.length; renderFeature(); });
+        document.getElementById('feat-prev').addEventListener('click', () => { featIndex = (featIndex - 1 + features.length) % features.length; renderFeature(); });
 
-        // Auto-unregister any stale service worker so visitors don't see cached old content
+        // 6. Service Worker registration (PWA)
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistrations().then(regs => regs.forEach(r => r.unregister()));
-            if (window.caches) {
-                caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
-            }
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js').catch(err => console.warn('SW register failed', err));
+            });
         }
     </script>
 </body>

@@ -121,18 +121,12 @@
                 <a href="#experience" class="hover:text-[#d97706] transition-colors">Experience</a>
                 <a href="#dates" class="hover:text-[#d97706] transition-colors">Tour Dates</a>
             </div>
-            <div class="flex items-center gap-4">
-                <a href="sms:+12025551212&body=Raymondbrown"
-                    class="hidden md:inline-flex items-center gap-2 text-xs font-black tracking-[0.2em] uppercase text-black hover:text-[#d97706] transition-colors">
-                    <i data-lucide="message-square" class="w-4 h-4"></i>
-                    <span>Text <span class="text-[#d97706]">Raymondbrown</span> to (202) 555-1212</span>
-                </a>
-                <button onclick="document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' })"
-                    class="inline-flex items-center gap-2 bg-[#d97706] hover:bg-[#b45309] text-white px-5 py-2.5 text-[10px] sm:text-xs font-black tracking-[0.2em] uppercase transition-colors shadow-[0_4px_15px_rgba(217,119,6,0.35)]">
-                    <i data-lucide="lock" class="w-3.5 h-3.5"></i>
-                    Reserve Your Spot
-                </button>
-            </div>
+            <a href="sms:+12025551212&body=Raymondbrown"
+                class="inline-flex items-center gap-2 text-[10px] sm:text-xs font-black tracking-[0.15em] sm:tracking-[0.2em] uppercase text-black hover:text-[#d97706] transition-colors">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                <span class="hidden sm:inline">Text <span class="text-[#d97706]">Raymondbrown</span> to (202) 555-1212</span>
+                <span class="sm:hidden text-[#d97706]">Text Us</span>
+            </a>
         </div>
     </nav>
 
@@ -165,6 +159,7 @@
             <div class="mt-8">
                 <button onclick="document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' })"
                     class="group inline-flex items-center gap-3 bg-[#d97706] hover:bg-[#b45309] text-white px-7 py-4 text-xs md:text-sm font-bold tracking-[0.25em] uppercase transition-colors shadow-[0_10px_30px_rgba(217,119,6,0.35)]">
+                    <i data-lucide="lock" class="w-4 h-4"></i>
                     Reserve Your Spot
                     <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                 </button>

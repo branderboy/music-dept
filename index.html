@@ -92,37 +92,60 @@
 </head>
 <body class="min-h-screen bg-white text-black font-sans selection:bg-[#db2777] selection:text-white overflow-x-hidden">
 
-    <!-- LAUNCH SHOW POPUP (handwritten sticky note) -->
-    <div id="launch-popup" class="fixed inset-0 z-[100] hidden items-center justify-center px-4 py-8 bg-black/70 backdrop-blur-sm overflow-y-auto">
-        <div class="relative w-full max-w-xl bg-white shadow-[0_30px_60px_rgba(0,0,0,0.5),inset_0_-30px_60px_rgba(0,0,0,0.04)] transform rotate-[-1.5deg] animate-[popup-in_0.4s_ease-out]" style="font-family: 'Caveat', cursive;">
-            <!-- Tape -->
-            <div class="absolute -top-3 left-10 w-24 h-7 bg-[#db2777]/40 rotate-[-4deg] shadow-sm"></div>
-            <div class="absolute -top-3 right-12 w-20 h-7 bg-[#db2777]/40 rotate-[3deg] shadow-sm"></div>
+    <!-- LAUNCH SHOW POPUP (iMessage text) -->
+    <div id="launch-popup" class="fixed inset-0 z-[100] hidden items-center justify-center px-4 py-8 bg-black/70 backdrop-blur-sm overflow-y-auto" style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;">
+        <div class="relative w-full max-w-sm bg-white rounded-[2rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.6)] animate-[popup-in_0.4s_ease-out]">
+            <!-- iPhone notch -->
+            <div class="bg-white pt-2 pb-1 flex items-center justify-center">
+                <div class="w-24 h-5 bg-black rounded-full"></div>
+            </div>
 
-            <!-- Close button -->
-            <button id="launch-popup-close" class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center text-black/60 hover:text-black transition-colors text-2xl leading-none font-sans">×</button>
+            <!-- Header bar -->
+            <div class="bg-[#f6f6f6] border-b border-gray-200 px-4 py-3 flex items-center gap-3">
+                <button id="launch-popup-close" class="text-[#007aff] text-lg leading-none">‹</button>
+                <div class="flex-1 flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full bg-[#db2777] flex items-center justify-center text-white font-bold text-xs mb-0.5">MD</div>
+                    <p class="text-[11px] font-semibold text-black leading-tight">The Music Dept</p>
+                    <p class="text-[9px] text-gray-500">iMessage</p>
+                </div>
+                <div class="w-4"></div>
+            </div>
 
-            <div class="px-8 md:px-12 py-10 md:py-12">
-                <p class="text-3xl md:text-4xl text-black leading-tight mb-5 font-semibold">Hey — this one's for my people. 🖤</p>
+            <!-- Conversation -->
+            <div class="bg-white px-3 py-4 space-y-1.5">
+                <p class="text-center text-[10px] text-gray-400 mb-2">iMessage · Today 11:42 AM</p>
 
-                <p class="text-xl md:text-2xl text-black/80 leading-snug mb-4">
-                    Running it back with <span class="font-bold text-black">Usher &amp; Chris Brown</span>, July 11th in DC.
-                </p>
+                <div class="flex">
+                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
+                        yo — this one's for my people 🖤
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
+                        Usher &amp; Chris Brown · July 11 · DC
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
+                        coach + tailgate + bottles + ticket
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
+                        normally $2,500. for you → <span class="font-bold">$1,000</span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
+                        you in?
+                    </div>
+                </div>
+                <p class="text-center text-[10px] text-gray-400 pt-1">Delivered</p>
+            </div>
 
-                <p class="text-xl md:text-2xl text-black/80 leading-snug mb-6">
-                    Coach, tailgate, bottles, the ticket — all in. Just need you to capture the vibe.
-                </p>
-
-                <p class="text-2xl md:text-3xl mb-6">
-                    <span class="line-through text-black/40">$2,500</span>
-                    <span class="ml-2 text-[#db2777] font-bold">$1,000.</span>
-                </p>
-
-                <p class="text-base md:text-lg text-black/60 italic mb-7" style="font-family: 'Space Grotesk', sans-serif;">
-                    If you've ever said "let me know when you do something" — this is that.
-                </p>
-
-                <button id="launch-popup-cta" class="bg-black hover:bg-[#db2777] text-white px-8 py-3.5 text-base font-bold transition-colors" style="font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.1em; text-transform: uppercase;">
+            <!-- iMessage input bar (CTA) -->
+            <div class="bg-[#f6f6f6] border-t border-gray-200 px-3 py-2.5 flex items-center gap-2">
+                <button id="launch-popup-cta" class="flex-1 bg-[#db2777] hover:bg-[#be185d] text-white rounded-full py-2.5 text-sm font-semibold transition-colors">
                     I'm In →
                 </button>
             </div>

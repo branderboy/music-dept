@@ -83,6 +83,26 @@
         .pink-on-dark {
             color: #db2777;
         }
+        /* Smooth font rendering so text doesn't look razor-sharp on dark bgs */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        /* Slightly off-white so text reads soft instead of stark on dark sections */
+        .text-white {
+            color: #fafafa;
+        }
+        .form-pop-init {
+            opacity: 0;
+            transform: translateY(24px) scale(0.97);
+            transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.7s ease;
+        }
+        .form-pop-in {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            box-shadow: 0 30px 80px rgba(219, 39, 119, 0.35);
+        }
         @media (max-width: 767px) {
             .pink-on-dark {
                 color: #f9a8d4;
@@ -325,7 +345,8 @@
                     </ul>
 
                     <div class="flex flex-wrap items-baseline gap-3 border-b border-[#db2777]/20 pb-8">
-                        <span class="text-6xl font-display tracking-wider">$2,500</span>
+                        <span class="text-6xl font-display tracking-wider text-gray-400 line-through decoration-[#db2777] decoration-[3px]">$2,500</span>
+                        <span class="text-6xl font-display tracking-wider text-[#db2777]">$1,000</span>
                         <span class="text-xs font-bold tracking-[0.2em] uppercase text-white">Per Person · Everything Included</span>
                     </div>
                 </div>
@@ -679,7 +700,7 @@
             <div id="form-grid" class="grid lg:grid-cols-5 gap-10 lg:gap-12 items-start">
 
             <!-- Form Container -->
-            <div id="form-container" class="order-1 lg:order-2 lg:col-span-3 border-2 md:border border-[#db2777] md:border-[#db2777]/20 bg-white relative overflow-hidden shadow-[0_25px_70px_rgba(219,39,119,0.35)] md:shadow-[0_20px_60px_rgba(219,39,119,0.15)] ring-4 ring-[#db2777]/20 md:ring-0">
+            <div id="form-container" class="order-1 lg:order-2 lg:col-span-3 border border-[#db2777]/20 bg-white relative overflow-hidden shadow-[0_20px_60px_rgba(219,39,119,0.15)]">
                 <!-- Secure Checkout Banner -->
                 <div class="bg-gray-50 border-b border-gray-200 px-6 md:px-10 py-4">
                     <div class="flex items-center justify-between gap-4 flex-wrap">
@@ -1153,11 +1174,12 @@
             });
         });
 
-        // 2. Navbar Scroll Effect
+        // 2. Navbar Scroll Effect + Mobile Sticky CTA
         const nav = document.getElementById('main-nav');
         const mobileCta = document.getElementById('mobile-sticky-cta');
         const applySection = document.getElementById('apply-section');
-        window.addEventListener('scroll', () => {
+
+        function updateScrollUI() {
             if (window.scrollY > 50) {
                 nav.classList.add('bg-white/95', 'backdrop-blur-md', 'border-gray-200');
                 nav.classList.remove('bg-transparent', 'border-transparent');
@@ -1166,18 +1188,34 @@
                 nav.classList.add('bg-transparent', 'border-transparent');
             }
 
-            // Mobile sticky CTA: show after scrolling past hero, hide once user is inside the form
             if (mobileCta && applySection) {
                 const applyRect = applySection.getBoundingClientRect();
-                const pastHero = window.scrollY > window.innerHeight * 0.5;
-                const insideForm = applyRect.top < 80 && applyRect.bottom > 200;
-                if (pastHero && !insideForm) {
+                const pastHero = window.scrollY > 300;
+                const formNearby = applyRect.top < window.innerHeight && applyRect.bottom > 100;
+                if (pastHero && !formNearby) {
                     mobileCta.classList.remove('translate-y-full');
                 } else {
                     mobileCta.classList.add('translate-y-full');
                 }
             }
-        });
+        }
+        window.addEventListener('scroll', updateScrollUI, { passive: true });
+        updateScrollUI();
+
+        // Pop-in animation when the form enters the viewport
+        const formContainerEl = document.getElementById('form-container');
+        if (formContainerEl && 'IntersectionObserver' in window) {
+            formContainerEl.classList.add('form-pop-init');
+            const popObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        formContainerEl.classList.add('form-pop-in');
+                        popObserver.disconnect();
+                    }
+                });
+            }, { threshold: 0.15 });
+            popObserver.observe(formContainerEl);
+        }
 
         // 2b. Share + Add to Calendar (DC Show)
         const showStartUTC = '20260710T230000Z';

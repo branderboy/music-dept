@@ -64,6 +64,10 @@
             0%, 100% { transform: rotate(-2deg); }
             50% { transform: rotate(2deg); }
         }
+        @keyframes popup-in {
+            0% { opacity: 0; transform: rotate(-1deg) scale(0.85) translateY(20px); }
+            100% { opacity: 1; transform: rotate(-1deg) scale(1) translateY(0); }
+        }
         .animate-sway {
             animation: sway 4s ease-in-out infinite;
             transform-origin: top center;
@@ -87,6 +91,54 @@
     </style>
 </head>
 <body class="min-h-screen bg-white text-black font-sans selection:bg-[#db2777] selection:text-white overflow-x-hidden">
+
+    <!-- LAUNCH SHOW POPUP (SMS / sticky note style) -->
+    <div id="launch-popup" class="fixed inset-0 z-[100] hidden items-center justify-center px-4 py-8 bg-black/70 backdrop-blur-sm overflow-y-auto">
+        <div class="relative w-full max-w-sm bg-[#fff9c4] shadow-[0_25px_60px_rgba(0,0,0,0.4)] rounded-sm transform rotate-[-1deg] animate-[popup-in_0.4s_ease-out] my-auto">
+            <!-- Tape -->
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-[#db2777]/30 rounded-sm rotate-[2deg] shadow-sm"></div>
+
+            <!-- Close button -->
+            <button id="launch-popup-close" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center text-black/60 hover:text-black transition-colors text-lg leading-none">×</button>
+
+            <div class="p-6 pt-8">
+                <!-- iMessage header -->
+                <div class="flex items-center gap-3 pb-3 border-b border-black/10 mb-4">
+                    <div class="w-10 h-10 rounded-full bg-[#db2777] flex items-center justify-center text-white font-black text-sm tracking-wider">MD</div>
+                    <div class="flex-1 min-w-0">
+                        <p class="font-bold text-sm text-black truncate">The Music Dept</p>
+                        <p class="text-[10px] text-gray-500 tracking-wide">@themusicdeptdmv</p>
+                    </div>
+                    <p class="text-[10px] text-gray-400 font-medium">now</p>
+                </div>
+
+                <!-- Message bubbles -->
+                <div class="space-y-2 mb-4">
+                    <div class="bg-white rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed text-black shadow-sm">
+                        I don't do this often — this one's for my people. 🖤
+                    </div>
+                    <div class="bg-white rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed text-black shadow-sm">
+                        We're taking a group to see <span class="font-bold">Usher &amp; Chris Brown</span> at Northwest Stadium on <span class="font-bold">July 11th</span>, and I opened a few discounted spots just for friends/supporters.
+                    </div>
+                    <div class="bg-white rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed text-black shadow-sm">
+                        Luxury coach, VIP parking, catered tailgate, bottles, and concert ticket included. We just ask to capture the experience as we build this for future cities.
+                    </div>
+                    <div class="bg-[#db2777] rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed text-white shadow-sm">
+                        Regularly <span class="line-through opacity-70">$2,500</span> — for my people: <span class="font-black text-lg">$1,000</span>
+                    </div>
+                    <div class="bg-white rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed text-black shadow-sm italic">
+                        If you've ever said "let me know when you do something" — this is that moment.
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <button id="launch-popup-cta" class="w-full bg-[#db2777] hover:bg-[#be185d] text-white px-5 py-3.5 text-xs font-bold tracking-[0.25em] uppercase transition-colors shadow-[0_8px_20px_rgba(219,39,119,0.4)]">
+                    Reserve My Spot
+                </button>
+                <p class="text-center text-[10px] text-gray-500 mt-3 font-medium tracking-wide">12 spots only · DC launch · Jul 11</p>
+            </div>
+        </div>
+    </div>
 
     <!-- SOCIAL PROOF ALERT -->
     <div id="social-proof-alert" class="fixed bottom-6 right-6 z-50 transition-all duration-700 transform translate-y-10 opacity-0 pointer-events-none">
@@ -158,22 +210,6 @@
                     Book Your Fan Experience
                     <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                 </button>
-            </div>
-
-            <!-- Launch Show Callout -->
-            <div class="mt-10 max-w-2xl border-l-4 border-[#db2777] bg-white/70 backdrop-blur-sm p-5 md:p-6 shadow-[0_10px_30px_rgba(219,39,119,0.15)]">
-                <div class="flex items-center gap-2 mb-3">
-                    <span class="inline-block px-2 py-1 bg-[#db2777] text-white text-[10px] font-black tracking-[0.2em] uppercase">Launch Show</span>
-                    <span class="text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-[#db2777]">Jul 11 · Washington, DC · Northwest Stadium</span>
-                </div>
-                <p class="text-sm md:text-base font-light text-gray-700 leading-relaxed">
-                    We're taking a group to see <span class="font-semibold text-black">Usher &amp; Chris Brown</span> on July 11th — and I opened a few discounted spots just for friends &amp; supporters. Luxury coach, VIP parking, catered tailgate, bottles, and concert ticket included. We just ask to capture the experience as we build this for future cities.
-                </p>
-                <div class="mt-4 flex items-baseline gap-3 flex-wrap">
-                    <span class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 line-through">$2,500</span>
-                    <span class="text-3xl md:text-4xl font-display tracking-wider text-[#db2777]">$1,000</span>
-                    <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-700">For My People · DC Launch Only</span>
-                </div>
             </div>
         </div>
 
@@ -1157,7 +1193,41 @@
         // Initial render
         renderStep();
 
-        // 6. Service Worker registration (PWA)
+        // 6. Launch Show Popup
+        const launchPopup = document.getElementById('launch-popup');
+        const launchClose = document.getElementById('launch-popup-close');
+        const launchCta = document.getElementById('launch-popup-cta');
+
+        function hideLaunchPopup() {
+            launchPopup.classList.remove('flex');
+            launchPopup.classList.add('hidden');
+            try { localStorage.setItem('vibeEscapeLaunchSeen', '1'); } catch (e) {}
+        }
+
+        function showLaunchPopup() {
+            launchPopup.classList.remove('hidden');
+            launchPopup.classList.add('flex');
+            lucide.createIcons();
+        }
+
+        try {
+            if (!localStorage.getItem('vibeEscapeLaunchSeen')) {
+                setTimeout(showLaunchPopup, 1200);
+            }
+        } catch (e) {
+            setTimeout(showLaunchPopup, 1200);
+        }
+
+        launchClose.addEventListener('click', hideLaunchPopup);
+        launchPopup.addEventListener('click', (e) => {
+            if (e.target === launchPopup) hideLaunchPopup();
+        });
+        launchCta.addEventListener('click', () => {
+            hideLaunchPopup();
+            document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // 7. Service Worker registration (PWA)
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js').catch(err => console.warn('SW register failed', err));

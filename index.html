@@ -26,7 +26,7 @@
     <!-- ADDED: Modern, younger Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -92,50 +92,39 @@
 </head>
 <body class="min-h-screen bg-white text-black font-sans selection:bg-[#db2777] selection:text-white overflow-x-hidden">
 
-    <!-- LAUNCH SHOW POPUP (SMS / sticky note style) -->
+    <!-- LAUNCH SHOW POPUP (handwritten sticky note) -->
     <div id="launch-popup" class="fixed inset-0 z-[100] hidden items-center justify-center px-4 py-8 bg-black/70 backdrop-blur-sm overflow-y-auto">
-        <div class="relative w-full max-w-sm bg-[#fff9c4] shadow-[0_25px_60px_rgba(0,0,0,0.4)] rounded-sm transform rotate-[-1deg] animate-[popup-in_0.4s_ease-out] my-auto">
+        <div class="relative w-full max-w-xl bg-[#fff59d] shadow-[0_30px_60px_rgba(0,0,0,0.5),inset_0_-30px_60px_rgba(0,0,0,0.04)] transform rotate-[-1.5deg] animate-[popup-in_0.4s_ease-out]" style="font-family: 'Caveat', cursive;">
             <!-- Tape -->
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-[#db2777]/30 rounded-sm rotate-[2deg] shadow-sm"></div>
+            <div class="absolute -top-3 left-10 w-24 h-7 bg-[#db2777]/40 rotate-[-4deg] shadow-sm"></div>
+            <div class="absolute -top-3 right-12 w-20 h-7 bg-[#db2777]/40 rotate-[3deg] shadow-sm"></div>
 
             <!-- Close button -->
-            <button id="launch-popup-close" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center text-black/60 hover:text-black transition-colors text-lg leading-none">×</button>
+            <button id="launch-popup-close" class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center text-black/60 hover:text-black transition-colors text-2xl leading-none font-sans">×</button>
 
-            <div class="p-6 pt-8">
-                <!-- iMessage header -->
-                <div class="flex items-center gap-3 pb-3 border-b border-black/10 mb-4">
-                    <div class="w-10 h-10 rounded-full bg-[#db2777] flex items-center justify-center text-white font-black text-sm tracking-wider">MD</div>
-                    <div class="flex-1 min-w-0">
-                        <p class="font-bold text-sm text-black truncate">The Music Dept</p>
-                        <p class="text-[10px] text-gray-500 tracking-wide">@themusicdeptdmv</p>
-                    </div>
-                    <p class="text-[10px] text-gray-400 font-medium">now</p>
-                </div>
+            <div class="px-8 md:px-12 py-10 md:py-12">
+                <p class="text-3xl md:text-4xl text-black leading-tight mb-5 font-semibold">Hey — this one's for my people. 🖤</p>
 
-                <!-- Message bubbles -->
-                <div class="space-y-2 mb-4">
-                    <div class="bg-white rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed text-black shadow-sm">
-                        I don't do this often — this one's for my people. 🖤
-                    </div>
-                    <div class="bg-white rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed text-black shadow-sm">
-                        We're taking a group to see <span class="font-bold">Usher &amp; Chris Brown</span> at Northwest Stadium on <span class="font-bold">July 11th</span>, and I opened a few discounted spots just for friends/supporters.
-                    </div>
-                    <div class="bg-white rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed text-black shadow-sm">
-                        Luxury coach, VIP parking, catered tailgate, bottles, and concert ticket included. We just ask to capture the experience as we build this for future cities.
-                    </div>
-                    <div class="bg-[#db2777] rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed text-white shadow-sm">
-                        Regularly <span class="line-through opacity-70">$2,500</span> — for my people: <span class="font-black text-lg">$1,000</span>
-                    </div>
-                    <div class="bg-white rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed text-black shadow-sm italic">
-                        If you've ever said "let me know when you do something" — this is that moment.
-                    </div>
-                </div>
+                <p class="text-xl md:text-2xl text-black/80 leading-snug mb-4">
+                    Running it back with <span class="font-bold text-black">Usher &amp; Chris Brown</span>, July 11th in DC.
+                </p>
 
-                <!-- CTA -->
-                <button id="launch-popup-cta" class="w-full bg-[#db2777] hover:bg-[#be185d] text-white px-5 py-3.5 text-xs font-bold tracking-[0.25em] uppercase transition-colors shadow-[0_8px_20px_rgba(219,39,119,0.4)]">
-                    Reserve My Spot
+                <p class="text-xl md:text-2xl text-black/80 leading-snug mb-6">
+                    Coach, tailgate, bottles, the ticket — all in. Just need you to capture the vibe.
+                </p>
+
+                <p class="text-2xl md:text-3xl mb-6">
+                    <span class="line-through text-black/40">$2,500</span>
+                    <span class="ml-2 text-[#db2777] font-bold">$1,000.</span>
+                </p>
+
+                <p class="text-base md:text-lg text-black/60 italic mb-7" style="font-family: 'Space Grotesk', sans-serif;">
+                    If you've ever said "let me know when you do something" — this is that.
+                </p>
+
+                <button id="launch-popup-cta" class="bg-black hover:bg-[#db2777] text-white px-8 py-3.5 text-base font-bold transition-colors" style="font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.1em; text-transform: uppercase;">
+                    I'm In →
                 </button>
-                <p class="text-center text-[10px] text-gray-500 mt-3 font-medium tracking-wide">12 spots only · DC launch · Jul 11</p>
             </div>
         </div>
     </div>

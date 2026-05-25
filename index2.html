@@ -122,15 +122,16 @@
                 <a href="#dates" class="hover:text-[#d97706] transition-colors">Tour Dates</a>
             </div>
             <a href="sms:+12025551212&body=Raymondbrown"
-                class="hidden sm:inline-flex items-center gap-2 text-xs font-black tracking-[0.2em] uppercase text-black hover:text-[#d97706] transition-colors">
+                class="inline-flex items-center gap-2 text-[10px] sm:text-xs font-black tracking-[0.15em] sm:tracking-[0.2em] uppercase text-black hover:text-[#d97706] transition-colors">
                 <i data-lucide="message-square" class="w-4 h-4"></i>
-                Text <span class="text-[#d97706]">Raymondbrown</span> to (202) 555-1212
+                <span class="hidden sm:inline">Text <span class="text-[#d97706]">Raymondbrown</span> to (202) 555-1212</span>
+                <span class="sm:hidden text-[#d97706]">Text Us</span>
             </a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="relative min-h-[110vh] flex flex-col justify-center bg-[#f8f8f8] pt-20 pb-24 overflow-hidden">
+    <header class="relative min-h-screen md:min-h-[110vh] flex flex-col justify-center bg-[#f8f8f8] pt-20 pb-20 md:pb-24 overflow-hidden">
         <!-- Subtle Purple Glow behind hero -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-[#d97706]/10 to-[#d97706]/5 rounded-full blur-[100px] pointer-events-none"></div>
 
@@ -311,26 +312,30 @@
             </div>
 
             <!-- Next Show Countdown -->
-            <div class="mt-20 border border-[#d97706]/20 bg-[#0a0a0a] p-8 md:p-12 w-full max-w-4xl shadow-[0_0_50px_rgba(217,119,6,0.05)]">
-                <p class="text-[#d97706] font-bold tracking-[0.3em] uppercase text-xs mb-8">Next Stop: Washington, DC</p>
+            <div class="mt-20 border border-[#d97706]/20 bg-[#0a0a0a] p-8 md:p-12 w-full max-w-4xl shadow-[0_0_50px_rgba(217,119,6,0.05)] text-center">
+                <p class="text-[#d97706] font-bold tracking-[0.3em] uppercase text-xs mb-3">Next Stop</p>
+                <h3 class="text-4xl md:text-6xl font-display tracking-wide uppercase text-white leading-[0.95]">Northwest Stadium</h3>
+                <p class="text-white text-base md:text-lg font-bold tracking-wide mt-3 mb-10">Friday · July 11</p>
+
                 <div class="grid grid-cols-4 gap-4 md:gap-8 text-center divide-x divide-gray-800">
                     <div class="flex flex-col">
                         <span id="cd-days" class="text-5xl md:text-7xl font-display">00</span>
-                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Days</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-300 mt-2">Days</span>
                     </div>
                     <div class="flex flex-col">
                         <span id="cd-hours" class="text-5xl md:text-7xl font-display">00</span>
-                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Hours</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-300 mt-2">Hours</span>
                     </div>
                     <div class="flex flex-col">
                         <span id="cd-minutes" class="text-5xl md:text-7xl font-display">00</span>
-                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Minutes</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-300 mt-2">Minutes</span>
                     </div>
                     <div class="flex flex-col">
                         <span id="cd-seconds" class="text-5xl md:text-7xl font-display text-[#d97706]">00</span>
-                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mt-2">Seconds</span>
+                        <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-gray-300 mt-2">Seconds</span>
                     </div>
                 </div>
+
 
                 <!-- Share + Add to Calendar -->
                 <div class="mt-10 pt-8 border-t border-[#d97706]/20 flex flex-col sm:flex-row gap-4 justify-center">
@@ -350,7 +355,7 @@
     </section>
 
     <!-- THE COACH PARALLAX ANIMATION -->
-    <section class="py-20 bg-white relative overflow-hidden border-t border-b border-gray-200">
+    <section class="py-12 md:py-20 bg-white relative overflow-hidden border-t border-b border-gray-200">
         <div class="text-center relative z-20 mb-8">
             <p class="text-[#d97706] font-bold tracking-[0.3em] uppercase text-xs mb-4">The Transport · Fan Experience</p>
             <h2 class="text-6xl md:text-8xl font-display text-black tracking-wide uppercase leading-[0.9]">Premium Star Coach</h2>
@@ -861,7 +866,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-white py-20 text-center border-t border-gray-100">
+    <footer class="bg-white py-12 md:py-20 text-center border-t border-gray-100">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-6xl md:text-8xl font-display uppercase tracking-wide mb-10 leading-none">
                 VIBE <span class="text-[#d97706]">ESCAPE</span>

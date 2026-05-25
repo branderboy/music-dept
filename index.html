@@ -94,7 +94,7 @@
 
     <!-- LAUNCH SHOW POPUP (iMessage text) -->
     <div id="launch-popup" class="fixed inset-0 z-[100] hidden items-center justify-center px-4 py-8 bg-black/70 backdrop-blur-sm overflow-y-auto" style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;">
-        <div class="relative w-full max-w-sm bg-white rounded-[2rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.6)] animate-[popup-in_0.4s_ease-out]">
+        <div class="relative w-full max-w-2xl bg-white rounded-[2rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.6)] animate-[popup-in_0.4s_ease-out] my-auto max-h-[90vh] flex flex-col">
             <!-- iPhone notch -->
             <div class="bg-white pt-2 pb-1 flex items-center justify-center">
                 <div class="w-24 h-5 bg-black rounded-full"></div>
@@ -112,7 +112,7 @@
             </div>
 
             <!-- Conversation -->
-            <div class="bg-white px-3 py-4">
+            <div class="bg-white px-4 py-4 flex-1 overflow-y-auto">
                 <p class="text-center text-[10px] text-gray-400 mb-3">iMessage · Today 11:42 AM</p>
                 <div class="flex">
                     <div class="max-w-[88%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-4 py-3 text-[15px] leading-relaxed whitespace-pre-line">I don&rsquo;t do this often &mdash; this one&rsquo;s for my people. 🖤
@@ -666,8 +666,8 @@ If you&rsquo;ve ever said &ldquo;let me know when you do something&rdquo; &mdash
                         </ul>
                         <div class="border border-[#db2777]/40 bg-[#db2777]/10 p-5 mb-2">
                             <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-[#db2777] mb-1">Total Package</p>
-                            <p class="text-3xl md:text-4xl font-display tracking-wider">$2,500 <span class="text-base font-sans font-light text-white">/ person</span></p>
-                            <p class="text-xs font-bold tracking-[0.15em] uppercase text-gray-300 mt-2">$500 Deposit To Reserve</p>
+                            <p class="text-3xl md:text-4xl font-display tracking-wider text-black">$2,500 <span class="text-base font-sans font-light text-gray-700">/ person</span></p>
+                            <p class="text-xs font-bold tracking-[0.15em] uppercase text-gray-700 mt-2">$500 Deposit To Reserve</p>
                         </div>
                     </div>
 
@@ -882,9 +882,9 @@ If you&rsquo;ve ever said &ldquo;let me know when you do something&rdquo; &mdash
                     </div>
                 </details>
 
-                <div class="border border-[#db2777]/40 bg-[#db2777]/5 p-5 mt-6">
+                <div class="border border-[#db2777]/40 bg-white p-5 mt-6">
                     <p class="text-xs font-bold tracking-[0.2em] uppercase text-[#db2777] mb-2">Still have questions?</p>
-                    <p class="text-gray-700 text-sm font-light">Email <a href="mailto:concierge@musicdept.com" class="underline hover:text-[#db2777]">concierge@musicdept.com</a> for white-glove support.</p>
+                    <p class="text-black text-sm font-light">Email <a href="mailto:concierge@musicdept.com" class="underline hover:text-[#db2777]">concierge@musicdept.com</a> for white-glove support.</p>
                 </div>
             </aside>
 

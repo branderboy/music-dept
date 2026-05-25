@@ -198,22 +198,20 @@
                     </div>
 
                     <!-- Compact Features Carousel -->
-                    <div class="relative flex items-start gap-5">
-                        <div id="feat-stage" class="min-h-[120px] flex items-start gap-3">
-                            <div class="w-10 h-10 rounded-full bg-[#db2777] flex items-center justify-center shrink-0">
-                                <i id="feat-icon" data-lucide="bus" class="w-4 h-4 text-white"></i>
+                    <div class="relative flex items-center gap-4 w-full h-[210px]">
+                        <div id="feat-stage" class="flex-1 min-h-[210px] flex flex-col items-center justify-center text-center gap-2">
+                            <div id="feat-icon-wrap" class="w-10 h-10 rounded-full bg-[#db2777] flex items-center justify-center shrink-0">
+                                <i data-lucide="bus" class="w-4 h-4 text-white"></i>
                             </div>
-                            <div>
-                                <p class="text-[10px] font-black tracking-[0.3em] uppercase text-white mb-1"><span id="feat-counter">01</span> / 05</p>
-                                <h5 id="feat-title" class="text-xl font-bold tracking-wide mb-2 uppercase text-white">Luxury Star Coach Travel</h5>
-                                <ul id="feat-bullets" class="text-white text-base font-light leading-snug space-y-1">
-                                    <li class="flex gap-2"><span class="text-white shrink-0">•</span><span>Premium star coach ride</span></li>
-                                    <li class="flex gap-2"><span class="text-white shrink-0">•</span><span>VIP venue parking</span></li>
-                                    <li class="flex gap-2"><span class="text-white shrink-0">•</span><span>Round-trip transport</span></li>
-                                </ul>
-                            </div>
+                            <p class="text-[10px] font-black tracking-[0.3em] uppercase text-white"><span id="feat-counter">01</span> / 05</p>
+                            <h5 id="feat-title" class="text-xl font-bold tracking-wide uppercase text-white">Luxury Star Coach Travel</h5>
+                            <ul id="feat-bullets" class="text-white text-base font-light leading-snug space-y-1">
+                                <li class="flex justify-center gap-2"><span class="text-white shrink-0">•</span><span>Premium star coach ride</span></li>
+                                <li class="flex justify-center gap-2"><span class="text-white shrink-0">•</span><span>VIP venue parking</span></li>
+                                <li class="flex justify-center gap-2"><span class="text-white shrink-0">•</span><span>Round-trip transport</span></li>
+                            </ul>
                         </div>
-                        <button type="button" id="feat-next" class="shrink-0 self-center w-12 h-12 rounded-full bg-[#db2777] text-white hover:bg-[#be185d] transition-colors flex items-center justify-center shadow-[0_8px_20px_rgba(219,39,119,0.4)]" aria-label="Next">
+                        <button type="button" id="feat-next" class="shrink-0 self-start w-12 h-12 rounded-full bg-[#db2777] text-white hover:bg-[#be185d] transition-colors flex items-center justify-center shadow-[0_8px_20px_rgba(219,39,119,0.4)]" aria-label="Next">
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </button>
                     </div>
@@ -1166,15 +1164,15 @@
             { icon: 'wine',     title: 'VIP Bottle Service',           bullets: ['Full bottle of your choice', 'Vibes from the moment you board'] }
         ];
         let featIndex = 0;
-        const featIconWrap = document.getElementById('feat-icon') ? document.getElementById('feat-icon').parentElement : null;
+        const featIconWrap = document.getElementById('feat-icon-wrap');
         const featTitle = document.getElementById('feat-title');
         const featBullets = document.getElementById('feat-bullets');
         const featCounter = document.getElementById('feat-counter');
         function renderFeature() {
             const f = features[featIndex];
-            if (featIconWrap) featIconWrap.innerHTML = FEAT_SVG[f.icon];
+            featIconWrap.innerHTML = FEAT_SVG[f.icon];
             featTitle.textContent = f.title;
-            featBullets.innerHTML = f.bullets.map(b => `<li class="flex gap-2"><span class="text-white shrink-0">•</span><span>${b}</span></li>`).join('');
+            featBullets.innerHTML = f.bullets.map(b => `<li class="flex justify-center gap-2"><span class="text-white shrink-0">•</span><span>${b}</span></li>`).join('');
             featCounter.textContent = String(featIndex + 1).padStart(2, '0');
         }
         renderFeature();

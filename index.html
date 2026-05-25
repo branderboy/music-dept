@@ -111,6 +111,14 @@
             animation: cta-shimmer 3.5s ease-in-out infinite;
             pointer-events: none;
         }
+        .linen-pink {
+            background-color: #fbcfe8;
+            background-image:
+                repeating-linear-gradient(0deg, rgba(157, 23, 77, 0.07) 0 1px, transparent 1px 3px),
+                repeating-linear-gradient(90deg, rgba(157, 23, 77, 0.07) 0 1px, transparent 1px 3px),
+                radial-gradient(ellipse at top, rgba(255, 255, 255, 0.35), transparent 60%),
+                radial-gradient(ellipse at bottom, rgba(157, 23, 77, 0.12), transparent 60%);
+        }
         .hero-cta-divider {
             border-left-color: rgba(255, 255, 255, 0.4);
         }
@@ -494,7 +502,7 @@
     </section>
 
     <!-- CLICK FUNNEL: HOW IT WORKS -->
-    <section class="py-16 md:py-32 bg-[#fbcfe8] text-black border-y border-[#db2777]/30 relative overflow-hidden">
+    <section class="linen-pink py-16 md:py-32 text-black border-y border-[#db2777]/30 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
             <div class="text-center mb-24">
                 <p class="text-[#9d174d] text-xs md:text-sm font-black tracking-[0.4em] uppercase mb-6">Three Steps · Zero Friction</p>
@@ -838,32 +846,10 @@
                 </div>
 
                 <!-- Trust Footer -->
-                <div class="px-5 sm:px-8 md:px-14 py-8 border-t border-[#db2777]/15 bg-black text-white">
-                    <p class="text-center text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-5">Why You Can Trust This Reservation</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="lock-keyhole" class="w-6 h-6 text-[#db2777] shrink-0 mt-0.5"></i>
-                            <div>
-                                <p class="text-sm font-black tracking-wide uppercase">256-Bit SSL Encryption</p>
-                                <p class="text-xs text-gray-300 font-normal mt-1">Every field you submit is encrypted in transit.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="shield-check" class="w-6 h-6 text-[#db2777] shrink-0 mt-0.5"></i>
-                            <div>
-                                <p class="text-sm font-black tracking-wide uppercase">No Charge Until Approved</p>
-                                <p class="text-xs text-gray-300 font-normal mt-1">We confirm your spot first. You never pay before then.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="user-check" class="w-6 h-6 text-[#db2777] shrink-0 mt-0.5"></i>
-                            <div>
-                                <p class="text-sm font-black tracking-wide uppercase">Real Humans · Real Reply</p>
-                                <p class="text-xs text-gray-300 font-normal mt-1">A team member personally responds within 24 to 48 hours.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-center text-[10px] tracking-[0.25em] uppercase text-gray-300 font-bold mt-6 pt-5 border-t border-white/10">The Music Dept · 4848 Battery Lane, Bethesda MD</p>
+                <div class="px-5 sm:px-8 md:px-14 py-5 border-t border-[#db2777]/15 bg-[#db2777]/5 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 text-xs tracking-[0.2em] uppercase text-gray-900 font-bold">
+                    <span class="flex items-center gap-2"><i data-lucide="lock" class="w-3.5 h-3.5 text-black"></i> Secure · Encrypted</span>
+                    <span class="hidden md:inline text-gray-400">·</span>
+                    <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-black"></i> No Charge Until Approved</span>
                 </div>
             </div>
 

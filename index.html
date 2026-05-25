@@ -200,8 +200,8 @@
                     <!-- Compact Features Carousel -->
                     <div class="relative flex items-center gap-4 w-full h-[210px]">
                         <div id="feat-stage" class="flex-1 min-h-[210px] flex flex-col items-center justify-center text-center gap-2">
-                            <div class="w-10 h-10 rounded-full bg-[#db2777] flex items-center justify-center shrink-0">
-                                <i id="feat-icon" data-lucide="bus" class="w-4 h-4 text-white"></i>
+                            <div id="feat-icon-wrap" class="w-10 h-10 rounded-full bg-[#db2777] flex items-center justify-center shrink-0">
+                                <i data-lucide="bus" class="w-4 h-4 text-white"></i>
                             </div>
                             <p class="text-[10px] font-black tracking-[0.3em] uppercase text-white"><span id="feat-counter">01</span> / 05</p>
                             <h5 id="feat-title" class="text-xl font-bold tracking-wide uppercase text-white">Luxury Star Coach Travel</h5>
@@ -1157,13 +1157,13 @@
             { icon: 'wine', title: 'VIP Bottle Service', bullets: ['Full bottle of your choice', 'Vibes from the moment you board'] }
         ];
         let featIndex = 0;
-        const featIcon = document.getElementById('feat-icon');
+        const featIconWrap = document.getElementById('feat-icon-wrap');
         const featTitle = document.getElementById('feat-title');
         const featBullets = document.getElementById('feat-bullets');
         const featCounter = document.getElementById('feat-counter');
         function renderFeature() {
             const f = features[featIndex];
-            featIcon.setAttribute('data-lucide', f.icon);
+            featIconWrap.innerHTML = `<i data-lucide="${f.icon}" class="w-4 h-4 text-white"></i>`;
             featTitle.textContent = f.title;
             featBullets.innerHTML = f.bullets.map(b => `<li class="flex justify-center gap-2"><span class="text-white shrink-0">•</span><span>${b}</span></li>`).join('');
             featCounter.textContent = String(featIndex + 1).padStart(2, '0');

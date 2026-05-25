@@ -99,16 +99,7 @@
         .text-white {
             color: #fafafa;
         }
-        .form-pop-init {
-            opacity: 0;
-            transform: translateY(24px) scale(0.97);
-            transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.7s ease;
-        }
-        .form-pop-in {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-            box-shadow: 0 30px 80px rgba(219, 39, 119, 0.35);
-        }
+        /* Form pop-in animation removed - caused layout wobble */
         @media (max-width: 767px) {
             .pink-on-dark {
                 color: #db2777;
@@ -381,9 +372,9 @@
             </div>
 
             <!-- Fan Access Image -->
-            <div class="mt-12 md:mt-16 relative w-screen md:w-full md:max-w-7xl -mx-6 md:mx-0 md:px-0 scale-110 md:scale-100 origin-center">
+            <div class="mt-8 md:mt-16 relative w-screen md:w-full md:max-w-7xl -mx-6 md:mx-0 md:px-0 h-[55vh] md:h-auto">
                 <div class="absolute inset-0 bg-gradient-to-tr from-[#db2777]/20 to-[#db2777]/20 blur-[80px] rounded-full"></div>
-                <img src="fanaccess.png" alt="Usher and Chris Brown" class="relative z-10 w-full object-contain drop-shadow-[0_30px_60px_rgba(219,39,119,0.25)]" onerror="this.src='https://via.placeholder.com/900x500/0a0a0a/e11d48?text=USHER+%26+CHRIS+BROWN'">
+                <img src="fanaccess.png" alt="Usher and Chris Brown" class="relative z-10 w-full h-full object-cover md:object-contain drop-shadow-[0_30px_60px_rgba(219,39,119,0.25)]" onerror="this.src='https://via.placeholder.com/900x500/0a0a0a/e11d48?text=USHER+%26+CHRIS+BROWN'">
             </div>
 
             <!-- Next Show Countdown -->
@@ -605,8 +596,8 @@
                 <div class="hidden md:block absolute top-16 left-[16.66%] right-[16.66%] h-px bg-gradient-to-r from-transparent via-[#db2777]/40 to-transparent pointer-events-none"></div>
 
                 <!-- Step 01 -->
-                <div class="group relative border border-gray-200 bg-white p-8 md:p-10 hover:border-[#db2777]/60 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(219,39,119,0.15)] transition-all duration-500">
-                    <div class="flex items-center justify-between mb-8">
+                <div class="group relative border border-gray-200 bg-white p-8 md:p-10 hover:border-[#db2777]/60 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(219,39,119,0.15)] transition-all duration-500 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-between mb-8">
                         <div class="relative">
                             <span class="text-5xl sm:text-6xl md:text-8xl font-display text-[#db2777] leading-none">01</span>
                             <span class="absolute -inset-2 bg-[#db2777]/20 blur-2xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -617,7 +608,7 @@
                     <p class="text-gray-800 text-lg md:text-xl font-medium leading-relaxed mb-6">
                         Submit your application below. Spots are highly contested and processed on a strict first-come, first-served basis.
                     </p>
-                    <div class="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-gray-800 group-hover:text-[#db2777] transition-colors">
+                    <div class="flex items-center justify-center md:justify-start gap-2 text-xs font-bold tracking-[0.2em] uppercase text-gray-800 group-hover:text-[#db2777] transition-colors">
                         <span>2 Min Application</span>
                         <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                     </div>
@@ -636,15 +627,15 @@
                     <p class="text-gray-800 text-lg md:text-xl font-medium leading-relaxed mb-6">
                         If approved, our concierge will send a private, encrypted link to lock in your spot with a deposit or payment plan.
                     </p>
-                    <div class="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-gray-800 group-hover:text-[#db2777] transition-colors">
+                    <div class="flex items-center justify-center md:justify-start gap-2 text-xs font-bold tracking-[0.2em] uppercase text-gray-800 group-hover:text-[#db2777] transition-colors">
                         <span>24-Hour Response</span>
                         <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                     </div>
                 </div>
 
                 <!-- Step 03 -->
-                <div class="group relative border border-gray-200 bg-white p-8 md:p-10 hover:border-[#db2777]/60 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(219,39,119,0.15)] transition-all duration-500">
-                    <div class="flex items-center justify-between mb-8">
+                <div class="group relative border border-gray-200 bg-white p-8 md:p-10 hover:border-[#db2777]/60 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(219,39,119,0.15)] transition-all duration-500 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-between mb-8">
                         <div class="relative">
                             <span class="text-5xl sm:text-6xl md:text-8xl font-display text-[#db2777] leading-none">03</span>
                             <span class="absolute -inset-2 bg-[#db2777]/20 blur-2xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -655,7 +646,7 @@
                     <p class="text-gray-800 text-lg md:text-xl font-medium leading-relaxed mb-6">
                         Step onto the star coach. We handle the driving, the drinks, the tailgate, and the tickets. You just vibe.
                     </p>
-                    <div class="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-gray-800 group-hover:text-[#db2777] transition-colors">
+                    <div class="flex items-center justify-center md:justify-start gap-2 text-xs font-bold tracking-[0.2em] uppercase text-gray-800 group-hover:text-[#db2777] transition-colors">
                         <span>Show Day</span>
                         <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                     </div>
@@ -1205,20 +1196,6 @@
         window.addEventListener('scroll', updateScrollUI, { passive: true });
         updateScrollUI();
 
-        // Pop-in animation when the form enters the viewport
-        const formContainerEl = document.getElementById('form-container');
-        if (formContainerEl && 'IntersectionObserver' in window) {
-            formContainerEl.classList.add('form-pop-init');
-            const popObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        formContainerEl.classList.add('form-pop-in');
-                        popObserver.disconnect();
-                    }
-                });
-            }, { threshold: 0.15 });
-            popObserver.observe(formContainerEl);
-        }
 
         // 2b. Share + Add to Calendar (DC Show)
         const showStartUTC = '20260710T230000Z';

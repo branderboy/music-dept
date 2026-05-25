@@ -625,7 +625,7 @@ If you&rsquo;ve ever said &ldquo;let me know when you do something&rdquo; &mdash
                     </div>
                 </div>
 
-                <div class="px-8 md:px-14 py-10 md:py-14">
+                <div class="px-8 md:px-14 py-6 md:py-8">
 
                 <form id="apply-form" class="relative z-10">
 
@@ -644,6 +644,20 @@ If you&rsquo;ve ever said &ldquo;let me know when you do something&rdquo; &mdash
                             <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-[#db2777] mb-1">Total Package</p>
                             <p class="text-3xl md:text-4xl font-display tracking-wider text-black">$2,500 <span class="text-base font-sans font-light text-gray-700">/ person</span></p>
                             <p class="text-xs font-bold tracking-[0.15em] uppercase text-gray-700 mt-2">$500 Deposit To Reserve</p>
+                        </div>
+                        <div class="mt-3 border-2 border-[#db2777] bg-black text-white p-5">
+                            <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-[#db2777] mb-1">DC Launch Show · Jul 11</p>
+                            <p class="text-3xl md:text-4xl font-display tracking-wider"><span class="line-through text-white/40 text-xl">$2,500</span> <span class="ml-2">$1,000</span> <span class="text-base font-sans font-light text-white/70">/ person</span></p>
+                            <p class="text-xs font-bold tracking-[0.15em] uppercase text-white/80 mt-2">Friends &amp; Supporters Pricing</p>
+                        </div>
+
+                        <div class="mt-4">
+                            <label for="discount-code" class="block text-xs font-bold tracking-[0.2em] uppercase text-black mb-2">Have a Discount Code?</label>
+                            <div class="flex gap-2">
+                                <input type="text" name="discount" id="discount-code" placeholder="Enter code" class="flex-1 bg-white border border-gray-300 px-4 py-3 text-black text-sm focus:outline-none focus:border-[#db2777] transition-colors uppercase tracking-wider">
+                                <button type="button" id="discount-apply" class="bg-black hover:bg-[#db2777] text-white px-5 py-3 text-xs font-bold tracking-[0.2em] uppercase transition-colors">Apply</button>
+                            </div>
+                            <p id="discount-feedback" class="hidden mt-2 text-sm font-bold"></p>
                         </div>
                     </div>
 
@@ -1160,6 +1174,26 @@ If you&rsquo;ve ever said &ldquo;let me know when you do something&rdquo; &mdash
                 successMessage.classList.remove('hidden');
             }, 1500);
         });
+
+        // Discount code (FORMYPEOPLE unlocks $1,000 DC launch pricing)
+        const discountInput = document.getElementById('discount-code');
+        const discountApply = document.getElementById('discount-apply');
+        const discountFeedback = document.getElementById('discount-feedback');
+        if (discountApply) {
+            discountApply.addEventListener('click', () => {
+                const code = discountInput.value.trim().toUpperCase();
+                if (code === 'FORMYPEOPLE') {
+                    discountFeedback.textContent = '✓ Code applied — $1,000 DC launch pricing unlocked.';
+                    discountFeedback.className = 'mt-2 text-sm font-bold text-[#db2777]';
+                } else if (code) {
+                    discountFeedback.textContent = '✗ Invalid code. Please check and try again.';
+                    discountFeedback.className = 'mt-2 text-sm font-bold text-gray-700';
+                } else {
+                    discountFeedback.textContent = 'Enter a code first.';
+                    discountFeedback.className = 'mt-2 text-sm font-bold text-gray-700';
+                }
+            });
+        }
 
         // Initial render
         renderStep();

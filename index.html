@@ -1150,27 +1150,34 @@
         // Initial render
         renderStep();
 
-        // Features carousel (Premium Escape Package)
+        // Features carousel — inline SVGs so swap actually works
+        const FEAT_SVG = {
+            bus: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><path d="M9 18h5"/><circle cx="16" cy="18" r="2"/></svg>',
+            bed: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/></svg>',
+            utensils: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>',
+            ticket: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>',
+            wine: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5V3H7v7a5 5 0 0 0 5 5Z"/></svg>'
+        };
         const features = [
-            { icon: 'bus', title: 'Luxury Star Coach Travel', bullets: ['Premium star coach ride', 'VIP venue parking', 'Round-trip transport'] },
-            { icon: 'bed-double', title: 'Overnight Comfort & Lodging', bullets: ['Sleep comfortably onboard', 'Hotel or Airbnb on overnight trips'] },
-            { icon: 'utensils', title: 'Premium Tailgate Experience', bullets: ['Catered R&B tailgate', 'Curated food & vibes', 'High-energy atmosphere'] },
-            { icon: 'ticket', title: 'Concert Access Included', bullets: ['Concert ticket covered', 'Live Usher & Chris Brown'] },
-            { icon: 'wine', title: 'VIP Bottle Service', bullets: ['Full bottle of your choice', 'Vibes from the moment you board'] }
+            { icon: 'bus',      title: 'Luxury Star Coach Travel',     bullets: ['Premium star coach ride', 'VIP venue parking', 'Round-trip transport'] },
+            { icon: 'bed',      title: 'Overnight Comfort & Lodging',  bullets: ['Sleep comfortably onboard', 'Hotel or Airbnb on overnight trips'] },
+            { icon: 'utensils', title: 'Premium Tailgate Experience',  bullets: ['Catered R&B tailgate', 'Curated food & vibes', 'High-energy atmosphere'] },
+            { icon: 'ticket',   title: 'Concert Access Included',      bullets: ['Concert ticket covered', 'Live Usher & Chris Brown'] },
+            { icon: 'wine',     title: 'VIP Bottle Service',           bullets: ['Full bottle of your choice', 'Vibes from the moment you board'] }
         ];
         let featIndex = 0;
-        const featIcon = document.getElementById('feat-icon');
+        const featIconWrap = document.getElementById('feat-icon') ? document.getElementById('feat-icon').parentElement : null;
         const featTitle = document.getElementById('feat-title');
         const featBullets = document.getElementById('feat-bullets');
         const featCounter = document.getElementById('feat-counter');
         function renderFeature() {
             const f = features[featIndex];
-            featIcon.setAttribute('data-lucide', f.icon);
+            if (featIconWrap) featIconWrap.innerHTML = FEAT_SVG[f.icon];
             featTitle.textContent = f.title;
             featBullets.innerHTML = f.bullets.map(b => `<li class="flex gap-2"><span class="text-white shrink-0">•</span><span>${b}</span></li>`).join('');
             featCounter.textContent = String(featIndex + 1).padStart(2, '0');
-            lucide.createIcons();
         }
+        renderFeature();
         document.getElementById('feat-next').addEventListener('click', () => { featIndex = (featIndex + 1) % features.length; renderFeature(); });
         document.getElementById('feat-prev').addEventListener('click', () => { featIndex = (featIndex - 1 + features.length) % features.length; renderFeature(); });
 

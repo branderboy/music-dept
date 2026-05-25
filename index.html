@@ -80,6 +80,34 @@
             -webkit-text-stroke: 1px #db2777;
             color: transparent;
         }
+        @keyframes cta-pulse {
+            0%, 100% { box-shadow: 0 10px 30px rgba(219,39,119,0.35), 0 0 0 0 rgba(219,39,119,0.6); }
+            50% { box-shadow: 0 18px 50px rgba(219,39,119,0.55), 0 0 0 14px rgba(219,39,119,0); }
+        }
+        @keyframes cta-shimmer {
+            0% { transform: translateX(-150%) skewX(-20deg); }
+            100% { transform: translateX(350%) skewX(-20deg); }
+        }
+        .hero-cta {
+            background-image: linear-gradient(135deg, #f43f9e 0%, #db2777 50%, #9d174d 100%);
+            animation: cta-pulse 2.6s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-cta:hover {
+            transform: translateY(-2px);
+        }
+        .hero-cta::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+            animation: cta-shimmer 3.5s ease-in-out infinite;
+            pointer-events: none;
+        }
         @media (min-width: 768px) {
             .text-stroke {
                 -webkit-text-stroke: 3px black;
@@ -158,10 +186,10 @@
             <!-- Hero CTA -->
             <div class="mt-8">
                 <button onclick="document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' })"
-                    class="group inline-flex items-center gap-3 bg-[#db2777] hover:bg-[#be185d] text-white px-8 md:px-9 py-4 md:py-[18px] text-xs md:text-sm font-bold tracking-[0.25em] uppercase transition-colors shadow-[0_10px_30px_rgba(219,39,119,0.35)]">
-                    Reserve Your Spot
-                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                    <span class="flex items-center gap-1.5 pl-3 ml-1 border-l border-white/30 normal-case tracking-wide">
+                    class="hero-cta group inline-flex items-center gap-3 text-white px-8 md:px-9 py-4 md:py-[18px] text-xs md:text-sm font-bold tracking-[0.25em] uppercase transition-transform duration-300 ring-1 ring-white/15">
+                    <span class="relative z-10">Reserve Your Spot</span>
+                    <i data-lucide="arrow-right" class="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    <span class="relative z-10 flex items-center gap-1.5 pl-3 ml-1 border-l border-white/40 normal-case tracking-wide">
                         <i data-lucide="lock" class="w-3.5 h-3.5"></i>
                         <span class="text-[10px] md:text-xs">Powered by</span>
                         <span class="font-bold italic text-sm md:text-base tracking-tight">stripe</span>

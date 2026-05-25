@@ -92,66 +92,6 @@
 </head>
 <body class="min-h-screen bg-white text-black font-sans selection:bg-[#d97706] selection:text-white overflow-x-hidden">
 
-    <!-- LAUNCH SHOW POPUP (iMessage text) -->
-    <div id="launch-popup" class="fixed inset-0 z-[100] hidden items-center justify-center px-4 py-8 bg-black/70 backdrop-blur-sm overflow-y-auto" style="font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;">
-        <div class="relative w-full max-w-sm bg-white rounded-[2rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.6)] animate-[popup-in_0.4s_ease-out]">
-            <!-- iPhone notch -->
-            <div class="bg-white pt-2 pb-1 flex items-center justify-center">
-                <div class="w-24 h-5 bg-black rounded-full"></div>
-            </div>
-
-            <!-- Header bar -->
-            <div class="bg-[#f6f6f6] border-b border-gray-200 px-4 py-3 flex items-center gap-3">
-                <button id="launch-popup-close" class="text-[#007aff] text-lg leading-none">‹</button>
-                <div class="flex-1 flex flex-col items-center">
-                    <div class="w-10 h-10 rounded-full bg-[#d97706] flex items-center justify-center text-white font-bold text-xs mb-0.5">MD</div>
-                    <p class="text-[11px] font-semibold text-black leading-tight">The Music Dept</p>
-                    <p class="text-[9px] text-gray-500">iMessage</p>
-                </div>
-                <div class="w-4"></div>
-            </div>
-
-            <!-- Conversation -->
-            <div class="bg-white px-3 py-4 space-y-1.5">
-                <p class="text-center text-[10px] text-gray-400 mb-2">iMessage · Today 11:42 AM</p>
-
-                <div class="flex">
-                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
-                        yo — this one's for my people 🖤
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
-                        Usher &amp; Chris Brown · July 11 · DC
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
-                        coach + tailgate + bottles + ticket
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
-                        normally $2,500. for you → <span class="font-bold">$1,000</span>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="max-w-[80%] bg-[#e9e9eb] text-black rounded-[18px] rounded-bl-[4px] px-3.5 py-2 text-[15px] leading-snug">
-                        you in?
-                    </div>
-                </div>
-                <p class="text-center text-[10px] text-gray-400 pt-1">Delivered</p>
-            </div>
-
-            <!-- iMessage input bar (CTA) -->
-            <div class="bg-[#f6f6f6] border-t border-gray-200 px-3 py-2.5 flex items-center gap-2">
-                <button id="launch-popup-cta" class="flex-1 bg-[#d97706] hover:bg-[#b45309] text-white rounded-full py-2.5 text-sm font-semibold transition-colors">
-                    I'm In →
-                </button>
-            </div>
-        </div>
-    </div>
-
     <!-- SOCIAL PROOF ALERT -->
     <div id="social-proof-alert" class="fixed bottom-6 right-6 z-50 transition-all duration-700 transform translate-y-10 opacity-0 pointer-events-none">
         <div class="bg-black/90 backdrop-blur-lg border border-[#d97706]/40 p-4 rounded-sm shadow-[0_10px_40px_rgba(217,119,6,0.2)] flex items-start gap-4 max-w-sm">
@@ -205,21 +145,18 @@
             <p class="text-xs md:text-sm font-black tracking-[0.35em] uppercase mb-5 text-[#d97706]">
                 The Music Dept Presents
             </p>
-            <h1 class="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display uppercase tracking-normal mb-3 leading-[0.9]">
-                Vibe <span class="text-[#d97706]">Escape</span>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display uppercase tracking-normal mb-5 leading-[0.95]">
+                Are You Ready <br /> For The Next <span class="text-[#d97706]">Vibe Escape?</span>
             </h1>
-            <p class="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-black max-w-2xl">
-                VIP R&amp;B Tour Experience
-            </p>
-            <p class="mt-5 text-base md:text-lg font-light leading-relaxed text-gray-700 max-w-xl">
-                A luxury bus-to-concert experience for Usher &amp; Chris Brown — travel, tailgate, and tickets, all included.
+            <p class="text-base md:text-lg font-normal leading-relaxed text-black max-w-2xl">
+                <span class="font-bold">Usher &amp; Chris Brown</span> at Northwest Stadium on <span class="font-bold">July 11th</span> is going to be crazy. We only have a few discounted spots available just for friends &amp; supporters for <span class="font-bold text-[#d97706]">$1k</span> only.
             </p>
 
             <!-- Hero CTA -->
             <div class="mt-8">
                 <button onclick="document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' })"
                     class="group inline-flex items-center gap-3 bg-[#d97706] hover:bg-[#b45309] text-white px-7 py-4 text-xs md:text-sm font-bold tracking-[0.25em] uppercase transition-colors shadow-[0_10px_30px_rgba(217,119,6,0.35)]">
-                    Book Your Fan Experience
+                    Click Here To Get Started
                     <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                 </button>
             </div>
@@ -428,10 +365,10 @@
 
         <!-- Coach Features Grid -->
         <div class="relative z-20 max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-5">
-            <div class="group relative overflow-hidden border border-gray-200 bg-white p-7 hover:border-[#d97706] hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] hover:-translate-y-1 transition-all duration-500">
+            <div class="group relative overflow-hidden border-2 border-black bg-white p-7 text-center hover:border-[#d97706] hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] hover:-translate-y-1 transition-all duration-500">
                 <div class="absolute top-0 right-0 w-24 h-24 hidden"></div>
                 <div class="relative">
-                    <div class="flex items-center justify-between mb-4">
+                    <div class="flex flex-col items-center mb-3">
                         <div class="w-10 h-10 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center group-hover:bg-[#b45309] transition-colors">
                             <i data-lucide="users" class="w-5 h-5 text-white transition-colors"></i>
                         </div>
@@ -442,10 +379,10 @@
                     <div class="w-8 h-px bg-[#d97706]/40 mt-4 group-hover:w-full transition-all duration-500"></div>
                 </div>
             </div>
-            <div class="group relative overflow-hidden border border-gray-200 bg-white p-7 hover:border-[#d97706] hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] hover:-translate-y-1 transition-all duration-500">
+            <div class="group relative overflow-hidden border-2 border-black bg-white p-7 text-center hover:border-[#d97706] hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] hover:-translate-y-1 transition-all duration-500">
                 <div class="absolute top-0 right-0 w-24 h-24 hidden"></div>
                 <div class="relative">
-                    <div class="flex items-center justify-between mb-4">
+                    <div class="flex flex-col items-center mb-3">
                         <div class="w-10 h-10 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center group-hover:bg-[#b45309] transition-colors">
                             <i data-lucide="bell-ring" class="w-5 h-5 text-white transition-colors"></i>
                         </div>
@@ -456,10 +393,10 @@
                     <div class="w-8 h-px bg-[#d97706]/40 mt-4 group-hover:w-full transition-all duration-500"></div>
                 </div>
             </div>
-            <div class="group relative overflow-hidden border border-gray-200 bg-white p-7 hover:border-[#d97706] hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] hover:-translate-y-1 transition-all duration-500">
+            <div class="group relative overflow-hidden border-2 border-black bg-white p-7 text-center hover:border-[#d97706] hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] hover:-translate-y-1 transition-all duration-500">
                 <div class="absolute top-0 right-0 w-24 h-24 hidden"></div>
                 <div class="relative">
-                    <div class="flex items-center justify-between mb-4">
+                    <div class="flex flex-col items-center mb-3">
                         <div class="w-10 h-10 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center group-hover:bg-[#b45309] transition-colors">
                             <i data-lucide="wine" class="w-5 h-5 text-white transition-colors"></i>
                         </div>
@@ -470,10 +407,10 @@
                     <div class="w-8 h-px bg-[#d97706]/40 mt-4 group-hover:w-full transition-all duration-500"></div>
                 </div>
             </div>
-            <div class="group relative overflow-hidden border border-gray-200 bg-white p-7 hover:border-[#d97706] hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] hover:-translate-y-1 transition-all duration-500">
+            <div class="group relative overflow-hidden border-2 border-black bg-white p-7 text-center hover:border-[#d97706] hover:shadow-[0_20px_50px_rgba(217,119,6,0.15)] hover:-translate-y-1 transition-all duration-500">
                 <div class="absolute top-0 right-0 w-24 h-24 hidden"></div>
                 <div class="relative">
-                    <div class="flex items-center justify-between mb-4">
+                    <div class="flex flex-col items-center mb-3">
                         <div class="w-10 h-10 rounded-full bg-[#d97706] border border-[#d97706] flex items-center justify-center group-hover:bg-[#b45309] transition-colors">
                             <i data-lucide="parking-square" class="w-5 h-5 text-white transition-colors"></i>
                         </div>
@@ -523,7 +460,7 @@
                 <p class="text-gray-500 text-sm font-bold tracking-[0.2em] uppercase">Select your destination.</p>
             </div>
 
-            <div id="tour-dates-grid" class="flex flex-wrap justify-center items-start gap-x-10 gap-y-10 text-center w-full mx-auto">
+            <div id="tour-dates-grid" class="w-full mx-auto space-y-16">
                 <!-- Tour dates will be injected here via JavaScript -->
             </div>
         </div>
@@ -538,8 +475,8 @@
         <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
             <div class="text-center mb-24">
                 <p class="text-[#d97706] text-xs md:text-sm font-black tracking-[0.4em] uppercase mb-6">Three Steps · Zero Friction</p>
-                <h2 class="text-6xl md:text-8xl font-display tracking-wide mb-4 uppercase leading-[0.9]">
-                    How To <span class="text-[#d97706]">Secure</span> <br /> Your Access
+                <h2 class="text-6xl md:text-8xl font-display tracking-wide mb-4 uppercase leading-[0.9] text-black" style="-webkit-text-stroke: 1px black;">
+                    How To <span class="text-[#d97706]" style="-webkit-text-stroke: 1px #d97706;">Secure</span> <br /> Your Access
                 </h2>
                 <p class="text-gray-600 text-base md:text-lg font-light max-w-2xl mx-auto mt-6">A streamlined, white-glove VIP fan experience process — from request to first sip onboard.</p>
             </div>
@@ -641,7 +578,7 @@
             <!-- Success Message (Hidden by default) -->
             <div id="success-message" class="hidden text-center py-24 border border-[#d97706]/20 p-12 bg-white shadow-[0_0_50px_rgba(217,119,6,0.1)] max-w-3xl mx-auto">
                 <i data-lucide="check-circle-2" class="w-16 h-16 text-[#d97706] mx-auto mb-8 stroke-1"></i>
-                <h3 class="text-5xl font-display tracking-wide mb-4 uppercase">Application Received</h3>
+                <h3 class="text-5xl font-display tracking-wide mb-4 uppercase text-black">Application Received</h3>
                 <p class="text-gray-700 text-lg font-light leading-relaxed">
                     Thank you for applying to the Vibe Escape VIP Fan Experience. Our concierge team will contact you shortly to confirm availability and coordinate the next steps of your fan experience.
                 </p>
@@ -664,51 +601,66 @@
                     </div>
                 </div>
 
-                <div class="px-8 md:px-14 py-10 md:py-14">
+                <div class="px-8 md:px-14 py-6 md:py-8">
 
                 <form id="apply-form" class="relative z-10">
 
                     <!-- STEP 1: What's Included -->
                     <div data-step="1" class="form-step">
-                        <p class="text-gray-600 text-sm font-light mb-8">Here's everything in your Vibe Escape package.</p>
+                        <p class="text-black text-xl md:text-2xl font-bold mb-8">Here's everything in your Vibe Escape package.</p>
                         <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Luxury Star Coach Travel</span></li>
-                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Room &amp; Board on the Coach</span></li>
-                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>VIP Bottle Service</span></li>
-                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Concert Access (Usher &amp; Chris Brown)</span></li>
-                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Premium R&amp;B Tailgate Experience</span></li>
-                            <li class="flex items-center gap-3 text-sm md:text-base"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Round-Trip Transportation</span></li>
+                            <li class="flex items-center gap-3 text-sm md:text-base text-black"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Luxury Star Coach Travel</span></li>
+                            <li class="flex items-center gap-3 text-sm md:text-base text-black"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Room &amp; Board on the Coach</span></li>
+                            <li class="flex items-center gap-3 text-sm md:text-base text-black"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>VIP Bottle Service</span></li>
+                            <li class="flex items-center gap-3 text-sm md:text-base text-black"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Concert Access (Usher &amp; Chris Brown)</span></li>
+                            <li class="flex items-center gap-3 text-sm md:text-base text-black"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Premium R&amp;B Tailgate Experience</span></li>
+                            <li class="flex items-center gap-3 text-sm md:text-base text-black"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#d97706] shrink-0"></i><span>Round-Trip Transportation</span></li>
                         </ul>
                         <div class="border border-[#d97706]/40 bg-[#d97706]/10 p-5 mb-2">
                             <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-[#d97706] mb-1">Total Package</p>
-                            <p class="text-3xl md:text-4xl font-display tracking-wider">$2,500 <span class="text-base font-sans font-light text-white">/ person</span></p>
-                            <p class="text-xs font-bold tracking-[0.15em] uppercase text-gray-300 mt-2">$500 Deposit To Reserve</p>
+                            <p class="text-3xl md:text-4xl font-display tracking-wider text-black">$2,500 <span class="text-base font-sans font-light text-gray-700">/ person</span></p>
+                            <p class="text-xs font-bold tracking-[0.15em] uppercase text-gray-700 mt-2">$500 Deposit To Reserve</p>
+                        </div>
+                        <div class="mt-3 border-2 border-[#d97706] bg-white p-5">
+                            <p class="text-lg md:text-xl font-black tracking-wide uppercase text-black mb-2">DC Launch Show · Jul 11</p>
+                            <p class="text-3xl md:text-4xl font-display tracking-wider text-black"><span class="line-through text-gray-400 text-xl">$2,500</span> <span class="ml-2 text-[#d97706]">$1,000</span> <span class="text-base font-sans font-light text-gray-700">/ person</span></p>
+                            <p class="text-xs font-bold tracking-[0.15em] uppercase text-gray-700 mt-2">Friends &amp; Supporters Pricing</p>
+                            <p class="mt-3 text-xs font-bold tracking-[0.15em] uppercase text-gray-700">Use code <span class="inline-block bg-black text-white px-2 py-1 tracking-[0.25em] ml-1">FORMYPEOPLE</span></p>
+                        </div>
+
+                        <div class="mt-4">
+                            <label for="discount-code" class="block text-xs font-bold tracking-[0.2em] uppercase text-black mb-2">Have a Discount Code?</label>
+                            <div class="flex gap-2">
+                                <input type="text" name="discount" id="discount-code" placeholder="Enter code" class="flex-1 bg-white border border-gray-300 px-4 py-3 text-black text-sm focus:outline-none focus:border-[#d97706] transition-colors uppercase tracking-wider">
+                                <button type="button" id="discount-apply" class="bg-black hover:bg-[#d97706] text-white px-5 py-3 text-xs font-bold tracking-[0.2em] uppercase transition-colors">Apply</button>
+                            </div>
+                            <p id="discount-feedback" class="hidden mt-2 text-sm font-bold"></p>
                         </div>
                     </div>
 
                     <!-- STEP 2: Payment Preference -->
                     <div data-step="2" class="form-step hidden">
-                        <p class="text-gray-600 text-sm font-light mb-8">Choose how you'd like to lock in your spot.</p>
+                        <p class="text-black text-xl md:text-2xl font-bold mb-8">Choose how you'd like to lock in your spot.</p>
                         <div class="space-y-4">
                             <label class="flex items-start gap-4 p-5 border border-[#d97706]/20 hover:border-[#d97706] has-[:checked]:border-[#d97706] has-[:checked]:bg-[#d97706]/10 cursor-pointer transition-colors">
                                 <input type="radio" name="payment" value="deposit" required class="mt-1 accent-[#d97706]">
                                 <div>
-                                    <p class="text-base font-bold tracking-wide uppercase mb-1">$500 Deposit</p>
-                                    <p class="text-xs text-gray-600 font-light leading-relaxed">Remaining $2,000 due 30 days before departure.</p>
+                                    <p class="text-base font-bold tracking-wide uppercase mb-1 text-black">$500 Deposit</p>
+                                    <p class="text-sm text-gray-700 font-normal leading-relaxed">Remaining $2,000 due 30 days before departure.</p>
                                 </div>
                             </label>
                             <label class="flex items-start gap-4 p-5 border border-[#d97706]/20 hover:border-[#d97706] has-[:checked]:border-[#d97706] has-[:checked]:bg-[#d97706]/10 cursor-pointer transition-colors">
                                 <input type="radio" name="payment" value="full" class="mt-1 accent-[#d97706]">
                                 <div>
-                                    <p class="text-base font-bold tracking-wide uppercase mb-1">Pay In Full · $2,500</p>
-                                    <p class="text-xs text-gray-600 font-light leading-relaxed">Fully confirmed — no further invoices.</p>
+                                    <p class="text-base font-bold tracking-wide uppercase mb-1 text-black">Pay In Full · $2,500</p>
+                                    <p class="text-sm text-gray-700 font-normal leading-relaxed">Fully confirmed — no further invoices.</p>
                                 </div>
                             </label>
                             <label class="flex items-start gap-4 p-5 border border-[#d97706]/20 hover:border-[#d97706] has-[:checked]:border-[#d97706] has-[:checked]:bg-[#d97706]/10 cursor-pointer transition-colors">
                                 <input type="radio" name="payment" value="plan" class="mt-1 accent-[#d97706]">
                                 <div>
-                                    <p class="text-base font-bold tracking-wide uppercase mb-1">Payment Plan</p>
-                                    <p class="text-xs text-gray-600 font-light leading-relaxed">A team member will reach out to set up a schedule.</p>
+                                    <p class="text-base font-bold tracking-wide uppercase mb-1 text-black">Payment Plan</p>
+                                    <p class="text-sm text-gray-700 font-normal leading-relaxed">A team member will reach out to set up a schedule.</p>
                                 </div>
                             </label>
                         </div>
@@ -716,7 +668,7 @@
 
                     <!-- STEP 3: Your Details -->
                     <div data-step="3" class="form-step hidden">
-                        <p class="text-gray-600 text-sm font-light mb-8">Who should we reach out to?</p>
+                        <p class="text-black text-xl md:text-2xl font-bold mb-8">Who should we reach out to?</p>
                         <div class="space-y-8">
                             <div class="grid md:grid-cols-2 gap-8">
                                 <div class="relative">
@@ -778,7 +730,7 @@
 
                     <!-- STEP 4: A Little More -->
                     <div data-step="4" class="form-step hidden">
-                        <p class="text-gray-600 text-sm font-light mb-8">Last couple of questions and you're done.</p>
+                        <p class="text-black text-xl md:text-2xl font-bold mb-8">Last couple of questions and you're done.</p>
                         <div class="space-y-8">
                             <div class="relative">
                                 <input type="text" name="referral" id="referral"
@@ -791,20 +743,20 @@
                                     class="peer w-full bg-transparent border-b border-gray-300 py-3 text-black focus:outline-none focus:border-[#d97706] transition-colors placeholder-transparent resize-none"
                                     placeholder="Any questions or special requests?"></textarea>
                                 <label for="notes" class="absolute left-0 -top-3.5 text-xs font-bold tracking-[0.15em] uppercase text-gray-500 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-600 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#d97706]">Questions or Special Requests?</label>
-                                <p class="mt-2 text-xs text-gray-500 font-light">Dietary needs, accessibility requirements, tour questions, etc.</p>
+                                <p class="mt-2 text-sm text-gray-700 font-normal">Dietary needs, accessibility requirements, tour questions, etc.</p>
                             </div>
                             <div class="border border-[#d97706]/20 bg-[#d97706]/5 p-4 text-xs text-gray-600 font-light leading-relaxed">
                                 <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-[#d97706] mb-2">Important</p>
                                 The Music Dept is an independent operator and is not affiliated with Usher, Chris Brown, or their management or tour promoters. All payments are non-refundable. Submitting this form is an expression of interest only — your seat is not confirmed until a deposit or full payment is received and your agreement is signed.
                             </div>
-                            <p class="text-xs text-gray-500 font-light text-center">A member of The Music Dept team will follow up within 24–48 hours. Spots are limited to 12 per bus — don't wait!</p>
+                            <p class="text-sm text-gray-700 font-normal text-center">A member of The Music Dept team will follow up within 24–48 hours. Spots are limited to 12 per bus — don't wait!</p>
                         </div>
                     </div>
 
                     <!-- Navigation Buttons -->
                     <div class="flex items-center justify-between gap-4 mt-12 pt-8 border-t border-[#d97706]/15">
                         <button type="button" id="prev-btn"
-                            class="text-xs font-bold tracking-[0.25em] uppercase text-gray-500 hover:text-[#d97706] transition-colors disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-2">
+                            class="text-xs font-bold tracking-[0.25em] uppercase text-black hover:text-[#d97706] transition-colors disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-2">
                             <i data-lucide="arrow-left" class="w-4 h-4"></i>
                             Back
                         </button>
@@ -837,69 +789,69 @@
                     <h3 class="text-3xl md:text-4xl font-display tracking-wide uppercase">Frequently Asked</h3>
                 </div>
 
-                <details class="group border border-[#d97706]/20 bg-white open:border-[#d97706]/60 open:bg-[#d97706]/5 transition-colors shadow-[0_4px_15px_rgba(217,119,6,0.08)]">
-                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
+                <details class="group border border-[#d97706]/30 open:border-[#d97706] transition-colors">
+                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide text-white">
                         <span>What's included?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-[#d97706] transition-transform group-open:rotate-45"></i>
                     </summary>
-                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
+                    <div class="px-5 pb-5 text-white text-sm font-light leading-relaxed">
                         Round-trip luxury coach transport, VIP venue parking, curated R&B tailgate with food and bar service, premium concert ticket, and onboard bottle service. Overnight accommodations included for multi-day fan experiences.
                     </div>
                 </details>
 
-                <details class="group border border-[#d97706]/20 bg-white open:border-[#d97706]/60 open:bg-[#d97706]/5 transition-colors shadow-[0_4px_15px_rgba(217,119,6,0.08)]">
-                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
+                <details class="group border border-[#d97706]/30 open:border-[#d97706] transition-colors">
+                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide text-white">
                         <span>How much is it?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-[#d97706] transition-transform group-open:rotate-45"></i>
                     </summary>
-                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
+                    <div class="px-5 pb-5 text-white text-sm font-light leading-relaxed">
                         $2,500 per person, all-inclusive. Payment plans are available — our concierge will discuss options after your application is approved.
                     </div>
                 </details>
 
-                <details class="group border border-[#d97706]/20 bg-white open:border-[#d97706]/60 open:bg-[#d97706]/5 transition-colors shadow-[0_4px_15px_rgba(217,119,6,0.08)]">
-                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
+                <details class="group border border-[#d97706]/30 open:border-[#d97706] transition-colors">
+                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide text-white">
                         <span>How many spots per coach?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-[#d97706] transition-transform group-open:rotate-45"></i>
                     </summary>
-                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
+                    <div class="px-5 pb-5 text-white text-sm font-light leading-relaxed">
                         Strictly 12 VIP guests per Premium Star Coach — by design. The intimacy is the experience.
                     </div>
                 </details>
 
-                <details class="group border border-[#d97706]/20 bg-white open:border-[#d97706]/60 open:bg-[#d97706]/5 transition-colors shadow-[0_4px_15px_rgba(217,119,6,0.08)]">
-                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
+                <details class="group border border-[#d97706]/30 open:border-[#d97706] transition-colors">
+                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide text-white">
                         <span>When will I be contacted?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-[#d97706] transition-transform group-open:rotate-45"></i>
                     </summary>
-                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
+                    <div class="px-5 pb-5 text-white text-sm font-light leading-relaxed">
                         Our concierge team responds to approved applications within 24 hours with an encrypted link to lock in your deposit.
                     </div>
                 </details>
 
-                <details class="group border border-[#d97706]/20 bg-white open:border-[#d97706]/60 open:bg-[#d97706]/5 transition-colors shadow-[0_4px_15px_rgba(217,119,6,0.08)]">
-                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
+                <details class="group border border-[#d97706]/30 open:border-[#d97706] transition-colors">
+                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide text-white">
                         <span>Can I book for a group?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-[#d97706] transition-transform group-open:rotate-45"></i>
                     </summary>
-                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
+                    <div class="px-5 pb-5 text-white text-sm font-light leading-relaxed">
                         Yes — select up to 12 guests in the party size field. Private full-coach buyouts are also available; mention it in your follow-up call.
                     </div>
                 </details>
 
-                <details class="group border border-[#d97706]/20 bg-white open:border-[#d97706]/60 open:bg-[#d97706]/5 transition-colors shadow-[0_4px_15px_rgba(217,119,6,0.08)]">
-                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide">
+                <details class="group border border-[#d97706]/30 open:border-[#d97706] transition-colors">
+                    <summary class="cursor-pointer list-none flex items-center justify-between p-5 text-sm md:text-base font-bold uppercase tracking-wide text-white">
                         <span>Is my deposit refundable?</span>
                         <i data-lucide="plus" class="w-5 h-5 text-[#d97706] transition-transform group-open:rotate-45"></i>
                     </summary>
-                    <div class="px-5 pb-5 text-gray-700 text-sm font-light leading-relaxed">
+                    <div class="px-5 pb-5 text-white text-sm font-light leading-relaxed">
                         Deposits are non-refundable but fully transferable. The Vibe Escape concierge will walk you through the full policy before you commit.
                     </div>
                 </details>
 
-                <div class="border border-[#d97706]/40 bg-[#d97706]/5 p-5 mt-6">
+                <div class="border border-[#d97706]/40 bg-white p-5 mt-6">
                     <p class="text-xs font-bold tracking-[0.2em] uppercase text-[#d97706] mb-2">Still have questions?</p>
-                    <p class="text-gray-700 text-sm font-light">Email <a href="mailto:concierge@musicdept.com" class="underline hover:text-[#d97706]">concierge@musicdept.com</a> for white-glove support.</p>
+                    <p class="text-black text-sm font-light">Email <a href="mailto:concierge@musicdept.com" class="underline hover:text-[#d97706]">concierge@musicdept.com</a> for white-glove support.</p>
                 </div>
             </aside>
 
@@ -989,28 +941,31 @@
         const gridContainer = document.getElementById('tour-dates-grid');
         const selectContainer = document.getElementById('city-select');
 
-        tourLegs.forEach(leg => {
-            // Leg Header (full width)
-            const header = document.createElement('div');
-            header.className = "w-full text-center mt-8 mb-4";
-            header.innerHTML = `
-                <div class="inline-flex items-center gap-4">
-                    <span class="w-10 h-px bg-[#d97706]"></span>
-                    <span class="text-[#d97706] text-2xl md:text-4xl font-display tracking-wide uppercase">${leg.title}</span>
-                    <span class="w-10 h-px bg-[#d97706]"></span>
+        tourLegs.forEach((leg, idx) => {
+            // Section wrapper per leg
+            const section = document.createElement('div');
+            section.className = "border-t border-gray-200 pt-10";
+
+            const datesHtml = leg.dates.map(tour => `
+                <div class="group cursor-default text-left border-l-2 border-gray-200 hover:border-[#d97706] pl-4 transition-colors">
+                    <p class="text-2xl md:text-3xl font-display tracking-wide uppercase text-black group-hover:text-[#d97706] transition-colors leading-none mb-1">${tour.date}</p>
+                    <h4 class="text-sm font-bold tracking-[0.1em] uppercase text-gray-800">${tour.city}</h4>
+                    ${tour.venue ? `<p class="text-[10px] text-[#d97706] font-bold tracking-[0.15em] uppercase mt-0.5">${tour.venue}</p>` : ''}
+                </div>
+            `).join('');
+
+            section.innerHTML = `
+                <div class="flex items-baseline justify-between gap-4 mb-8">
+                    <h3 class="text-3xl md:text-5xl font-display tracking-wide uppercase text-black leading-none">${leg.title}</h3>
+                    <span class="text-[10px] md:text-xs font-black tracking-[0.4em] uppercase text-[#d97706] whitespace-nowrap">${String(idx + 1).padStart(2, '0')} / ${String(tourLegs.length).padStart(2, '0')}</span>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-6">
+                    ${datesHtml}
                 </div>
             `;
-            gridContainer.appendChild(header);
+            gridContainer.appendChild(section);
 
             leg.dates.forEach(tour => {
-                const card = document.createElement('div');
-                card.className = "group pb-3 hover:text-[#d97706] transition-colors cursor-default text-center w-[220px] md:w-[240px] flex flex-col items-center";
-                card.innerHTML = `
-                    <p class="text-xs font-bold tracking-[0.15em] uppercase text-white group-hover:text-[#d97706] transition-colors mb-2">${tour.date}</p>
-                    <h4 class="text-xl font-bold tracking-tight mb-1">${tour.city}</h4>
-                    ${tour.venue ? `<p class="text-sm text-gray-500 font-display font-semibold">${tour.venue}</p>` : ''}
-                `;
-                gridContainer.appendChild(card);
 
                 // Populate Form Select
                 const option = document.createElement('option');
@@ -1200,37 +1155,30 @@
             }, 1500);
         });
 
+        // Discount code (FORMYPEOPLE unlocks $1,000 DC launch pricing)
+        const discountInput = document.getElementById('discount-code');
+        const discountApply = document.getElementById('discount-apply');
+        const discountFeedback = document.getElementById('discount-feedback');
+        if (discountApply) {
+            discountApply.addEventListener('click', () => {
+                const code = discountInput.value.trim().toUpperCase();
+                if (code === 'FORMYPEOPLE') {
+                    discountFeedback.textContent = '✓ Code applied — $1,000 DC launch pricing unlocked.';
+                    discountFeedback.className = 'mt-2 text-sm font-bold text-[#d97706]';
+                } else if (code) {
+                    discountFeedback.textContent = '✗ Invalid code. Please check and try again.';
+                    discountFeedback.className = 'mt-2 text-sm font-bold text-gray-700';
+                } else {
+                    discountFeedback.textContent = 'Enter a code first.';
+                    discountFeedback.className = 'mt-2 text-sm font-bold text-gray-700';
+                }
+            });
+        }
+
         // Initial render
         renderStep();
 
-        // 6. Launch Show Popup
-        const launchPopup = document.getElementById('launch-popup');
-        const launchClose = document.getElementById('launch-popup-close');
-        const launchCta = document.getElementById('launch-popup-cta');
-
-        function hideLaunchPopup() {
-            launchPopup.classList.remove('flex');
-            launchPopup.classList.add('hidden');
-        }
-
-        function showLaunchPopup() {
-            launchPopup.classList.remove('hidden');
-            launchPopup.classList.add('flex');
-            lucide.createIcons();
-        }
-
-        setTimeout(showLaunchPopup, 800);
-
-        launchClose.addEventListener('click', hideLaunchPopup);
-        launchPopup.addEventListener('click', (e) => {
-            if (e.target === launchPopup) hideLaunchPopup();
-        });
-        launchCta.addEventListener('click', () => {
-            hideLaunchPopup();
-            document.getElementById('apply-section').scrollIntoView({ behavior: 'smooth' });
-        });
-
-        // 7. Service Worker registration (PWA)
+        // 6. Service Worker registration (PWA)
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js').catch(err => console.warn('SW register failed', err));

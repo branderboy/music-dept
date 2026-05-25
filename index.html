@@ -1077,11 +1077,11 @@
             featuredContainer.innerHTML = '';
             list.forEach(tour => {
                 const card = document.createElement('div');
-                card.className = 'group bg-black text-white p-4 hover:bg-[#db2777] transition-colors cursor-pointer shrink-0 snap-start w-[200px] md:w-auto md:flex-1';
+                card.className = 'group cursor-default text-left border-l-2 border-gray-200 hover:border-[#db2777] pl-4 transition-colors shrink-0 snap-start w-[180px] md:w-auto md:flex-1';
                 card.innerHTML = `
-                    <p class="text-[10px] font-black tracking-[0.3em] uppercase text-[#db2777] group-hover:text-white mb-2 transition-colors">${tour.date}</p>
-                    <h4 class="text-base font-bold tracking-wide uppercase leading-tight">${tour.city}</h4>
-                    ${tour.venue ? `<p class="text-[10px] text-gray-300 group-hover:text-white/90 font-bold tracking-[0.15em] uppercase mt-1 transition-colors">${tour.venue}</p>` : '<p class="text-[10px] text-gray-400 group-hover:text-white/80 font-bold tracking-[0.15em] uppercase mt-1 transition-colors">Tickets Soon</p>'}
+                    <p class="text-2xl md:text-3xl font-display tracking-wide uppercase text-black group-hover:text-[#db2777] transition-colors leading-none mb-1">${tour.date}</p>
+                    <h4 class="text-sm font-bold tracking-[0.1em] uppercase text-gray-800">${tour.city}</h4>
+                    ${tour.venue ? `<p class="text-[10px] text-[#db2777] font-bold tracking-[0.15em] uppercase mt-0.5">${tour.venue}</p>` : ''}
                 `;
                 featuredContainer.appendChild(card);
             });

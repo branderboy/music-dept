@@ -565,7 +565,7 @@
                 <div class="relative px-8 md:px-14 pt-10 md:pt-14 pb-8 border-b border-[#db2777]/15">
                     <div class="flex items-center justify-between mb-3">
                         <p class="text-[10px] md:text-xs font-bold tracking-[0.35em] uppercase text-[#db2777]">Vibe Escape · Reservation</p>
-                        <p class="text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-gray-500"><span id="step-counter">01</span> <span class="text-gray-300">/</span> 05</p>
+                        <p class="text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-gray-500"><span id="step-counter">01</span> <span class="text-gray-300">/</span> 04</p>
                     </div>
                     <h3 id="step-label" class="text-2xl md:text-3xl font-display tracking-wide uppercase text-black">What's Included</h3>
                     <div class="mt-6 w-full h-px bg-[#db2777]/15 overflow-hidden">
@@ -722,41 +722,6 @@
                                 The Music Dept is an independent operator and is not affiliated with Usher, Chris Brown, or their management or tour promoters. All payments are non-refundable. Submitting this form is an expression of interest only — your seat is not confirmed until a deposit or full payment is received and your agreement is signed.
                             </div>
                             <p class="text-sm text-gray-700 font-normal text-center">A member of The Music Dept team will follow up within 24–48 hours. Spots are limited to 12 per bus — don't wait!</p>
-                        </div>
-                    </div>
-
-                    <!-- STEP 5: Agreements & Consent -->
-                    <div data-step="5" class="form-step hidden">
-                        <p class="text-black text-xl md:text-2xl font-bold mb-8">Agreements &amp; Consent</p>
-                        <div class="space-y-5">
-                            <label class="flex items-start gap-3 cursor-pointer">
-                                <input type="checkbox" name="mediaConsent" required class="mt-1 accent-[#db2777] w-5 h-5">
-                                <div>
-                                    <p class="text-sm font-bold tracking-wide text-black">Media Consent <span class="text-[#db2777]">*</span></p>
-                                    <p class="text-xs text-gray-600 font-normal mt-1">I consent to photo and video capture during the experience, which may be used for promotional purposes.</p>
-                                </div>
-                            </label>
-                            <label class="flex items-start gap-3 cursor-pointer">
-                                <input type="checkbox" name="ageConfirm" required class="mt-1 accent-[#db2777] w-5 h-5">
-                                <div>
-                                    <p class="text-sm font-bold tracking-wide text-black">Age Confirmation <span class="text-[#db2777]">*</span></p>
-                                    <p class="text-xs text-gray-600 font-normal mt-1">I confirm that I am 21 years of age or older.</p>
-                                </div>
-                            </label>
-                            <label class="flex items-start gap-3 cursor-pointer">
-                                <input type="checkbox" name="docusignAck" required class="mt-1 accent-[#db2777] w-5 h-5">
-                                <div>
-                                    <p class="text-sm font-bold tracking-wide text-black">DocuSign Acknowledgment <span class="text-[#db2777]">*</span></p>
-                                    <p class="text-xs text-gray-600 font-normal mt-1">I understand a separate DocuSign agreement will be sent to me and must be signed before my spot is confirmed.</p>
-                                </div>
-                            </label>
-                            <label class="flex items-start gap-3 cursor-pointer pt-2 border-t border-gray-200">
-                                <input type="checkbox" name="paymentPlan" class="mt-1 accent-[#db2777] w-5 h-5">
-                                <div>
-                                    <p class="text-sm font-bold tracking-wide text-black">Payment Plan <span class="text-xs font-normal text-gray-500">(optional)</span></p>
-                                    <p class="text-xs text-gray-600 font-normal mt-1">I'd like to discuss a payment plan instead of paying in full upfront.</p>
-                                </div>
-                            </label>
                         </div>
                     </div>
 
@@ -1092,7 +1057,7 @@
         const stepLabel = document.getElementById('step-label');
         const stepCounter = document.getElementById('step-counter');
         const steps = form.querySelectorAll('.form-step');
-        const stepTitles = ["What's Included", "Payment Preference", "Your Details", "A Little More", "Agreements & Consent"];
+        const stepTitles = ["What's Included", "Payment Preference", "Your Details", "A Little More"];
         let currentStep = 1;
         const totalSteps = steps.length;
 

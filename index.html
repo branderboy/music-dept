@@ -83,6 +83,16 @@
         .pink-on-dark {
             color: #db2777;
         }
+        /* Smooth font rendering so text doesn't look razor-sharp on dark bgs */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        /* Slightly off-white so text reads soft instead of stark on dark sections */
+        .text-white {
+            color: #fafafa;
+        }
         .form-pop-init {
             opacity: 0;
             transform: translateY(24px) scale(0.97);

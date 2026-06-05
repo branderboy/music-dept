@@ -79,24 +79,59 @@
         .text-shadow-light {
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
+
+        /* Animated tour banner (infinite marquee) */
+        @keyframes marquee-scroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+            display: inline-flex;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            will-change: transform;
+            animation: marquee-scroll 22s linear infinite;
+        }
+        .tour-banner:hover .marquee-track {
+            animation-play-state: paused;
+        }
+        .vs-pill {
+            animation: vs-pulse 1.6s ease-in-out infinite;
+        }
+        @keyframes vs-pulse {
+            0%, 100% { transform: scale(1); }
+            50%      { transform: scale(1.12); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .marquee-track { animation: none; }
+            .vs-pill { animation: none; }
+        }
     </style>
 </head>
 <body class="font-sans text-gray-900">
 
-    <header class="w-full bg-white py-6 px-4 md:px-8 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 max-w-6xl mx-auto">
-        <!-- Logo Area -->
-        <div class="flex flex-col items-center">
+    <header class="w-full bg-white py-6 px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 max-w-6xl mx-auto">
+        <!-- Logo Area (left) -->
+        <div class="flex flex-col items-center md:items-start">
             <img src="images/vibe%20logo.png" alt="Vibe Escape Tour" class="h-24 md:h-32 w-auto">
         </div>
 
-        <!-- Vertical Divider (Desktop) / Horizontal (Mobile) -->
-        <div class="hidden md:block w-0.5 h-24 bg-flyer-purple"></div>
-        <div class="md:hidden w-full h-0.5 bg-flyer-purple my-2"></div>
+        <!-- Location Area (center) -->
+        <div class="flex items-center gap-6 md:gap-8">
+            <!-- Vertical Divider (Desktop) / Horizontal (Mobile) -->
+            <div class="hidden md:block w-0.5 h-24 bg-flyer-purple"></div>
+            <div class="md:hidden w-full h-0.5 bg-flyer-purple my-2"></div>
 
-        <!-- Location Area -->
-        <div class="text-center md:text-left flex flex-col justify-center">
-            <h2 class="text-flyer-purple font-serif text-3xl md:text-5xl lg:text-6xl uppercase tracking-wide">The Vibe Escape</h2>
-            <h3 class="text-flyer-gold font-serif text-3xl md:text-5xl lg:text-6xl uppercase tracking-wide mt-1">Washington, D.C.</h3>
+            <div class="text-center md:text-left flex flex-col justify-center">
+                <h2 class="text-flyer-purple font-serif text-3xl md:text-5xl lg:text-6xl uppercase tracking-wide">The Vibe Escape</h2>
+                <h3 class="text-flyer-gold font-serif text-3xl md:text-5xl lg:text-6xl uppercase tracking-wide mt-1">Washington, D.C.</h3>
+            </div>
+        </div>
+
+        <!-- Phone (right) -->
+        <div class="text-center md:text-right flex flex-col justify-center">
+            <a href="tel:+12025551212" class="text-flyer-purple font-sans font-bold text-2xl md:text-3xl tracking-tight whitespace-nowrap hover:text-flyer-gold transition-colors">(202) 555-1212</a>
+            <span class="text-flyer-purple font-sans text-sm md:text-base tracking-widest uppercase mt-1">For More Info</span>
         </div>
     </header>
 
@@ -107,7 +142,38 @@
                 <!-- Placeholder mimicking the limo toast -->
                 <img src="images/website_hero.png" alt="The Vibe Escape" class="w-full h-full object-cover object-center">
             </div>
-            
+
+            <!-- Animated Tour Banner -->
+            <div class="tour-banner w-full bg-flyer-purple overflow-hidden py-3 md:py-4">
+                <div class="marquee-track font-sans uppercase text-lg md:text-2xl tracking-wide">
+                    <!-- Repeated twice for a seamless infinite loop. Placeholder dates — replace with real ones. -->
+                    <span class="inline-flex items-center px-6">
+                        <span class="text-flyer-gold font-bold">Atlanta, GA</span><span class="text-white font-medium ml-2">Jul 11</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Washington, D.C.</span><span class="text-white font-medium ml-2">Jul 18</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">New York, NY</span><span class="text-white font-medium ml-2">Jul 25</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Chicago, IL</span><span class="text-white font-medium ml-2">Aug 1</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Los Angeles, CA</span><span class="text-white font-medium ml-2">Aug 8</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                    </span>
+                    <span class="inline-flex items-center px-6" aria-hidden="true">
+                        <span class="text-flyer-gold font-bold">Atlanta, GA</span><span class="text-white font-medium ml-2">Jul 11</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Washington, D.C.</span><span class="text-white font-medium ml-2">Jul 18</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">New York, NY</span><span class="text-white font-medium ml-2">Jul 25</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Chicago, IL</span><span class="text-white font-medium ml-2">Aug 1</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Los Angeles, CA</span><span class="text-white font-medium ml-2">Aug 8</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                    </span>
+                </div>
+            </div>
+
             <!-- Bottom 3 images -->
             <div class="flex flex-row w-full h-[150px] md:h-[250px] lg:h-[300px] gap-[6px]">
                 <!-- Left -->

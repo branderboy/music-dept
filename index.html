@@ -112,9 +112,9 @@
 </head>
 <body class="font-sans text-gray-900 overflow-x-hidden">
 
-    <header class="w-full bg-white py-4 md:py-6 px-4 md:px-8 flex flex-row items-center justify-between gap-3 md:gap-8 max-w-6xl mx-auto">
+    <header class="w-full bg-white py-4 md:py-6 px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 max-w-6xl mx-auto">
         <!-- Logo Area (left) -->
-        <div class="flex flex-col items-start shrink-0">
+        <div class="flex flex-col items-center md:items-start shrink-0">
             <img src="images/vibe%20logo.png" alt="Vibe Escape Tour" class="h-24 md:h-32 w-auto">
         </div>
 
@@ -706,24 +706,24 @@
     </section>
 
     <!-- Win Free Tickets / Lead Capture Section -->
-    <section class="w-full bg-white border-t-8 border-flyer-gold py-12 relative overflow-hidden">
-        <div class="max-w-4xl mx-auto text-center relative z-10 mb-8 px-4">
+    <section class="w-full bg-white border-t-8 border-flyer-gold py-12 px-4 relative overflow-hidden">
+        <div class="max-w-3xl mx-auto text-center relative z-10">
             <h2 class="text-flyer-purple font-serif text-3xl md:text-5xl font-bold uppercase tracking-wide mb-4">
                 Win a Free Slot to the Next Event
             </h2>
-            <p class="text-gray-700 font-sans text-lg md:text-xl max-w-2xl mx-auto font-medium">
+            <p class="text-gray-700 font-sans text-lg md:text-xl mb-8 max-w-2xl mx-auto font-medium">
                 Enter your details below to get exclusive tour updates, early access to future events, and a chance to win free VIP upgrades!
             </p>
-        </div>
 
-        <form id="lead-form" onsubmit="event.preventDefault(); showLeadSuccess();" class="flex flex-col md:flex-row justify-center items-stretch gap-4 w-full relative z-10">
-            <input type="text" placeholder="First Name" required class="w-full md:flex-1 px-4 py-4 bg-white text-black font-bold uppercase tracking-wide border-2 border-flyer-gold focus:border-flyer-gold-dark outline-none rounded-sm placeholder-gray-500">
-            <input type="email" placeholder="Email Address" required class="w-full md:flex-1 px-4 py-4 bg-white text-black font-bold uppercase tracking-wide border-2 border-flyer-gold focus:border-flyer-gold-dark outline-none rounded-sm placeholder-gray-500">
-            <button type="submit" class="w-full md:flex-1 bg-flyer-gold hover:bg-flyer-gold-light text-white font-bold text-xl uppercase tracking-widest py-4 px-6 rounded-sm shadow-lg transition-transform hover:scale-105 border-b-4 border-flyer-gold-dark">
-                Get Notified!
-            </button>
-        </form>
-        <p id="lead-success-msg" class="text-green-600 font-bold mt-4 hidden uppercase tracking-wider text-lg text-center relative z-10">You're on the list! Watch your inbox.</p>
+            <form id="lead-form" onsubmit="event.preventDefault(); showLeadSuccess();" class="flex flex-col md:flex-row justify-center items-stretch gap-4 w-full">
+                <input type="text" placeholder="First Name" required class="w-full md:flex-1 px-4 py-4 bg-white text-black font-bold uppercase tracking-wide border-2 border-flyer-gold focus:border-flyer-gold-dark outline-none rounded-sm placeholder-gray-500">
+                <input type="email" placeholder="Email Address" required class="w-full md:flex-1 px-4 py-4 bg-white text-black font-bold uppercase tracking-wide border-2 border-flyer-gold focus:border-flyer-gold-dark outline-none rounded-sm placeholder-gray-500">
+                <button type="submit" class="w-full md:flex-1 bg-flyer-gold hover:bg-flyer-gold-light text-white font-bold text-xl uppercase tracking-widest py-4 px-6 rounded-sm shadow-lg transition-transform hover:scale-105 border-b-4 border-flyer-gold-dark">
+                    Get Notified!
+                </button>
+            </form>
+            <p id="lead-success-msg" class="text-green-600 font-bold mt-4 hidden uppercase tracking-wider text-lg text-center">You're on the list! Watch your inbox.</p>
+        </div>
     </section>
 
     <footer class="w-full bg-flyer-gold py-6 md:py-8 px-4 text-center">

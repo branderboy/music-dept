@@ -107,7 +107,7 @@
         }
     </style>
 </head>
-<body class="font-sans text-gray-900">
+<body class="font-sans text-gray-900 overflow-x-hidden">
 
     <header class="w-full bg-white py-6 px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 max-w-6xl mx-auto">
         <!-- Logo Area (left) -->
@@ -291,7 +291,7 @@
 
         <!-- Destination headline + badge -->
         <div class="mb-6">
-            <div class="inline-block border-[3px] border-flyer-gold px-10 md:px-12 py-6 mb-8 shadow-sm bg-white">
+            <div class="inline-block border-[3px] border-flyer-gold px-6 sm:px-10 md:px-12 py-6 mb-8 shadow-sm bg-white">
                 <div class="text-flyer-purple font-bold text-2xl tracking-widest uppercase mb-2">Destination:</div>
                 <div class="text-black font-sans font-bold text-3xl md:text-4xl mb-3">Chris Brown VS Usher</div>
                 <div class="text-flyer-purple font-bold text-xl md:text-2xl mb-1">Friday, July 11, 2026</div>
@@ -301,11 +301,11 @@
         </div>
 
         <!-- NEW: Add to Calendar & Share Actions -->
-        <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-12">
-            <button onclick="addToCalendar()" class="bg-white hover:bg-flyer-gold text-flyer-gold hover:text-white border-2 border-flyer-gold font-bold uppercase py-3 px-6 rounded shadow-md transition-colors flex items-center gap-2 tracking-wider">
+        <div class="flex flex-col md:flex-row justify-center items-stretch md:items-center gap-4 mb-12 max-w-md md:max-w-none mx-auto">
+            <button onclick="addToCalendar()" class="w-full md:w-auto justify-center bg-white hover:bg-flyer-gold text-flyer-gold hover:text-white border-2 border-flyer-gold font-bold uppercase py-3 px-6 rounded shadow-md transition-colors flex items-center gap-2 tracking-wider">
                 Add To Calendar
             </button>
-            <button onclick="shareExperience()" class="bg-white hover:bg-flyer-purple text-flyer-purple hover:text-white border-2 border-flyer-purple font-bold uppercase py-3 px-6 rounded shadow-md transition-colors flex items-center gap-2 tracking-wider">
+            <button onclick="shareExperience()" class="w-full md:w-auto justify-center bg-white hover:bg-flyer-purple text-flyer-purple hover:text-white border-2 border-flyer-purple font-bold uppercase py-3 px-6 rounded shadow-md transition-colors flex items-center gap-2 tracking-wider">
                 Share With Squad
             </button>
         </div>
@@ -499,6 +499,14 @@
                 <p class="mt-6 max-w-2xl mx-auto text-white font-medium text-base md:text-lg">
                     12 seats per bus. First come, first served. Apply below to reserve your seat.
                 </p>
+
+                <!-- Gold Phone Call CTA -->
+                <div class="mt-8 flex justify-center">
+                    <a href="tel:+12025551212" class="block w-full max-w-sm bg-flyer-gold text-flyer-purple rounded-xl shadow-lg px-6 py-4 text-center hover:bg-flyer-gold-light transition-colors">
+                        <span class="block text-xs font-bold tracking-[0.25em] uppercase">Questions? Call Us</span>
+                        <span class="block text-2xl sm:text-3xl font-bold tracking-tight mt-1 whitespace-nowrap">(202) 555-1212</span>
+                    </a>
+                </div>
             </div>
 
             <!-- Success Message (Hidden by default) -->
@@ -740,17 +748,17 @@
                     </div>
 
                     <!-- Navigation Buttons -->
-                    <div class="flex items-center justify-between gap-4 mt-12 pt-8 border-t border-[#2a113e]/15">
+                    <div class="flex items-center justify-between gap-3 sm:gap-4 mt-12 pt-8 border-t border-[#2a113e]/15">
                         <button type="button" id="prev-btn"
-                            class="text-xs font-bold tracking-[0.25em] uppercase text-black hover:text-flyer-purple transition-colors disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-2">
+                            class="shrink-0 text-xs font-bold tracking-[0.25em] uppercase text-black hover:text-flyer-purple transition-colors disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-2">
                             Back
                         </button>
                         <button type="button" id="next-btn"
-                            class="flex items-center gap-3 px-7 py-4 bg-flyer-purple text-white text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#3d1a5a] transition-colors">
+                            class="flex items-center justify-center gap-3 px-5 sm:px-7 py-4 min-h-[48px] bg-flyer-purple text-white text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#3d1a5a] transition-colors">
                             Continue
                         </button>
                         <button type="submit" id="apply-submit-btn"
-                            class="hidden flex items-center gap-3 px-7 py-4 bg-flyer-purple text-white text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#3d1a5a] transition-colors disabled:opacity-70 disabled:cursor-not-allowed">
+                            class="hidden flex items-center justify-center gap-3 px-5 sm:px-7 py-4 min-h-[48px] bg-flyer-purple text-white text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#3d1a5a] transition-colors disabled:opacity-70 disabled:cursor-not-allowed">
                             <span id="submit-text">Submit My Interest</span>
                         </button>
                     </div>

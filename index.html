@@ -112,28 +112,27 @@
 </head>
 <body class="font-sans text-gray-900 overflow-x-hidden">
 
-    <header class="w-full bg-white py-6 px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 max-w-6xl mx-auto">
+    <header class="w-full bg-white py-4 md:py-6 px-4 md:px-8 flex flex-row items-center justify-between gap-3 md:gap-8 max-w-6xl mx-auto">
         <!-- Logo Area (left) -->
-        <div class="flex flex-col items-center md:items-start">
-            <img src="images/vibe%20logo.png" alt="Vibe Escape Tour" class="h-24 md:h-32 w-auto">
+        <div class="flex flex-col items-start shrink-0">
+            <img src="images/vibe%20logo.png" alt="Vibe Escape Tour" class="h-14 md:h-32 w-auto">
         </div>
 
-        <!-- Location Area (center) -->
-        <div class="flex items-center gap-6 md:gap-8">
-            <!-- Vertical Divider (Desktop) / Horizontal (Mobile) -->
-            <div class="hidden md:block w-0.5 h-24 bg-flyer-purple"></div>
-            <div class="md:hidden w-full h-0.5 bg-flyer-purple my-2"></div>
+        <!-- Location Area (center) — hidden on mobile -->
+        <div class="hidden md:flex items-center gap-6 md:gap-8">
+            <!-- Vertical Divider -->
+            <div class="w-0.5 h-24 bg-flyer-purple"></div>
 
-            <div class="text-center md:text-left flex flex-col justify-center">
+            <div class="text-left flex flex-col justify-center">
                 <h2 class="text-flyer-purple font-serif text-3xl md:text-5xl lg:text-6xl uppercase tracking-wide">The Vibe Escape</h2>
                 <h3 class="text-flyer-gold font-serif text-3xl md:text-5xl lg:text-6xl uppercase tracking-wide mt-1">Washington, D.C.</h3>
             </div>
         </div>
 
         <!-- Phone (right) -->
-        <div class="text-center md:text-right flex flex-col justify-center border-2 border-flyer-gold rounded-lg px-5 py-3">
+        <div class="text-center md:text-right flex flex-col justify-center border-2 border-flyer-gold rounded-lg px-5 py-3.5 md:px-7 md:py-4 shrink-0">
             <a href="tel:+12025551212" class="text-flyer-purple font-sans font-bold text-2xl md:text-3xl tracking-tight whitespace-nowrap hover:text-flyer-gold transition-colors">(202) 555-1212</a>
-            <span class="text-flyer-purple font-sans text-sm md:text-base tracking-widest uppercase mt-1">For More Info</span>
+            <span class="text-flyer-purple font-sans text-xs md:text-base tracking-widest uppercase mt-1">For More Info</span>
         </div>
     </header>
 
@@ -716,10 +715,10 @@
                 Enter your details below to get exclusive tour updates, early access to future events, and a chance to win free VIP upgrades!
             </p>
 
-            <form id="lead-form" onsubmit="event.preventDefault(); showLeadSuccess();" class="flex flex-col justify-center items-center gap-4 max-w-md mx-auto">
-                <input type="text" placeholder="First Name" required class="w-full px-4 py-4 bg-white text-black font-bold uppercase tracking-wide border-2 border-flyer-gold focus:border-flyer-gold-dark outline-none rounded-sm placeholder-gray-500">
-                <input type="email" placeholder="Email Address" required class="w-full px-4 py-4 bg-white text-black font-bold uppercase tracking-wide border-2 border-flyer-gold focus:border-flyer-gold-dark outline-none rounded-sm placeholder-gray-500">
-                <button type="submit" class="w-full bg-flyer-gold hover:bg-flyer-gold-light text-white font-bold text-xl uppercase tracking-widest py-4 px-6 rounded-sm shadow-lg transition-transform hover:scale-105 border-b-4 border-flyer-gold-dark">
+            <form id="lead-form" onsubmit="event.preventDefault(); showLeadSuccess();" class="flex flex-col md:flex-row justify-center items-stretch gap-4 w-full">
+                <input type="text" placeholder="First Name" required class="w-full md:flex-1 px-4 py-4 bg-white text-black font-bold uppercase tracking-wide border-2 border-flyer-gold focus:border-flyer-gold-dark outline-none rounded-sm placeholder-gray-500">
+                <input type="email" placeholder="Email Address" required class="w-full md:flex-1 px-4 py-4 bg-white text-black font-bold uppercase tracking-wide border-2 border-flyer-gold focus:border-flyer-gold-dark outline-none rounded-sm placeholder-gray-500">
+                <button type="submit" class="w-full md:flex-1 bg-flyer-gold hover:bg-flyer-gold-light text-white font-bold text-xl uppercase tracking-widest py-4 px-6 rounded-sm shadow-lg transition-transform hover:scale-105 border-b-4 border-flyer-gold-dark">
                     Get Notified!
                 </button>
             </form>

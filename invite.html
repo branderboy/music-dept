@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Using standard strong Serif for headings to match the flyer's bold look, and bold Sans for body -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
         tailwind.config = {
@@ -145,30 +144,114 @@
 
             <!-- Animated Tour Banner -->
             <div class="tour-banner w-full bg-flyer-purple overflow-hidden py-3 md:py-4">
-                <div class="marquee-track font-sans uppercase text-lg md:text-2xl tracking-wide">
-                    <!-- Repeated twice for a seamless infinite loop. Placeholder dates — replace with real ones. -->
+                <div class="marquee-track font-sans uppercase text-base md:text-xl tracking-wide">
+                    <!-- Repeated twice for a seamless infinite loop. Washington, D.C. shown first. -->
                     <span class="inline-flex items-center px-6">
-                        <span class="text-flyer-gold font-bold">Atlanta, GA</span><span class="text-white font-medium ml-2">Jul 11</span>
+                        <span class="text-flyer-gold font-bold">Fri, Jul 11</span><span class="text-white font-bold ml-2">Washington, D.C.</span><span class="text-flyer-gold-light font-medium ml-2">Northwest Stadium</span>
                         <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
-                        <span class="text-flyer-gold font-bold">Washington, D.C.</span><span class="text-white font-medium ml-2">Jul 18</span>
+                        <span class="text-flyer-gold font-bold">Jun 26</span><span class="text-white font-medium ml-2">Denver, CO</span><span class="text-flyer-gold-light font-medium ml-2">Empower Field</span>
                         <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
-                        <span class="text-flyer-gold font-bold">New York, NY</span><span class="text-white font-medium ml-2">Jul 25</span>
+                        <span class="text-flyer-gold font-bold">Jun 30</span><span class="text-white font-medium ml-2">Minneapolis, MN</span><span class="text-flyer-gold-light font-medium ml-2">U.S. Bank Stadium</span>
                         <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
-                        <span class="text-flyer-gold font-bold">Chicago, IL</span><span class="text-white font-medium ml-2">Aug 1</span>
+                        <span class="text-flyer-gold font-bold">Jul 2</span><span class="text-white font-medium ml-2">Detroit, MI</span><span class="text-flyer-gold-light font-medium ml-2">Ford Field</span>
                         <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
-                        <span class="text-flyer-gold font-bold">Los Angeles, CA</span><span class="text-white font-medium ml-2">Aug 8</span>
+                        <span class="text-flyer-gold font-bold">Jul 5</span><span class="text-white font-medium ml-2">Cleveland, OH</span><span class="text-flyer-gold-light font-medium ml-2">Cleveland Browns Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Jul 17</span><span class="text-white font-medium ml-2">Charlotte, NC</span><span class="text-flyer-gold-light font-medium ml-2">Bank of America Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Jul 25</span><span class="text-white font-medium ml-2">St. Louis, MO</span><span class="text-flyer-gold-light font-medium ml-2">The Dome</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Jul 29</span><span class="text-white font-medium ml-2">Nashville, TN</span><span class="text-flyer-gold-light font-medium ml-2">Nissan Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Jul 29</span><span class="text-white font-medium ml-2">Birmingham, AL</span><span class="text-flyer-gold-light font-medium ml-2">Protective Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Aug 1</span><span class="text-white font-medium ml-2">Syracuse, NY</span><span class="text-flyer-gold-light font-medium ml-2">JMA Wireless Dome</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Aug 7–8</span><span class="text-white font-medium ml-2">East Rutherford, NJ</span><span class="text-flyer-gold-light font-medium ml-2">MetLife Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Aug 11</span><span class="text-white font-medium ml-2">Toronto, ON</span><span class="text-flyer-gold-light font-medium ml-2">Rogers Centre</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Aug 17</span><span class="text-white font-medium ml-2">Boston, MA</span><span class="text-flyer-gold-light font-medium ml-2">Gillette Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Aug 21</span><span class="text-white font-medium ml-2">Chicago, IL</span><span class="text-flyer-gold-light font-medium ml-2">Soldier Field</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Aug 28</span><span class="text-white font-medium ml-2">Santa Clara, CA</span><span class="text-flyer-gold-light font-medium ml-2">Levi's Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Sep 5–6</span><span class="text-white font-medium ml-2">Las Vegas, NV</span><span class="text-flyer-gold-light font-medium ml-2">Allegiant Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Sep 10</span><span class="text-white font-medium ml-2">Dallas, TX</span><span class="text-flyer-gold-light font-medium ml-2">AT&amp;T Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Sep 25–26</span><span class="text-white font-medium ml-2">Los Angeles, CA</span><span class="text-flyer-gold-light font-medium ml-2">SoFi Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Sep 29</span><span class="text-white font-medium ml-2">Glendale, AZ</span><span class="text-flyer-gold-light font-medium ml-2">State Farm Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Oct 3</span><span class="text-white font-medium ml-2">El Paso, TX</span><span class="text-flyer-gold-light font-medium ml-2">Sun Bowl Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Oct 5</span><span class="text-white font-medium ml-2">San Antonio, TX</span><span class="text-flyer-gold-light font-medium ml-2">Alamodome</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Nov 7–8</span><span class="text-white font-medium ml-2">Atlanta, GA</span><span class="text-flyer-gold-light font-medium ml-2">Mercedes-Benz Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Nov 9</span><span class="text-white font-medium ml-2">Houston, TX</span><span class="text-flyer-gold-light font-medium ml-2">NRG Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Nov 20</span><span class="text-white font-medium ml-2">New Orleans, LA</span><span class="text-flyer-gold-light font-medium ml-2">Caesars Superdome</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Dec 3</span><span class="text-white font-medium ml-2">Miami, FL</span><span class="text-flyer-gold-light font-medium ml-2">Hard Rock Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Dec 11</span><span class="text-white font-medium ml-2">Tampa, FL</span><span class="text-flyer-gold-light font-medium ml-2">Raymond James Stadium</span>
                         <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
                     </span>
                     <span class="inline-flex items-center px-6" aria-hidden="true">
-                        <span class="text-flyer-gold font-bold">Atlanta, GA</span><span class="text-white font-medium ml-2">Jul 11</span>
+                        <span class="text-flyer-gold font-bold">Fri, Jul 11</span><span class="text-white font-bold ml-2">Washington, D.C.</span><span class="text-flyer-gold-light font-medium ml-2">Northwest Stadium</span>
                         <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
-                        <span class="text-flyer-gold font-bold">Washington, D.C.</span><span class="text-white font-medium ml-2">Jul 18</span>
+                        <span class="text-flyer-gold font-bold">Jun 26</span><span class="text-white font-medium ml-2">Denver, CO</span><span class="text-flyer-gold-light font-medium ml-2">Empower Field</span>
                         <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
-                        <span class="text-flyer-gold font-bold">New York, NY</span><span class="text-white font-medium ml-2">Jul 25</span>
+                        <span class="text-flyer-gold font-bold">Jun 30</span><span class="text-white font-medium ml-2">Minneapolis, MN</span><span class="text-flyer-gold-light font-medium ml-2">U.S. Bank Stadium</span>
                         <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
-                        <span class="text-flyer-gold font-bold">Chicago, IL</span><span class="text-white font-medium ml-2">Aug 1</span>
+                        <span class="text-flyer-gold font-bold">Jul 2</span><span class="text-white font-medium ml-2">Detroit, MI</span><span class="text-flyer-gold-light font-medium ml-2">Ford Field</span>
                         <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
-                        <span class="text-flyer-gold font-bold">Los Angeles, CA</span><span class="text-white font-medium ml-2">Aug 8</span>
+                        <span class="text-flyer-gold font-bold">Jul 5</span><span class="text-white font-medium ml-2">Cleveland, OH</span><span class="text-flyer-gold-light font-medium ml-2">Cleveland Browns Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Jul 17</span><span class="text-white font-medium ml-2">Charlotte, NC</span><span class="text-flyer-gold-light font-medium ml-2">Bank of America Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Jul 25</span><span class="text-white font-medium ml-2">St. Louis, MO</span><span class="text-flyer-gold-light font-medium ml-2">The Dome</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Jul 29</span><span class="text-white font-medium ml-2">Nashville, TN</span><span class="text-flyer-gold-light font-medium ml-2">Nissan Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Jul 29</span><span class="text-white font-medium ml-2">Birmingham, AL</span><span class="text-flyer-gold-light font-medium ml-2">Protective Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Aug 1</span><span class="text-white font-medium ml-2">Syracuse, NY</span><span class="text-flyer-gold-light font-medium ml-2">JMA Wireless Dome</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Aug 7–8</span><span class="text-white font-medium ml-2">East Rutherford, NJ</span><span class="text-flyer-gold-light font-medium ml-2">MetLife Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Aug 11</span><span class="text-white font-medium ml-2">Toronto, ON</span><span class="text-flyer-gold-light font-medium ml-2">Rogers Centre</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Aug 17</span><span class="text-white font-medium ml-2">Boston, MA</span><span class="text-flyer-gold-light font-medium ml-2">Gillette Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Aug 21</span><span class="text-white font-medium ml-2">Chicago, IL</span><span class="text-flyer-gold-light font-medium ml-2">Soldier Field</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Aug 28</span><span class="text-white font-medium ml-2">Santa Clara, CA</span><span class="text-flyer-gold-light font-medium ml-2">Levi's Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Sep 5–6</span><span class="text-white font-medium ml-2">Las Vegas, NV</span><span class="text-flyer-gold-light font-medium ml-2">Allegiant Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Sep 10</span><span class="text-white font-medium ml-2">Dallas, TX</span><span class="text-flyer-gold-light font-medium ml-2">AT&amp;T Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Sep 25–26</span><span class="text-white font-medium ml-2">Los Angeles, CA</span><span class="text-flyer-gold-light font-medium ml-2">SoFi Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Sep 29</span><span class="text-white font-medium ml-2">Glendale, AZ</span><span class="text-flyer-gold-light font-medium ml-2">State Farm Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Oct 3</span><span class="text-white font-medium ml-2">El Paso, TX</span><span class="text-flyer-gold-light font-medium ml-2">Sun Bowl Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Oct 5</span><span class="text-white font-medium ml-2">San Antonio, TX</span><span class="text-flyer-gold-light font-medium ml-2">Alamodome</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Nov 7–8</span><span class="text-white font-medium ml-2">Atlanta, GA</span><span class="text-flyer-gold-light font-medium ml-2">Mercedes-Benz Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Nov 9</span><span class="text-white font-medium ml-2">Houston, TX</span><span class="text-flyer-gold-light font-medium ml-2">NRG Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Nov 20</span><span class="text-white font-medium ml-2">New Orleans, LA</span><span class="text-flyer-gold-light font-medium ml-2">Caesars Superdome</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Dec 3</span><span class="text-white font-medium ml-2">Miami, FL</span><span class="text-flyer-gold-light font-medium ml-2">Hard Rock Stadium</span>
+                        <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
+                        <span class="text-flyer-gold font-bold">Dec 11</span><span class="text-white font-medium ml-2">Tampa, FL</span><span class="text-flyer-gold-light font-medium ml-2">Raymond James Stadium</span>
                         <span class="text-flyer-gold-light mx-5 md:mx-7">&#9670;</span>
                     </span>
                 </div>
@@ -206,33 +289,36 @@
             Join fellow R&B fans for an unforgettable luxury concert experience featuring premium transportation, curated hospitality, exclusive giveaways, content creation opportunities, and a VIP-style atmosphere before the show.
         </p>
 
-        <!-- Destination badge -->
+        <!-- Destination headline + badge -->
         <div class="mb-6">
-            <img src="images/the%20badge.png" alt="Chris Brown & Usher · Washington, D.C." class="mx-auto w-full max-w-xl md:max-w-2xl h-auto">
+            <div class="text-flyer-purple font-bold text-2xl tracking-widest uppercase mb-2">Destination:</div>
+            <div class="text-black font-sans font-bold text-3xl md:text-4xl mb-3">Chris Brown & Usher</div>
+            <div class="text-flyer-purple font-bold text-xl md:text-2xl mb-1">Friday, July 11, 2026</div>
+            <div class="text-flyer-purple font-bold text-xl md:text-2xl mb-6">Northwest Stadium &bull; Washington, D.C.</div>
+            <img src="images/the%20badge.png" alt="Chris Brown & Usher · Washington, D.C." class="mr-auto md:ml-8 w-full max-w-xl md:max-w-2xl h-auto">
         </div>
 
         <!-- NEW: Add to Calendar & Share Actions -->
         <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-12">
             <button onclick="addToCalendar()" class="bg-black hover:bg-gray-900 text-flyer-gold border border-flyer-gold font-bold uppercase py-3 px-6 rounded shadow-md transition-colors flex items-center gap-2 tracking-wider">
-                <i class="far fa-calendar-plus text-xl"></i> Add To Calendar
+                Add To Calendar
             </button>
             <button onclick="shareExperience()" class="bg-flyer-purple hover:bg-purple-900 text-white border border-flyer-purple font-bold uppercase py-3 px-6 rounded shadow-md transition-colors flex items-center gap-2 tracking-wider">
-                <i class="fas fa-share-alt text-xl"></i> Share With Squad
+                Share With Squad
             </button>
         </div>
 
         <div class="w-full max-w-3xl mx-auto mb-4">
             <button onclick="scrollToReserve()" class="btn-funnel w-full bg-flyer-gold hover:bg-flyer-gold-light text-white border-b-4 border-flyer-gold-dark rounded-md py-6 px-4 flex flex-col items-center justify-center cursor-pointer shadow-funnel group">
                 <div class="flex items-center gap-4">
-                    <i class="fas fa-arrow-circle-right text-3xl md:text-5xl group-hover:translate-x-2 transition-transform"></i>
-                    <span class="text-2xl md:text-4xl font-bold uppercase tracking-wide text-shadow-light">Yes! Secure My Seat Now</span>
+                                        <span class="text-2xl md:text-4xl font-bold uppercase tracking-wide text-shadow-light">Yes! Secure My Seat Now</span>
                 </div>
                 <span class="text-sm md:text-lg font-semibold mt-2 opacity-90 uppercase tracking-widest">Spots Are Extremely Limited - Click Here</span>
             </button>
             <!-- Trust badges below button -->
             <div class="flex justify-center items-center gap-6 mt-4 text-gray-500 text-sm font-bold uppercase">
-                <span><i class="fas fa-lock mr-1"></i> Secure Checkout</span>
-                <span><i class="fas fa-ticket-alt mr-1"></i> VIP Access</span>
+                <span>Secure Checkout</span>
+                <span>VIP Access</span>
             </div>
         </div>
 
@@ -253,20 +339,16 @@
                 
                 <ul class="space-y-5 mb-10">
                     <li class="flex items-start">
-                        <i class="fas fa-check-circle text-flyer-gold text-2xl mr-4 mt-1"></i>
-                        <span class="text-white font-sans text-xl md:text-2xl font-medium tracking-wide">Luxury Motorcoach Transport</span>
+                                                <span class="text-white font-sans text-xl md:text-2xl font-medium tracking-wide">Luxury Motorcoach Transport</span>
                     </li>
                     <li class="flex items-start">
-                        <i class="fas fa-check-circle text-flyer-gold text-2xl mr-4 mt-1"></i>
-                        <span class="text-white font-sans text-xl md:text-2xl font-medium tracking-wide">VIP Tailgate Experience</span>
+                                                <span class="text-white font-sans text-xl md:text-2xl font-medium tracking-wide">VIP Tailgate Experience</span>
                     </li>
                     <li class="flex items-start">
-                        <i class="fas fa-check-circle text-flyer-gold text-2xl mr-4 mt-1"></i>
-                        <span class="text-white font-sans text-xl md:text-2xl font-medium tracking-wide">Premium Giveaways Included</span>
+                                                <span class="text-white font-sans text-xl md:text-2xl font-medium tracking-wide">Premium Giveaways Included</span>
                     </li>
                     <li class="flex items-start">
-                        <i class="fas fa-check-circle text-flyer-gold text-2xl mr-4 mt-1"></i>
-                        <span class="text-white font-sans text-xl md:text-2xl font-medium tracking-wide">Pro Content Creation Opportunities</span>
+                                                <span class="text-white font-sans text-xl md:text-2xl font-medium tracking-wide">Pro Content Creation Opportunities</span>
                     </li>
                 </ul>
 
@@ -284,7 +366,7 @@
                     <!-- Form Header -->
                     <div class="bg-flyer-gold py-4 px-6 text-center shadow-md">
                         <h3 class="text-black font-sans text-2xl font-bold uppercase tracking-widest">
-                            <i class="fas fa-lock mr-2"></i> Secure Order Form
+                            Secure Order Form
                         </h3>
                     </div>
                     
@@ -335,7 +417,7 @@
                         <!-- ClickFunnels Order Bump -->
                         <div class="bg-[#fff9e6] border-[3px] border-dashed border-[#d40000] p-4 rounded mb-8 relative animate-pulse-slow">
                             <div class="absolute -top-3 left-4 bg-[#d40000] text-white text-xs font-bold px-2 py-1 uppercase rounded animate-bounce">
-                                <i class="fas fa-arrow-down mr-1"></i> Don't Miss This
+                                Don't Miss This
                             </div>
                             <label class="flex items-start gap-3 cursor-pointer mt-2">
                                 <input type="checkbox" class="w-6 h-6 mt-1 accent-[#d40000]">
@@ -354,8 +436,7 @@
                             <label class="block text-sm font-bold text-gray-700 mb-1">Credit Card Number</label>
                             <div class="relative">
                                 <input type="text" placeholder="•••• •••• •••• ••••" required class="w-full p-3 pl-10 border border-gray-300 rounded focus:border-flyer-gold focus:ring-1 focus:ring-flyer-gold outline-none transition-all font-mono text-lg">
-                                <i class="far fa-credit-card absolute left-3 top-4 text-gray-400 text-lg"></i>
-                            </div>
+                                                            </div>
                             <div class="flex gap-4 mt-4">
                                 <div class="w-1/2">
                                     <input type="text" placeholder="MM/YY" required class="w-full p-3 border border-gray-300 rounded focus:border-flyer-gold outline-none font-mono text-center">
@@ -369,32 +450,26 @@
                         <div class="flex justify-center mb-6">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/128px-Bitcoin.svg.png" alt="Crypto" class="h-6 mx-1 grayscale opacity-50 hidden">
                             <div class="flex gap-2 text-2xl text-gray-400">
-                                <i class="fab fa-cc-visa text-blue-800 opacity-80"></i>
-                                <i class="fab fa-cc-mastercard text-red-600 opacity-80"></i>
-                                <i class="fab fa-cc-amex text-blue-500 opacity-80"></i>
-                                <i class="fab fa-cc-discover text-orange-500 opacity-80"></i>
-                            </div>
+                                                                                                                                                            </div>
                         </div>
 
                         <!-- Submit Button -->
                         <button type="submit" id="submit-btn" class="btn-funnel w-full bg-flyer-gold hover:bg-flyer-gold-light text-white border-b-4 border-flyer-gold-dark rounded py-5 px-4 flex flex-col items-center justify-center cursor-pointer shadow-funnel group relative overflow-hidden">
                             <div class="flex items-center gap-3 relative z-10">
                                 <span class="text-2xl md:text-3xl font-bold uppercase tracking-wide text-shadow-light">Complete Secure Order</span>
-                                <i class="fas fa-lock text-xl md:text-2xl group-hover:scale-110 transition-transform"></i>
-                            </div>
+                                                            </div>
                             <span class="text-xs md:text-sm font-semibold mt-1 opacity-90 uppercase tracking-widest relative z-10">You will receive an email confirmation instantly</span>
                         </button>
                         
                         <div class="text-center mt-4 text-xs text-gray-500 font-medium">
-                            <i class="fas fa-shield-alt text-green-600"></i> 256-Bit SSL Encrypted Checkout. Your information is safe.
+                            256-Bit SSL Encrypted Checkout. Your information is safe.
                         </div>
                     </form>
                     
                     <!-- Success Overlay (Hidden by default) -->
                     <div id="order-success" class="absolute inset-0 bg-white z-50 hidden flex-col items-center justify-center text-center p-8">
                         <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                            <i class="fas fa-check-circle text-green-500 text-6xl"></i>
-                        </div>
+                                                    </div>
                         <h2 class="text-3xl font-bold text-black mb-2 uppercase tracking-widest">Order Confirmed!</h2>
                         <p class="text-gray-600 text-lg font-medium mb-6">Welcome to the VIP Experience. We've sent your itinerary to your email.</p>
                         <p class="text-flyer-purple font-bold text-xl mb-8">Order #VBE-88392</p>
@@ -424,7 +499,7 @@
                     Subscribe Now
                 </button>
             </form>
-            <p id="lead-success-msg" class="text-green-400 font-bold mt-4 hidden uppercase tracking-wider text-lg"><i class="fas fa-check-circle mr-1"></i> You're on the list! Watch your inbox.</p>
+            <p id="lead-success-msg" class="text-green-400 font-bold mt-4 hidden uppercase tracking-wider text-lg">You're on the list! Watch your inbox.</p>
         </div>
     </section>
 
@@ -465,7 +540,7 @@
             const originalContent = btn.innerHTML;
             
             // Loading state
-            btn.innerHTML = `<i class="fas fa-circle-notch fa-spin text-3xl"></i><span class="mt-2 text-sm font-bold uppercase tracking-widest">Processing Secure Payment...</span>`;
+            btn.innerHTML = `<span class="mt-2 text-sm font-bold uppercase tracking-widest">Processing Secure Payment...</span>`;
             btn.style.opacity = '0.8';
             btn.style.pointerEvents = 'none';
 
@@ -517,7 +592,7 @@
         // NEW: Lead Capture Success State
         function showLeadSuccess() {
             const btn = document.querySelector('form button[type="submit"]');
-            btn.innerHTML = '<i class="fas fa-check"></i> Added!';
+            btn.innerHTML = 'Added!';
             btn.classList.replace('bg-flyer-gold', 'bg-green-600');
             btn.classList.replace('border-flyer-gold-dark', 'border-green-800');
             document.getElementById('lead-success-msg').classList.remove('hidden');
@@ -543,12 +618,11 @@
             const toastHtml = `
                 <div class="social-proof-toast bg-white border-l-4 border-flyer-gold shadow-2xl p-4 flex items-center gap-4 max-w-sm pointer-events-auto rounded-r-md">
                     <div class="w-10 h-10 rounded-full bg-flyer-purple flex items-center justify-center text-flyer-gold font-bold text-lg flex-shrink-0">
-                        <i class="fas fa-star"></i>
-                    </div>
+                                            </div>
                     <div>
                         <p class="text-black font-sans font-bold text-sm leading-tight">${randomProof.name} <span class="font-normal text-gray-500 text-xs">from ${randomProof.location}</span></p>
                         <p class="text-flyer-purple font-sans font-bold text-sm leading-tight mt-0.5">${randomProof.action}</p>
-                        <p class="text-xs text-gray-400 mt-1 font-medium"><i class="far fa-clock"></i> ${timeAgo} min ago <span class="text-green-500 ml-2"><i class="fas fa-check-circle"></i> Verified</span></p>
+                        <p class="text-xs text-gray-400 mt-1 font-medium">${timeAgo} min ago <span class="text-green-500 ml-2">Verified</span></p>
                     </div>
                 </div>
             `;
